@@ -1,0 +1,33 @@
+name: Generate Learning Projects
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate projects from latest news
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_MODELS_MODEL: "openai/gpt-4o-mini"
+        run: python scripts/generate_projects.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/projects.json
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "lab: regenerate learning projects from latest signal"
+          git push

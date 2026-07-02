@@ -1,0 +1,288 @@
+{
+  "generatedAt": "2026-07-02T09:00:00+00:00",
+  "generator": "seed",
+  "model": "seed walkthrough · curated by claude",
+  "basedOnNewsFrom": "2026-07-02T09:00:00+00:00",
+  "projects": [
+    {
+      "id": "local-llm-private-journal",
+      "title": "Run a Private AI Journal on Your Laptop",
+      "tagline": "Use a free open-weight model locally — no cloud, no subscription, total privacy.",
+      "inspiredBy": "Zyphra releases ZAYA1-8B fully open under Apache 2.0, trained on AMD hardware",
+      "difficulty": "Beginner",
+      "timeEstimate": "~1.5 hours",
+      "skills": ["Ollama", "local inference", "prompt engineering"],
+      "outcome": "A local AI assistant you can talk to privately, with a saved prompt template for daily journaling.",
+      "stretchGoals": ["Add a second model and compare outputs", "Write a shell alias that opens the journal in one command"],
+      "modules": [
+        {
+          "title": "Module 1: Setting Up Local AI",
+          "lessons": [
+            {
+              "title": "Why run AI locally?",
+              "duration": "8 min",
+              "content": "Cloud AI services are powerful, but they send every prompt to a remote server. For personal use — journaling, brainstorming, drafting — you might not want that.\n\nOpen-weight models like ZAYA1-8B (this week's news) run entirely on your machine. No account, no API key, no billing. The trade-off: they're smaller and less capable than cloud frontier models. But for structured tasks with good prompts, they're surprisingly useful.\n\n**Why this matters for a startup founder:** understanding the cost-capability spectrum of AI models is the single most valuable intuition you can build. Every feature you design for Sublime will sit somewhere on this spectrum.",
+              "code": "",
+              "checkpoint": "You can explain in one sentence why someone would choose a local model over a cloud API."
+            },
+            {
+              "title": "Install Ollama and pull a model",
+              "duration": "12 min",
+              "content": "Ollama is the simplest way to run open models locally. It handles downloading, quantization, and serving — you just type `ollama run`.\n\n**Install Ollama** (one command, no account needed):\n- macOS/Linux: `curl -fsSL https://ollama.com/install.sh | sh`\n- Windows: download from ollama.com\n\nThen pull a small, fast model:\n\n```bash\nollama pull llama3.2:3b\n```\n\nThis downloads a ~2GB model. It runs well even on a laptop without a GPU. Once it finishes, test it:\n\n```bash\nollama run llama3.2:3b \"What is the capital of Japan?\"\n```\n\nYou should get an answer in a few seconds. That response was generated entirely on your machine — nothing left your laptop.",
+              "code": "# Install\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Pull a small model (~2GB)\nollama pull llama3.2:3b\n\n# Test it\nollama run llama3.2:3b \"What is the capital of Japan?\"",
+              "checkpoint": "Running `ollama list` shows llama3.2:3b and `ollama run llama3.2:3b` answers a question."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Building the Journal Prompt",
+          "lessons": [
+            {
+              "title": "Design a system prompt for journaling",
+              "duration": "10 min",
+              "content": "A system prompt shapes how the model behaves for every message in a conversation. For journaling, we want the model to:\n\n1. Ask reflective questions instead of giving generic advice\n2. Keep responses short (journaling should be *your* writing)\n3. Summarize patterns it notices across the session\n\nHere's a starting prompt — save it to a file called `journal-prompt.txt`:\n\nThe key insight: **a well-designed prompt turns a generic model into a specialized tool.** This is the same skill you'll use to build AI features in Sublime — the model is the engine, but the prompt is the product.",
+              "code": "You are a reflective journaling partner. Rules:\n- Ask ONE thoughtful follow-up question after each entry.\n- Never give advice unless explicitly asked.\n- Keep responses under 3 sentences.\n- At the end of a session, when I say \"summarize\", list the 3 main themes from today's entries.\n\nStart by asking what's on my mind today.",
+              "checkpoint": "You have a file `journal-prompt.txt` with a system prompt you've customized to your style."
+            },
+            {
+              "title": "Run a journal session with Modelfile",
+              "duration": "15 min",
+              "content": "Ollama uses `Modelfile` to bundle a system prompt with a model so you can launch it with one command. Create a file called `Modelfile` (no extension):\n\n```\nFROM llama3.2:3b\nSYSTEM \"\"\"<paste your journal-prompt.txt content here>\"\"\"\nPARAMETER temperature 0.7\n```\n\nThen create your custom model:\n\n```bash\nollama create my-journal -f Modelfile\nollama run my-journal\n```\n\nYou're now in a live journal session. Write freely. When you're done, type `summarize` and the model will pull out your recurring themes.\n\n**Experiment:** try changing `temperature` to 0.3 (more focused, predictable) or 0.9 (more creative, surprising) and notice the difference.",
+              "code": "# Create the Modelfile\ncat > Modelfile << 'EOF'\nFROM llama3.2:3b\nSYSTEM \"\"\"You are a reflective journaling partner. Rules:\n- Ask ONE thoughtful follow-up question after each entry.\n- Never give advice unless explicitly asked.\n- Keep responses under 3 sentences.\n- When I say 'summarize', list the 3 main themes from today's entries.\nStart by asking what's on my mind today.\"\"\"\nPARAMETER temperature 0.7\nEOF\n\n# Build and run\nollama create my-journal -f Modelfile\nollama run my-journal",
+              "checkpoint": "Running `ollama run my-journal` starts a journaling conversation that asks you a reflective question."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Making It a Habit",
+          "lessons": [
+            {
+              "title": "One-command launcher and daily alias",
+              "duration": "8 min",
+              "content": "The difference between a tool you built and a tool you use is friction. Let's make it zero-friction.\n\nAdd this to your `~/.bashrc` or `~/.zshrc`:\n\n```bash\nalias journal='ollama run my-journal'\n```\n\nReload your shell (`source ~/.zshrc`) and now typing `journal` drops you straight into a private AI journaling session.\n\n**Optional:** pipe today's date as the first message so the model knows context:\n\n```bash\nalias journal='echo \"Today is $(date +\"%A, %B %d %Y\"). Let\\'s begin.\" | ollama run my-journal'\n```",
+              "code": "# Add to ~/.zshrc or ~/.bashrc\nalias journal='ollama run my-journal'\n\n# Reload\nsource ~/.zshrc\n\n# Now just type:\njournal",
+              "checkpoint": "Typing `journal` in a new terminal window starts your AI journaling session."
+            },
+            {
+              "title": "Connecting back: what this means for Sublime",
+              "duration": "8 min",
+              "content": "You just built a personalized AI tool in under two hours with zero cost and zero accounts. Here's what that teaches you about building Sublime:\n\n1. **Prompt = Product.** The model was generic; your system prompt made it a journaling tool. Every AI feature in Sublime is really a prompt design problem.\n\n2. **Local-first is viable.** For features where privacy matters or margins are tight, an open model running on the user's hardware (or a cheap server) can replace API calls entirely.\n\n3. **The cost spectrum.** You now have hands-on intuition for where local models sit vs. cloud APIs — small tasks with good prompts work great locally; complex reasoning still needs frontier models. Designing features around this trade-off is a real competitive advantage.\n\n**Next step:** think about one feature in Sublime where a local/open model would be good enough. Write down what the system prompt would look like.",
+              "code": "",
+              "checkpoint": "You've written down one Sublime feature idea that could run on a local open model, with a draft system prompt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompt-library-for-work",
+      "title": "Build a Personal Prompt Library",
+      "tagline": "Steal California's playbook: systematize AI prompts for your most repetitive tasks.",
+      "inspiredBy": "California partners with Anthropic to give Claude to every state agency",
+      "difficulty": "Beginner",
+      "timeEstimate": "~1 hour",
+      "skills": ["prompt engineering", "workflow automation", "markdown"],
+      "outcome": "A structured markdown file of reusable, tested prompts for your top 5 recurring tasks.",
+      "stretchGoals": ["Add a 'prompt score' for each (rate how well it works 1-5 after each use)", "Create a Claude Project with your top prompts as instructions"],
+      "modules": [
+        {
+          "title": "Module 1: Identifying Your Repetitive Tasks",
+          "lessons": [
+            {
+              "title": "The California lesson: standardize before you scale",
+              "duration": "8 min",
+              "content": "This week, California announced a state-wide partnership with Anthropic — giving Claude to every agency, city and county. But the real story isn't the tool, it's the method: they're pairing it with **standardized training and prompt templates** so thousands of workers get consistent results.\n\nYou're one person, but the same principle applies. Most of us use AI ad-hoc: open a chat, type something vaguely, get a vaguely useful answer. A prompt library flips that — you invest 5 minutes writing a great prompt once, then reuse it every time.\n\n**The ROI math:** if a prompt saves you 10 minutes on a task you do 3x per week, that's 26 hours per year from one prompt.",
+              "code": "",
+              "checkpoint": "You understand the difference between ad-hoc prompting and a reusable prompt library."
+            },
+            {
+              "title": "Audit your week for repeat tasks",
+              "duration": "10 min",
+              "content": "Open a blank note and spend 10 minutes listing tasks from your last week that:\n\n- You've done more than twice\n- Involve writing, summarizing, analyzing, or formatting\n- Feel tedious but don't require deep creative thought\n\nExamples:\n- Summarizing meeting notes into action items\n- Writing follow-up emails after calls\n- Turning rough ideas into structured outlines\n- Reviewing a document for tone and clarity\n- Drafting social media posts from a longer piece\n\nPick your **top 5**. These are the tasks worth building prompts for. Rank them by frequency × tedium.",
+              "code": "",
+              "checkpoint": "You have a ranked list of 5 repetitive tasks that AI could help with."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Writing Reusable Prompts",
+          "lessons": [
+            {
+              "title": "The anatomy of a reusable prompt",
+              "duration": "12 min",
+              "content": "A reusable prompt has four parts:\n\n1. **Role** — who is the AI acting as? (\"You are a concise technical editor.\")\n2. **Task** — what specifically to do (\"Rewrite the following for clarity...\")\n3. **Constraints** — rules and format (\"Max 3 bullet points. No jargon.\")\n4. **Placeholder** — where your input goes (\"Text to edit: {{INPUT}}\")\n\nHere's a real example for summarizing meeting notes:\n\n```\nYou are a project manager's assistant.\n\nSummarize these meeting notes into:\n1. Three key decisions made\n2. Action items with owners (format: \"- [ ] Task — @Owner\")\n3. One unresolved question to follow up on\n\nKeep the total under 150 words. Use plain language.\n\nMeeting notes:\n{{PASTE NOTES HERE}}\n```\n\nNotice: no fluff, very specific output format, clear constraints. **Test it** — paste real notes in and see if the output matches what you'd write by hand. Tweak until it does.",
+              "code": "# Template: Meeting Notes → Action Items\n\nYou are a project manager's assistant.\n\nSummarize these meeting notes into:\n1. Three key decisions made\n2. Action items with owners (format: \"- [ ] Task — @Owner\")\n3. One unresolved question to follow up on\n\nKeep the total under 150 words. Use plain language.\n\nMeeting notes:\n{{PASTE NOTES HERE}}",
+              "checkpoint": "You've written and tested one reusable prompt that produces consistent results."
+            },
+            {
+              "title": "Build prompts for all five tasks",
+              "duration": "20 min",
+              "content": "Now create a markdown file called `prompts.md` and write one prompt section for each of your 5 tasks. Use this structure for each:\n\n```markdown\n## Task: [Name]\n**When to use:** [one line]\n**Time saved:** ~[X] min per use\n\n### Prompt\n[Your prompt with {{PLACEHOLDER}} for input]\n\n### Example output\n[Paste one real result so future-you remembers what good looks like]\n\n---\n```\n\n**Tips:**\n- Be embarrassingly specific in constraints. \"Write casually\" → \"Write like a smart friend texting, not a LinkedIn post.\"\n- Include output format: bullet points, numbered list, table, JSON — the model follows formatting instructions well.\n- Test each prompt with real input before saving it. Adjust until the output is copy-paste-ready at least 80% of the time.",
+              "code": "",
+              "checkpoint": "You have a `prompts.md` file with 5 tested, reusable prompt sections."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Using It Daily",
+          "lessons": [
+            {
+              "title": "Make it frictionless to access",
+              "duration": "8 min",
+              "content": "A prompt library only works if it's faster to open than to retype from memory. Options:\n\n- **Simplest:** Pin `prompts.md` in your file manager or bookmark it in your notes app.\n- **Better:** Create a Claude Project and paste your top prompts into the Project Instructions. Every new conversation in that project automatically uses them.\n- **Power move:** Use a text expander (like Raycast snippets on Mac, or Espanso on any OS — both free). Type `;meeting` and it expands to your full meeting-notes prompt.\n\nPick one method and set it up now. The goal: going from \"I need to summarize these notes\" to having the prompt ready should take under 5 seconds.",
+              "code": "",
+              "checkpoint": "You can access any of your 5 prompts in under 5 seconds using your chosen method."
+            },
+            {
+              "title": "Connecting back: prompts as a product skill",
+              "duration": "5 min",
+              "content": "You just built what California is spending millions to roll out: a structured prompt library that turns AI from a novelty into a reliable tool.\n\nFor Sublime, this skill translates directly:\n\n1. **Every AI feature is a prompt.** When you build AI into Sublime, the prompts you write for users ARE the product experience. You just practiced the craft.\n\n2. **Prompt templates = product templates.** If Sublime helps users with repetitive tasks, shipping pre-built prompt templates (like your `prompts.md`) is a feature users will pay for.\n\n3. **Iteration matters.** You noticed that first-draft prompts rarely work perfectly. Build that iteration loop into Sublime's product process — user feedback on AI output quality is gold.\n\n**Next step:** look at your 5 prompts and ask: could any of these be a feature inside Sublime?",
+              "code": "",
+              "checkpoint": "You've identified at least one prompt that could become a Sublime feature."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "model-comparison-scorecard",
+      "title": "Build an AI Model Comparison Scorecard",
+      "tagline": "Sonnet 5, GPT-5.6, open models — test them yourself instead of trusting benchmarks.",
+      "inspiredBy": "Anthropic launches Claude Sonnet 5 — now the default for every Free and Pro user",
+      "difficulty": "Intermediate",
+      "timeEstimate": "~2 hours",
+      "skills": ["model evaluation", "Python", "JSON", "critical thinking"],
+      "outcome": "A Python script and spreadsheet that benchmarks 3+ models on tasks relevant to YOUR work, not generic leaderboards.",
+      "stretchGoals": ["Add automated scoring with a judge model", "Publish your scorecard as a blog post"],
+      "modules": [
+        {
+          "title": "Module 1: Why Generic Benchmarks Lie to You",
+          "lessons": [
+            {
+              "title": "Leaderboards vs. your actual tasks",
+              "duration": "8 min",
+              "content": "This week, Sonnet 5 launched claiming to be \"close to Opus 4.8 on many tasks\" and GPT-5.5 Instant reported a 52.5% hallucination reduction. Those are aggregate numbers across thousands of test cases.\n\nThe problem: **your tasks aren't average.** A model that ranks #1 on coding benchmarks might be mediocre at the specific kind of email drafting you do daily. The only benchmark that matters is one built from your real work.\n\nIn this project, you'll build a personal evaluation harness — a set of test prompts drawn from your actual tasks, with criteria you define, scored across multiple models. It takes ~2 hours but gives you decision-making power that no leaderboard post can.\n\n**This is a startup founder superpower:** knowing which model to use for which task, based on evidence rather than hype.",
+              "code": "",
+              "checkpoint": "You can explain why a model that tops a public leaderboard might underperform on your specific use case."
+            },
+            {
+              "title": "Design your test suite",
+              "duration": "15 min",
+              "content": "Create a file called `eval_prompts.json`. It holds 5-8 test cases — real prompts from your work, each with criteria for what a good answer looks like.\n\nStructure:\n\n```json\n[\n  {\n    \"id\": \"summarize-email\",\n    \"prompt\": \"Summarize this email thread into 3 bullet points...\\n\\n[paste a real email]\",\n    \"criteria\": \"Captures all action items; under 80 words; no hallucinated details\",\n    \"category\": \"summarization\"\n  }\n]\n```\n\nGood test cases to include:\n- A summarization task (email, article, meeting notes)\n- A writing task (draft a message in your voice)\n- A reasoning task (analyze a tradeoff, debug a problem)\n- A formatting task (turn messy text into structured output)\n- A knowledge task (something you can fact-check)\n\nUse **real data from your work** — that's the whole point.",
+              "code": "[\n  {\n    \"id\": \"summarize-email\",\n    \"prompt\": \"Summarize this email into 3 bullet points: ...\",\n    \"criteria\": \"Captures action items; under 80 words; no hallucinations\",\n    \"category\": \"summarization\"\n  },\n  {\n    \"id\": \"draft-followup\",\n    \"prompt\": \"Draft a follow-up email after a sales call where...\",\n    \"criteria\": \"Professional but warm; includes next steps; under 150 words\",\n    \"category\": \"writing\"\n  },\n  {\n    \"id\": \"debug-logic\",\n    \"prompt\": \"This function returns wrong results when input is empty: ...\",\n    \"criteria\": \"Identifies the root cause; fix is correct; explanation is clear\",\n    \"category\": \"reasoning\"\n  }\n]",
+              "checkpoint": "You have `eval_prompts.json` with at least 5 test cases using real data from your work."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Running the Evaluation",
+          "lessons": [
+            {
+              "title": "Build the eval runner script",
+              "duration": "20 min",
+              "content": "We'll write a Python script that sends each test prompt to multiple models and saves the results. It uses free tiers only:\n\n- **Claude Sonnet 5** via claude.ai (free tier — copy-paste)\n- **ChatGPT** via chatgpt.com (free tier — copy-paste)\n- **Local model** via Ollama (if you did Project 1)\n\nFor the local model, we can automate it. For cloud models on free tiers, the script generates the prompts and you paste the responses back. The script then collates everything into a scorecard.\n\nCreate `eval_runner.py`:\n\nThe script reads your test cases, optionally hits a local Ollama model, and writes a `results.json` file with all responses organized for scoring.",
+              "code": "import json, subprocess, sys\nfrom datetime import datetime\n\ndef load_prompts(path=\"eval_prompts.json\"):\n    with open(path) as f:\n        return json.load(f)\n\ndef run_ollama(prompt, model=\"llama3.2:3b\"):\n    try:\n        r = subprocess.run(\n            [\"ollama\", \"run\", model, prompt],\n            capture_output=True, text=True, timeout=120\n        )\n        return r.stdout.strip()\n    except Exception as e:\n        return f\"[error: {e}]\"\n\ndef main():\n    prompts = load_prompts()\n    results = []\n    for p in prompts:\n        entry = {\"id\": p[\"id\"], \"category\": p[\"category\"],\n                 \"criteria\": p[\"criteria\"], \"responses\": {}}\n        # Auto-run local model\n        print(f\"Running local model on: {p['id']}\")\n        entry[\"responses\"][\"llama3.2:3b\"] = run_ollama(p[\"prompt\"])\n        # Placeholder for cloud models (manual paste)\n        entry[\"responses\"][\"sonnet-5\"] = \"<paste from claude.ai>\"\n        entry[\"responses\"][\"gpt-free\"] = \"<paste from chatgpt.com>\"\n        results.append(entry)\n    \n    output = {\"date\": datetime.now().isoformat(), \"results\": results}\n    with open(\"results.json\", \"w\") as f:\n        json.dump(output, f, indent=2)\n    print(f\"Saved {len(results)} results to results.json\")\n    print(\"Now paste cloud model responses into results.json\")\n\nif __name__ == \"__main__\":\n    main()",
+              "checkpoint": "Running `python eval_runner.py` produces a `results.json` with local model responses filled in."
+            },
+            {
+              "title": "Score and compare",
+              "duration": "15 min",
+              "content": "Open `results.json` and paste the cloud model responses (run each prompt in claude.ai and chatgpt.com free tier). Then score each response 1-5 on the criteria you defined.\n\nAdd a `scores` field to each entry:\n\n```json\n\"scores\": {\n  \"llama3.2:3b\": {\"score\": 3, \"notes\": \"Got the gist but missed one action item\"},\n  \"sonnet-5\": {\"score\": 5, \"notes\": \"Perfect, nailed the format\"},\n  \"gpt-free\": {\"score\": 4, \"notes\": \"Good but slightly verbose\"}\n}\n```\n\nThen generate your scorecard — a simple markdown table:\n\n| Task | Local (3B) | Sonnet 5 | GPT Free |\n|------|-----------|----------|----------|\n| Summarize email | 3 | 5 | 4 |\n| Draft followup | 2 | 5 | 4 |\n| ... | ... | ... | ... |\n| **Average** | **2.6** | **4.8** | **4.0** |\n\nYou now have data, not opinions. You know exactly which model to use for which task in YOUR workflow.",
+              "code": "",
+              "checkpoint": "You have a completed scorecard table showing how 3+ models perform on your specific tasks."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Insights and Sublime Applications",
+          "lessons": [
+            {
+              "title": "Read the scorecard like a founder",
+              "duration": "10 min",
+              "content": "Look at your scorecard and answer these questions:\n\n1. **Is there a clear winner?** Often there isn't — different models win on different task types. That's the insight.\n\n2. **Where does the local model surprise you?** If it scores 4+ on any task, that's a feature you could run at near-zero cost.\n\n3. **What's the quality gap between free and paid tiers?** This tells you your \"cost of quality\" — how much it's worth to use a paid API vs. free.\n\n4. **Which tasks have the widest score spread?** Those are where model selection matters most — and where Sublime could differentiate by routing to the right model.\n\nWrite down your top 3 findings. These are now data-backed beliefs about the AI landscape — much more valuable than reading someone else's benchmark blog.",
+              "code": "",
+              "checkpoint": "You've written 3 data-backed findings about model strengths/weaknesses for your specific use cases."
+            },
+            {
+              "title": "Connecting back: model routing as a Sublime feature",
+              "duration": "8 min",
+              "content": "You just built what AI companies charge enterprise customers thousands for: a custom evaluation framework.\n\nFor Sublime:\n\n1. **Model routing is a product feature.** Your scorecard showed that no single model wins everything. A product that automatically routes tasks to the best model (cheap local model for simple tasks, frontier model for complex ones) saves money and improves quality.\n\n2. **Evaluation is ongoing.** New models drop every few weeks (Sonnet 5 and GPT-5.6 both landed this week). Your eval script lets you benchmark a new model in 30 minutes instead of guessing.\n\n3. **Your test suite is your moat.** The prompts in `eval_prompts.json` encode YOUR domain knowledge. A competitor using generic benchmarks will make worse model choices than you.\n\n**Next step:** rerun this evaluation whenever a major model launches. Your script makes it a 30-minute task instead of a day-long exercise.",
+              "code": "",
+              "checkpoint": "You've identified whether model routing could be a feature in Sublime and which tasks would benefit most."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiny-agent-with-smolagents",
+      "title": "Build a Tiny AI Agent That Searches and Summarizes",
+      "tagline": "Code-first agents in ~50 lines — no framework bloat, just Python.",
+      "inspiredBy": "Code-first agents go mainstream: Hugging Face's smolagents fits in ~1,000 lines",
+      "difficulty": "Intermediate",
+      "timeEstimate": "~2.5 hours",
+      "skills": ["Python", "AI agents", "tool use", "web scraping"],
+      "outcome": "A working agent that takes a question, searches the web, reads the results, and writes a concise answer — all in under 100 lines of Python.",
+      "stretchGoals": ["Add a file-writing tool so the agent saves reports to disk", "Give the agent a calculator tool for numerical questions"],
+      "modules": [
+        {
+          "title": "Module 1: What Agents Actually Are",
+          "lessons": [
+            {
+              "title": "Demystifying 'AI agents'",
+              "duration": "8 min",
+              "content": "\"AI agents\" is 2026's most overhyped buzzword, but the core idea is simple:\n\n**An agent is a loop:** the model receives a task → decides which tool to use → reads the tool's output → decides the next step → repeats until done.\n\nThat's it. The \"intelligence\" is the model's ability to pick the right tool and interpret results. The \"agent framework\" is just the loop that runs this.\n\nThis week's news: Hugging Face's `smolagents` proved you don't need a 10,000-line framework — the core routing logic fits in ~1,000 lines. We'll go even simpler: our agent will be under 100 lines, using only Python's standard library plus one model call.\n\n**Why this matters:** if you understand the loop, you can build agents without depending on any framework. Frameworks change; the pattern doesn't.",
+              "code": "",
+              "checkpoint": "You can describe the agent loop (task → tool selection → execution → observation → repeat) in your own words."
+            },
+            {
+              "title": "Set up the project",
+              "duration": "10 min",
+              "content": "Create a new directory and set up a minimal Python project:\n\n```bash\nmkdir tiny-agent && cd tiny-agent\n```\n\nWe need:\n- Python 3.10+ (pre-installed on most systems)\n- An Ollama model running locally (from Project 1), OR access to a free AI chat\n\nIf you have Ollama running:\n```bash\nollama pull llama3.2:3b\n```\n\nWe'll build three files:\n1. `tools.py` — the tools the agent can use (web search, page reader)\n2. `agent.py` — the agent loop\n3. `run.py` — the entry point\n\nNo pip installs needed — we're using only the standard library.",
+              "code": "mkdir tiny-agent && cd tiny-agent\ntouch tools.py agent.py run.py",
+              "checkpoint": "You have a `tiny-agent` directory with three empty Python files."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Tools and the Agent Loop",
+          "lessons": [
+            {
+              "title": "Build the tools",
+              "duration": "20 min",
+              "content": "An agent's tools are just Python functions with descriptions the model can read. We'll build two:\n\n1. **`web_search(query)`** — uses DuckDuckGo's HTML (no API key needed) to get search snippets\n2. **`read_page(url)`** — fetches a URL and extracts the text\n\nEach tool returns a string the model will read as its \"observation.\" Keep outputs concise — models work better with focused input.\n\nThe key design rule: **tools should be pure functions with clear input/output.** The model picks which tool to call and what arguments to pass; the tool just does the work and returns text.",
+              "code": "# tools.py\nimport re\nimport urllib.request\nimport urllib.parse\n\ndef web_search(query):\n    \"\"\"Search the web and return top 5 result snippets.\"\"\"\n    url = \"https://html.duckduckgo.com/html/?q=\" + urllib.parse.quote(query)\n    req = urllib.request.Request(url, headers={\"User-Agent\": \"TinyAgent/1.0\"})\n    with urllib.request.urlopen(req, timeout=15) as resp:\n        html = resp.read().decode(\"utf-8\", \"replace\")\n    results = re.findall(\n        r'class=\"result__a\"[^>]*href=\"(.*?)\".*?class=\"result__snippet\">(.*?)</a>',\n        html, re.DOTALL\n    )\n    lines = []\n    for url_encoded, snippet in results[:5]:\n        text = re.sub(r'<.*?>', '', snippet).strip()\n        lines.append(f\"- {text}\")\n    return \"\\n\".join(lines) if lines else \"No results found.\"\n\ndef read_page(url):\n    \"\"\"Fetch a URL and return first 1500 chars of text.\"\"\"\n    req = urllib.request.Request(url, headers={\"User-Agent\": \"TinyAgent/1.0\"})\n    with urllib.request.urlopen(req, timeout=15) as resp:\n        html = resp.read().decode(\"utf-8\", \"replace\")\n    text = re.sub(r'<script.*?</script>', '', html, flags=re.DOTALL)\n    text = re.sub(r'<style.*?</style>', '', text, flags=re.DOTALL)\n    text = re.sub(r'<.*?>', ' ', text)\n    text = re.sub(r'\\s+', ' ', text).strip()\n    return text[:1500]\n\nTOOLS = {\n    \"web_search\": {\n        \"fn\": web_search,\n        \"desc\": \"Search the web. Input: a search query string.\"\n    },\n    \"read_page\": {\n        \"fn\": read_page,\n        \"desc\": \"Read a web page. Input: a URL.\"\n    }\n}",
+              "checkpoint": "Running `python -c \"from tools import web_search; print(web_search('python programming'))\"` returns search snippets."
+            },
+            {
+              "title": "Build the agent loop",
+              "duration": "25 min",
+              "content": "The agent loop has four steps:\n\n1. **System prompt** tells the model it has tools and how to call them\n2. **User message** with the question\n3. **Parse** the model's response for tool calls (we use a simple `ACTION: tool_name(input)` format)\n4. **Execute** the tool, append the result as an observation, and loop back\n\nThe loop stops when the model outputs `FINAL ANSWER:` instead of an action.\n\nThis is the entire agent — no magic, no framework. The model's reasoning ability drives the loop; our code just connects the pieces.",
+              "code": "# agent.py\nimport subprocess, re, json\nfrom tools import TOOLS\n\nSYSTEM = \"\"\"You are a research assistant with these tools:\n{tool_list}\n\nTo use a tool, write EXACTLY: ACTION: tool_name(\"input\")\nThen wait for OBSERVATION.\nWhen you have enough information, write: FINAL ANSWER: your concise answer.\n\nAlways search before answering. Use 1-3 tool calls max.\"\"\"\n\ndef make_system_prompt():\n    tool_list = \"\\n\".join(f\"- {name}: {t['desc']}\" for name, t in TOOLS.items())\n    return SYSTEM.format(tool_list=tool_list)\n\ndef call_model(messages, model=\"llama3.2:3b\"):\n    prompt = \"\\n\".join(f\"{m['role']}: {m['content']}\" for m in messages)\n    r = subprocess.run(\n        [\"ollama\", \"run\", model, prompt],\n        capture_output=True, text=True, timeout=120\n    )\n    return r.stdout.strip()\n\ndef run_agent(question, max_steps=4):\n    messages = [\n        {\"role\": \"system\", \"content\": make_system_prompt()},\n        {\"role\": \"user\", \"content\": question}\n    ]\n    for step in range(max_steps):\n        reply = call_model(messages)\n        print(f\"\\n--- Step {step+1} ---\\n{reply}\")\n        \n        if \"FINAL ANSWER:\" in reply:\n            return reply.split(\"FINAL ANSWER:\", 1)[1].strip()\n        \n        match = re.search(r'ACTION:\\s*(\\w+)\\(\"(.+?)\"\\)', reply)\n        if not match:\n            return reply  # model didn't follow format, return raw\n        \n        tool_name, tool_input = match.group(1), match.group(2)\n        if tool_name in TOOLS:\n            result = TOOLS[tool_name][\"fn\"](tool_input)\n            messages.append({\"role\": \"assistant\", \"content\": reply})\n            messages.append({\"role\": \"user\", \"content\": f\"OBSERVATION: {result}\"})\n        else:\n            messages.append({\"role\": \"user\", \"content\": f\"OBSERVATION: Unknown tool '{tool_name}'\"})\n    \n    return \"Agent reached max steps without a final answer.\"",
+              "checkpoint": "You can read through `agent.py` and explain what happens at each step of the loop."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Run It and Learn From It",
+          "lessons": [
+            {
+              "title": "Test your agent",
+              "duration": "10 min",
+              "content": "Create the entry point and run it:\n\n```python\n# run.py\nfrom agent import run_agent\nimport sys\n\nquestion = \" \".join(sys.argv[1:]) or \"What is the latest AI news today?\"\nprint(f\"\\nQuestion: {question}\\n\")\nanswer = run_agent(question)\nprint(f\"\\n=== ANSWER ===\\n{answer}\")\n```\n\nRun it:\n```bash\npython run.py \"What did Anthropic announce this week?\"\n```\n\nWatch the steps print out — you'll see the model decide to search, read the results, and formulate an answer. It won't be perfect (a 3B model has limits), but it works.\n\n**Experiment:** Try questions that need 2+ tool calls, like \"Compare the price of Claude Sonnet 5 vs GPT-5.6.\" Watch how the agent chains searches.",
+              "code": "# run.py\nfrom agent import run_agent\nimport sys\n\nquestion = \" \".join(sys.argv[1:]) or \"What is the latest AI news today?\"\nprint(f\"\\nQuestion: {question}\\n\")\nanswer = run_agent(question)\nprint(f\"\\n=== ANSWER ===\\n{answer}\")",
+              "checkpoint": "Running `python run.py 'your question'` produces a multi-step agent trace ending in a coherent answer."
+            },
+            {
+              "title": "Connecting back: agents as Sublime features",
+              "duration": "8 min",
+              "content": "You just built a working AI agent in under 100 lines. Here's what this means for Sublime:\n\n1. **Agents are just loops + tools.** You don't need LangChain, CrewAI, or any framework to ship agentic features. A founder who understands the pattern can build exactly what's needed.\n\n2. **The tools are the product.** The model's reasoning ability is rented (via API or local model). What makes YOUR agent valuable is the specific tools you give it. For Sublime, the tools would connect to your users' data and workflows.\n\n3. **Small models can drive simple agents.** A 3B model successfully picked tools and chained actions. For Sublime features with well-defined tool sets, you don't always need a frontier model — which means lower cost per user.\n\n4. **The failure modes are instructive.** Where did your agent stumble? Those failure modes (wrong tool choice, bad parsing, hallucinated actions) are the same ones you'll need to handle in production. You've now seen them firsthand.\n\n**Next step:** think about one Sublime workflow that could be an agent — what tools would it need?",
+              "code": "",
+              "checkpoint": "You've listed one potential Sublime workflow as an agent, with the specific tools it would need."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sublime AI Signal — a self-updating daily briefing of the top 10 AI news, everyday ideas, and hands-on mini-projects." />
+  <title>SUBLIME // AI SIGNAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2304060d'/><circle cx='50' cy='50' r='28' fill='none' stroke='%235eead4' stroke-width='6'/><circle cx='50' cy='50' r='8' fill='%23a78bfa'/></svg>" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>SUBLIME <span class="brand-sep">//</span> AI SIGNAL</h1>
+    </div>
+    <div class="header-status">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span id="status-line" class="mono">CALIBRATING…</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-view="signal" role="tab" aria-selected="true">◉ TODAY'S SIGNAL</button>
+    <button class="tab" data-view="lab" role="tab" aria-selected="false">▲ BUILD LAB</button>
+  </nav>
+
+  <main id="main">
+    <!-- Top 10 news view -->
+    <section id="view-signal" class="view active">
+      <div class="view-intro">
+        <p class="kicker mono">TOP 10 · AUTO-CURATED FROM BLOGS, SOCIAL, VIDEO &amp; RESEARCH</p>
+        <p class="sub" id="signal-sub"></p>
+      </div>
+      <ol id="news-list" class="news-list" aria-live="polite"></ol>
+    </section>
+
+    <!-- Projects view -->
+    <section id="view-lab" class="view">
+      <div class="view-intro">
+        <p class="kicker mono">MINI-PROJECTS · 1–4 HOURS EACH · BUILT FROM THE SIGNAL</p>
+        <p class="sub" id="lab-sub"></p>
+      </div>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+
+    <!-- Course walkthrough view -->
+    <section id="view-course" class="view">
+      <button id="course-back" class="back-btn mono">← BACK TO BUILD LAB</button>
+      <div class="course-layout">
+        <aside id="course-nav" class="course-nav"></aside>
+        <article id="course-content" class="course-content"></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer mono">
+    <span>AUTO-UPDATES DAILY VIA GITHUB ACTIONS · SUMMARIES BY FREE GITHUB MODELS API</span>
+    <span id="footer-model"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

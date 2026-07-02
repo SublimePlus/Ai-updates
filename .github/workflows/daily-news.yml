@@ -1,0 +1,36 @@
+name: Daily AI News Update
+
+on:
+  schedule:
+    # Every day at 08:00 UTC
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and summarize news
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_MODELS_MODEL: "openai/gpt-4o-mini"
+        run: python scripts/update_news.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/news.json
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "signal: update daily AI news digest"
+          git push
