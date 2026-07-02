@@ -77,57 +77,139 @@ BIG_NEWS_PATTERN = re.compile(
 )
 
 SECTION_FINANCE = re.compile(
-    r"\b(fund\w*|invest\w*|revenue|valuation|ipo|series\s+[a-d]|billion|million\s+dollar|"
-    r"acqui\w+|market\s+cap|stock|profit|rais\w+\s+\$|venture|startup\s+fund|economy)\b",
+    r"\b(fund\w*|invest\w*|revenue|valuation|ipo|series\s+[a-d]|billion|million|"
+    r"acqui\w+|market|stock|profit|rais\w+|venture|startup|economy|business|"
+    r"partner\w*|deal|price|pricing|cost|monetiz|commercial|enterprise|licens\w+|"
+    r"regulat\w+|policy|govern\w*|legal|lawsuit|copyright|patent|antitrust|"
+    r"compet\w+|dominan\w+|monopol\w+)\b",
     re.IGNORECASE,
 )
 SECTION_TOOLS = re.compile(
-    r"\b(open[- ]?source|framework|library|sdk|cli\b|ollama|local\w*\s+(?:model|llm|ai)|"
-    r"self[- ]?host|install|download|package|pip\s+install|npm|weights?|gguf|onnx)\b",
+    r"\b(open[- ]?source|framework|library|sdk|cli\b|ollama|local\w*|"
+    r"self[- ]?host|install|download|package|pip|npm|weights?|gguf|onnx|"
+    r"model\s+release|new\s+model|launch\w*\s+model|deploy\w*|"
+    r"fine[- ]?tun\w*|quantiz\w*|inference|runtime|docker|github|"
+    r"hugging\s?face|llama|mistral|qwen|deepseek|gemma|phi[- ]?\d)\b",
     re.IGNORECASE,
 )
 SECTION_WEB = re.compile(
-    r"\b(api\b|saas|plugin|extension|chrome|browser|web\s+(?:app|service)|cloud|"
-    r"platform|subscription|integration|copilot|chatbot|assistant)\b",
+    r"\b(api\b|saas|plugin|extension|chrome|browser|web|cloud|"
+    r"platform|subscription|integration|copilot|chatbot|assistant|"
+    r"app\b|product|feature|update|service|tool|bot|"
+    r"search|gmail|google|microsoft|apple|amazon|meta|"
+    r"mobile|ios|android|desktop|interface|user\s+experience)\b",
     re.IGNORECASE,
 )
 SECTION_RESEARCH = re.compile(
-    r"\b(paper|arxiv|benchmark|dataset|training\s+(?:data|run)|novel\s+(?:approach|method)|"
-    r"state[- ]of[- ]the[- ]art|sota|peer[- ]review|methodology|ablation)\b",
+    r"\b(paper|arxiv|benchmark|dataset|training|novel|"
+    r"state[- ]of[- ]the[- ]art|sota|methodology|ablation|"
+    r"study|findings|experiment|evaluat\w+|performance|"
+    r"accuracy|parameter|architecur\w*|attention|token|"
+    r"reasoning|safety|alignment|hallucin\w+|bias)\b",
+    re.IGNORECASE,
+)
+SECTION_TECHNOLOGY = re.compile(
+    r"\b(robot\w*|chip|hardware|gpu|nvidia|amd|intel|semiconductor|"
+    r"autonomous|self[- ]?driv\w+|vehicle|drone|sensor|iot|"
+    r"health\w*|medic\w*|biotech|genome|brain|neuro\w*|"
+    r"energy|quantum|space|manufactur\w*|engineer\w*|"
+    r"compute|datacenter|data\s+center|infrastruc\w+|5g|network)\b",
     re.IGNORECASE,
 )
 
 SOURCE_SECTION_MAP = {
     "arXiv": "research",
     "Hugging Face Blog": "tools",
+    "Simon Willison": "tools",
+    "Towards Data Science": "research",
+    "Bloomberg Tech": "finance",
+    "The Information": "finance",
+    "Wired AI": "technology",
+    "Ars Technica AI": "technology",
 }
+
+SUBREDDIT_SECTION_MAP = {
+    "r/LocalLLaMA": "tools",
+    "r/StableDiffusion": "tools",
+    "r/technology": "technology",
+    "r/ChatGPT": "web-services",
+}
+
+SECTIONS = ["ai-news", "technology", "finance", "tools", "web-services", "research"]
+ITEMS_PER_SECTION = 10
 
 
 def classify_section(item):
     source = item.get("source", "")
     if source in SOURCE_SECTION_MAP:
         return SOURCE_SECTION_MAP[source]
+    for prefix, section in SUBREDDIT_SECTION_MAP.items():
+        if source.startswith(prefix):
+            return section
     text = f"{item['title']} {item.get('desc', '')}"
     scores = [
         ("finance", len(SECTION_FINANCE.findall(text))),
         ("tools", len(SECTION_TOOLS.findall(text))),
         ("web-services", len(SECTION_WEB.findall(text))),
         ("research", len(SECTION_RESEARCH.findall(text))),
+        ("technology", len(SECTION_TECHNOLOGY.findall(text))),
     ]
     best = max(scores, key=lambda x: x[1])
-    if best[1] >= 2:
+    if best[1] >= 1:
         return best[0]
     cat = item.get("category", "")
     if cat == "research":
         return "research"
     if cat == "video":
-        return "ai-news"
-    if source.startswith("r/LocalLLaMA"):
-        return "tools"
+        return "web-services"
     tech_sources = {"MIT Tech Review AI", "The Verge AI", "VentureBeat AI", "TechCrunch AI"}
     if source in tech_sources:
         return "technology"
     return "ai-news"
+
+
+def distribute_sections(items):
+    """Ensure each section has ~ITEMS_PER_SECTION items by redistributing overflow."""
+    from collections import defaultdict
+    buckets = defaultdict(list)
+    for item in items:
+        buckets[item["section"]].append(item)
+
+    overflow = []
+    for section in SECTIONS:
+        bucket = buckets[section]
+        if len(bucket) > ITEMS_PER_SECTION:
+            overflow.extend(bucket[ITEMS_PER_SECTION:])
+            buckets[section] = bucket[:ITEMS_PER_SECTION]
+
+    for item in overflow:
+        text = f"{item['title']} {item.get('desc', '')}"
+        section_scores = [
+            ("finance", len(SECTION_FINANCE.findall(text))),
+            ("tools", len(SECTION_TOOLS.findall(text))),
+            ("web-services", len(SECTION_WEB.findall(text))),
+            ("research", len(SECTION_RESEARCH.findall(text))),
+            ("technology", len(SECTION_TECHNOLOGY.findall(text))),
+            ("ai-news", 0),
+        ]
+        section_scores.sort(key=lambda x: (-x[1], len(buckets[x[0]])))
+        placed = False
+        for section, _score in section_scores:
+            if len(buckets[section]) < ITEMS_PER_SECTION:
+                item["section"] = section
+                buckets[section].append(item)
+                placed = True
+                break
+        if not placed:
+            smallest = min(SECTIONS, key=lambda s: len(buckets[s]))
+            item["section"] = smallest
+            buckets[smallest].append(item)
+
+    result = []
+    for section in SECTIONS:
+        result.extend(buckets[section])
+    result.sort(key=lambda i: i.get("rank", 999))
+    return result
 
 
 def log(msg):
@@ -536,6 +618,7 @@ def main():
 
     for i in top:
         i["section"] = classify_section(i)
+    top = distribute_sections(top)
 
     output = {
         "updatedAt": now.isoformat(timespec="seconds"),
