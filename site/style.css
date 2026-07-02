@@ -549,6 +549,17 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
   font-size: 0.62rem; color: var(--faint); letter-spacing: 0.12em;
 }
 
+/* ------- toast ------- */
+.toast-msg {
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--panel-solid); border: 1px solid var(--line-strong);
+  color: var(--cyan); padding: 12px 24px; border-radius: var(--radius);
+  font-size: 0.68rem; letter-spacing: 0.14em;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+.toast-msg.visible { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+
 @media (max-width: 560px) {
   .news-card { grid-template-columns: 1fr; gap: 8px; }
   .news-rank { display: flex; align-items: baseline; gap: 8px; font-size: 1.2rem; }

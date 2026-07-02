@@ -456,10 +456,28 @@
   );
   $("#course-back").addEventListener("click", () => switchView("lab"));
 
+  function showToast(msg) {
+    let toast = $("#toast-msg");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "toast-msg";
+      toast.className = "toast-msg mono";
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.classList.add("visible");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => toast.classList.remove("visible"), 3000);
+  }
+
   async function manualRefresh(btn) {
+    const oldNews = JSON.stringify(state.news);
+    const oldProjects = JSON.stringify(state.projects);
     btn.classList.add("spinning");
     btn.disabled = true;
     await refresh();
+    const changed = JSON.stringify(state.news) !== oldNews || JSON.stringify(state.projects) !== oldProjects;
+    showToast(changed ? "NEW DATA LOADED ✓" : "DATA IS UP TO DATE — NO CHANGES YET");
     setTimeout(() => { btn.classList.remove("spinning"); btn.disabled = false; }, 600);
   }
 
