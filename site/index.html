@@ -35,8 +35,15 @@
     <!-- Top 10 news view -->
     <section id="view-signal" class="view active">
       <div class="view-intro">
-        <p class="kicker mono">TOP 10 · AUTO-CURATED FROM BLOGS, SOCIAL, VIDEO &amp; RESEARCH</p>
-        <p class="sub" id="signal-sub"></p>
+        <div class="view-intro-row">
+          <div>
+            <p class="kicker mono">TOP 10 · AUTO-CURATED FROM BLOGS, SOCIAL, VIDEO &amp; RESEARCH</p>
+            <p class="sub" id="signal-sub"></p>
+          </div>
+          <button class="action-btn" id="refresh-news" title="Refresh news data">
+            <span class="action-icon">↻</span> REFRESH
+          </button>
+        </div>
       </div>
       <ol id="news-list" class="news-list" aria-live="polite"></ol>
     </section>
@@ -44,8 +51,20 @@
     <!-- Projects view -->
     <section id="view-lab" class="view">
       <div class="view-intro">
-        <p class="kicker mono">MINI-PROJECTS · 1–4 HOURS EACH · BUILT FROM THE SIGNAL</p>
-        <p class="sub" id="lab-sub"></p>
+        <div class="view-intro-row">
+          <div>
+            <p class="kicker mono">MINI-PROJECTS · 1–4 HOURS EACH · BUILT FROM THE SIGNAL</p>
+            <p class="sub" id="lab-sub"></p>
+          </div>
+          <div class="action-group">
+            <button class="action-btn" id="refresh-projects" title="Refresh project data">
+              <span class="action-icon">↻</span> REFRESH
+            </button>
+            <a class="action-btn generate" href="https://github.com/sublimeplus/ai-updates/actions/workflows/generate-projects.yml" target="_blank" rel="noopener" title="Generate new projects from latest news via GitHub Actions">
+              <span class="action-icon">⚡</span> GENERATE NEW
+            </a>
+          </div>
+        </div>
       </div>
       <div id="project-grid" class="project-grid"></div>
     </section>

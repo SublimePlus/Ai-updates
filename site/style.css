@@ -140,6 +140,55 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
 
 .sub { color: var(--dim); font-size: 0.95rem; max-width: 70ch; }
 
+.view-intro-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 16px; flex-wrap: wrap;
+}
+
+.action-group { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.action-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  appearance: none; cursor: pointer; text-decoration: none;
+  background: rgba(94, 234, 212, 0.06);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  color: var(--cyan);
+  font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 9px 16px;
+  white-space: nowrap;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.action-btn:hover {
+  background: rgba(94, 234, 212, 0.14);
+  box-shadow: 0 0 20px rgba(94, 234, 212, 0.18);
+  transform: translateY(-1px);
+}
+
+.action-btn.generate {
+  color: var(--violet);
+  background: rgba(167, 139, 250, 0.06);
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+.action-btn.generate:hover {
+  background: rgba(167, 139, 250, 0.14);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.18);
+}
+
+.action-btn.spinning .action-icon {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.action-icon { display: inline-block; font-size: 0.9rem; }
+
 /* ------- news list ------- */
 .news-list { list-style: none; display: grid; gap: 18px; }
 
