@@ -2,6 +2,10 @@ name: Generate Learning Projects
 
 on:
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for regeneration (optional)"
+        required: false
 
 permissions:
   contents: write
