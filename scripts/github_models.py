@@ -84,31 +84,34 @@ def extract_json(text):
     Models sometimes wrap JSON in ``` fences or add prose around it.
     """
     text = re.sub(r"```(?:json)?", "", text)
-    for opener, closer in (("[", "]"), ("{", "}")):
-        start = text.find(opener)
-        if start == -1:
+    # parse from whichever bracket appears first, so an object wrapping an
+    # array isn't mistaken for the array itself
+    candidates = [
+        (text.find(o), o, c) for o, c in (("[", "]"), ("{", "}")) if o in text
+    ]
+    if not candidates:
+        raise ValueError("no JSON found in model reply")
+    start, opener, closer = min(candidates)
+    depth = 0
+    in_str = False
+    escape = False
+    for i in range(start, len(text)):
+        ch = text[i]
+        if escape:
+            escape = False
             continue
-        depth = 0
-        in_str = False
-        escape = False
-        for i in range(start, len(text)):
-            ch = text[i]
-            if escape:
-                escape = False
-                continue
-            if ch == "\\":
-                escape = True
-                continue
-            if ch == '"':
-                in_str = not in_str
-                continue
-            if in_str:
-                continue
-            if ch == opener:
-                depth += 1
-            elif ch == closer:
-                depth -= 1
-                if depth == 0:
-                    return json.loads(text[start : i + 1])
-        break
+        if ch == "\\":
+            escape = True
+            continue
+        if ch == '"':
+            in_str = not in_str
+            continue
+        if in_str:
+            continue
+        if ch == opener:
+            depth += 1
+        elif ch == closer:
+            depth -= 1
+            if depth == 0:
+                return json.loads(text[start : i + 1])
     raise ValueError("no JSON found in model reply")
