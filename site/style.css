@@ -560,6 +560,30 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
 }
 .toast-msg.visible { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
 
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1100;
+  background: rgba(4, 6, 13, 0.85); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay[hidden] { display: none; }
+.modal-box {
+  background: var(--panel-solid); border: 1px solid var(--line-strong);
+  border-radius: var(--radius); padding: 28px; max-width: 520px; width: 100%;
+  box-shadow: 0 0 60px rgba(94, 234, 212, 0.12);
+}
+.modal-box h3 { color: var(--cyan); font-size: 0.8rem; letter-spacing: 0.14em; margin: 0 0 12px; }
+.modal-box p { color: var(--dim); font-size: 0.85rem; line-height: 1.55; margin: 0 0 12px; }
+.modal-box ol { color: var(--dim); font-size: 0.82rem; line-height: 1.7; margin: 0 0 16px; padding-left: 20px; }
+.modal-box a { color: var(--cyan); }
+.modal-box strong { color: var(--text); }
+.modal-box input {
+  width: 100%; box-sizing: border-box; padding: 10px 12px; margin-bottom: 16px;
+  background: rgba(94, 234, 212, 0.04); border: 1px solid var(--line-strong);
+  border-radius: var(--radius); color: var(--text); font-size: 0.8rem;
+}
+.modal-box input:focus { outline: none; border-color: var(--cyan); }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
 @media (max-width: 560px) {
   .news-card { grid-template-columns: 1fr; gap: 8px; }
   .news-rank { display: flex; align-items: baseline; gap: 8px; font-size: 1.2rem; }
