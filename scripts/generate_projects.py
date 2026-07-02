@@ -109,6 +109,8 @@ def main():
                 temperature=0.7,
             )
             walkthrough = github_models.extract_json(reply)
+            if isinstance(walkthrough, list):
+                walkthrough = {"modules": walkthrough}
             modules = walkthrough.get("modules")
             if not modules:
                 raise ValueError("walkthrough has no modules")
