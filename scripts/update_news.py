@@ -30,7 +30,7 @@ OUT_PATH = os.path.join(ROOT, "site", "data", "news.json")
 
 USER_AGENT = "SublimeAISignal/1.0 (daily AI news digest; github.com/sublimeplus/ai-updates)"
 MAX_AGE_HOURS = 72
-TOP_N = 15
+TOP_N = 60
 
 # (name, url, category, weight)
 RSS_FEEDS = [
@@ -44,6 +44,11 @@ RSS_FEEDS = [
     ("VentureBeat AI", "https://venturebeat.com/category/ai/feed/", "news", 1.00),
     ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/", "news", 1.05),
     ("Simon Willison", "https://simonwillison.net/atom/everything/", "blog", 1.15),
+    ("Wired AI", "https://www.wired.com/feed/tag/ai/latest/rss", "news", 1.05),
+    ("Ars Technica AI", "https://feeds.arstechnica.com/arstechnica/technology-lab", "news", 1.00),
+    ("The Information", "https://www.theinformation.com/feed", "news", 1.10),
+    ("Bloomberg Tech", "https://feeds.bloomberg.com/technology/news.rss", "news", 0.95),
+    ("Towards Data Science", "https://towardsdatascience.com/feed", "blog", 0.90),
 ]
 
 # YouTube channel RSS needs no API key: /feeds/videos.xml?channel_id=...
@@ -54,7 +59,7 @@ YOUTUBE_CHANNELS = [
     ("Fireship", "UCsBjURrPoezykLs9EqgamOA"),
 ]
 
-SUBREDDITS = ["artificial", "MachineLearning", "LocalLLaMA", "OpenAI", "singularity"]
+SUBREDDITS = ["artificial", "MachineLearning", "LocalLLaMA", "OpenAI", "singularity", "technology", "ChatGPT", "StableDiffusion"]
 
 AI_PATTERN = re.compile(
     r"\b(ai|a\.i\.|llm|llms|gpt[-\s]?[45o]?|claude|gemini|openai|anthropic|deepmind|"
@@ -402,15 +407,15 @@ def score_items(items, now):
 
 
 def pick_top(items, n=TOP_N):
-    """Greedy pick with diversity: max 3 per source, max 6 per category."""
+    """Greedy pick with diversity: max 8 per source, max 15 per category."""
     picked = []
     per_source, per_category = {}, {}
     for item in items:
         if len(picked) >= n:
             break
-        if per_source.get(item["source"], 0) >= 3:
+        if per_source.get(item["source"], 0) >= 8:
             continue
-        if per_category.get(item["category"], 0) >= 6:
+        if per_category.get(item["category"], 0) >= 15:
             continue
         picked.append(item)
         per_source[item["source"]] = per_source.get(item["source"], 0) + 1
