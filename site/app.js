@@ -133,6 +133,17 @@
       ? news.items
       : news.items.filter((n) => (n.section || "ai-news") === state.section);
 
+    document.querySelectorAll(".section-tab").forEach((tab) => {
+      const sec = tab.dataset.section;
+      if (sec === "all") {
+        tab.textContent = `ALL (${news.items.length})`;
+      } else {
+        const count = news.items.filter((n) => (n.section || "ai-news") === sec).length;
+        const labels = { "ai-news": "AI NEWS", technology: "TECHNOLOGY", finance: "FINANCE", tools: "TOOLS", "web-services": "WEB & EXT", research: "RESEARCH" };
+        tab.textContent = `${labels[sec] || sec.toUpperCase()} (${count})`;
+      }
+    });
+
     $("#news-list").innerHTML = items.length ? items.map((n) => {
       const favored = isFav("news", n.title);
       const section = n.section || "ai-news";
@@ -477,12 +488,19 @@
     btn.disabled = true;
     await refresh();
     const changed = JSON.stringify(state.news) !== oldNews || JSON.stringify(state.projects) !== oldProjects;
-    showToast(changed ? "NEW DATA LOADED ✓" : "DATA IS UP TO DATE — NO CHANGES YET");
+    showToast(changed ? "NEW DATA LOADED ✓" : "DATA IS UP TO DATE — AUTO-UPDATES AT 8 AM & 5 PM EGY");
     setTimeout(() => { btn.classList.remove("spinning"); btn.disabled = false; }, 600);
   }
 
   $("#refresh-news")?.addEventListener("click", function () { manualRefresh(this); });
   $("#refresh-projects")?.addEventListener("click", function () { manualRefresh(this); });
+
+  $("#generate-projects")?.addEventListener("click", function () {
+    showToast("OPENING GITHUB ACTIONS — CLICK 'RUN WORKFLOW' TO GENERATE NEW COURSES");
+    setTimeout(() => {
+      window.open("https://github.com/sublimeplus/ai-updates/actions/workflows/generate-projects.yml", "_blank", "noopener");
+    }, 800);
+  });
 
   refresh();
   setInterval(refresh, REFRESH_MS);
