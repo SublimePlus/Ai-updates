@@ -228,7 +228,7 @@
     $("#lab-sub").textContent =
       `${projects.projects.length} hands-on courses generated from the signal on ` +
       `${new Date(projects.generatedAt).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" })}. ` +
-      `Progress is saved in this browser. Regenerate any time from the Actions tab.`;
+      `Progress is saved in this browser. Hit ⚡ GENERATE NEW for a fresh batch built from today's signal.`;
 
     $("#project-grid").innerHTML = projects.projects.map((p) => {
       const total = lessonCount(p);
@@ -495,12 +495,93 @@
   $("#refresh-news")?.addEventListener("click", function () { manualRefresh(this); });
   $("#refresh-projects")?.addEventListener("click", function () { manualRefresh(this); });
 
-  $("#generate-projects")?.addEventListener("click", function () {
-    showToast("OPENING GITHUB ACTIONS — CLICK 'RUN WORKFLOW' TO GENERATE NEW COURSES");
-    setTimeout(() => {
-      window.open("https://github.com/sublimeplus/ai-updates/actions/workflows/generate-projects.yml", "_blank", "noopener");
-    }, 800);
-  });
+  /* ---------- live generation via GitHub API ---------- */
+
+  const REPO_API = "https://api.github.com/repos/SublimePlus/Ai-updates";
+
+  function getGhToken() { return localStorage.getItem("signal-gh-token") || ""; }
+  function setGhToken(t) {
+    if (t) localStorage.setItem("signal-gh-token", t);
+    else localStorage.removeItem("signal-gh-token");
+  }
+
+  async function triggerWorkflow(file) {
+    const resp = await fetch(`${REPO_API}/actions/workflows/${file}/dispatches`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${getGhToken()}`,
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ref: "main" }),
+    });
+    if (resp.status === 204) return;
+    if (resp.status === 401 || resp.status === 403) {
+      setGhToken("");
+      throw new Error("TOKEN REJECTED — PLEASE RECONNECT GITHUB");
+    }
+    if (resp.status === 404) throw new Error("TOKEN LACKS ACCESS TO THIS REPO — CHECK PERMISSIONS");
+    throw new Error(`GITHUB API ERROR ${resp.status}`);
+  }
+
+  let pollTimer = null;
+  function pollForNewData(getStamp, doneMsg) {
+    const initial = getStamp();
+    const started = Date.now();
+    clearInterval(pollTimer);
+    pollTimer = setInterval(async () => {
+      await refresh();
+      if (getStamp() !== initial) {
+        clearInterval(pollTimer);
+        showToast(doneMsg);
+      } else if (Date.now() - started > 12 * 60 * 1000) {
+        clearInterval(pollTimer);
+        showToast("STILL PROCESSING — HIT REFRESH IN A FEW MINUTES");
+      }
+    }, 25000);
+  }
+
+  function openTokenModal(onSaved) {
+    const modal = $("#token-modal");
+    const input = $("#token-input");
+    modal.hidden = false;
+    input.value = "";
+    input.focus();
+    const close = () => { modal.hidden = true; };
+    $("#token-cancel").onclick = close;
+    modal.onclick = (e) => { if (e.target === modal) close(); };
+    $("#token-save").onclick = () => {
+      const token = input.value.trim();
+      if (!token) { input.focus(); return; }
+      setGhToken(token);
+      close();
+      onSaved();
+    };
+  }
+
+  function generateLive(kind) {
+    const cfg = kind === "news"
+      ? { wf: "daily-news.yml", stamp: () => state.news && state.news.updatedAt,
+          running: "SEARCHING FRESH TOPICS — TAKES ~3-5 MIN, PAGE WILL UPDATE ITSELF",
+          done: "FRESH SIGNAL LOADED ✓" }
+      : { wf: "generate-projects.yml", stamp: () => state.projects && state.projects.generatedAt,
+          running: "GENERATING NEW COURSES — TAKES ~2-3 MIN, PAGE WILL UPDATE ITSELF",
+          done: "NEW COURSES LOADED ✓" };
+    const go = async () => {
+      try {
+        await triggerWorkflow(cfg.wf);
+        showToast(cfg.running);
+        pollForNewData(cfg.stamp, cfg.done);
+      } catch (err) {
+        showToast(String(err.message || err));
+        if (!getGhToken()) openTokenModal(go);
+      }
+    };
+    if (getGhToken()) go(); else openTokenModal(go);
+  }
+
+  $("#generate-news")?.addEventListener("click", () => generateLive("news"));
+  $("#generate-projects")?.addEventListener("click", () => generateLive("projects"));
 
   refresh();
   setInterval(refresh, REFRESH_MS);

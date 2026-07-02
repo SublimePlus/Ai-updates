@@ -41,9 +41,14 @@
             <p class="kicker mono">AUTO-CURATED FROM BLOGS, SOCIAL, VIDEO & RESEARCH</p>
             <p class="sub" id="signal-sub"></p>
           </div>
-          <button class="action-btn" id="refresh-news" title="Refresh news data">
-            <span class="action-icon">↻</span> REFRESH
-          </button>
+          <div class="action-group">
+            <button class="action-btn" id="refresh-news" title="Reload latest data">
+              <span class="action-icon">↻</span> REFRESH
+            </button>
+            <button class="action-btn generate" id="generate-news" title="Run a fresh news search right now">
+              <span class="action-icon">⚡</span> NEW SEARCH
+            </button>
+          </div>
         </div>
       </div>
       <nav class="section-tabs mono" id="section-tabs">
@@ -102,6 +107,25 @@
       </div>
     </section>
   </main>
+
+  <!-- GitHub connect modal -->
+  <div id="token-modal" class="modal-overlay" hidden>
+    <div class="modal-box">
+      <h3 class="mono">⚡ CONNECT GITHUB TO GENERATE LIVE</h3>
+      <p>One-time setup so the buttons on this page can run the generators directly. The token is stored <strong>only in this browser</strong> — never sent anywhere except github.com.</p>
+      <ol>
+        <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → New fine-grained token</a></li>
+        <li>Repository access: <strong>Only select repositories → SublimePlus/Ai-updates</strong></li>
+        <li>Repository permissions: <strong>Actions → Read and write</strong></li>
+        <li>Generate, copy, and paste it below</li>
+      </ol>
+      <input id="token-input" type="password" class="mono" placeholder="github_pat_…" autocomplete="off" />
+      <div class="modal-actions">
+        <button id="token-cancel" class="action-btn">CANCEL</button>
+        <button id="token-save" class="action-btn generate">SAVE &amp; RUN</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer mono">
     <span>AUTO-UPDATES TWICE DAILY (8 AM & 5 PM EGY) VIA GITHUB ACTIONS</span>
