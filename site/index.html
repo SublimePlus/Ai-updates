@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sublime AI Signal — a self-updating daily briefing of the top 10 AI news, everyday ideas, and hands-on mini-projects." />
+  <meta name="description" content="Sublime AI Signal — a self-updating daily briefing of the top AI news, everyday ideas, and hands-on mini-projects." />
   <title>SUBLIME // AI SIGNAL</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,15 +29,16 @@
   <nav class="tabs" role="tablist">
     <button class="tab active" data-view="signal" role="tab" aria-selected="true">◉ TODAY'S SIGNAL</button>
     <button class="tab" data-view="lab" role="tab" aria-selected="false">▲ BUILD LAB</button>
+    <button class="tab" data-view="saved" role="tab" aria-selected="false">★ SAVED</button>
   </nav>
 
   <main id="main">
-    <!-- Top 10 news view -->
+    <!-- Signal view -->
     <section id="view-signal" class="view active">
       <div class="view-intro">
         <div class="view-intro-row">
           <div>
-            <p class="kicker mono">TOP 10 · AUTO-CURATED FROM BLOGS, SOCIAL, VIDEO &amp; RESEARCH</p>
+            <p class="kicker mono">AUTO-CURATED FROM BLOGS, SOCIAL, VIDEO & RESEARCH</p>
             <p class="sub" id="signal-sub"></p>
           </div>
           <button class="action-btn" id="refresh-news" title="Refresh news data">
@@ -45,6 +46,15 @@
           </button>
         </div>
       </div>
+      <nav class="section-tabs mono" id="section-tabs">
+        <button class="section-tab active" data-section="all">ALL</button>
+        <button class="section-tab" data-section="ai-news">AI NEWS</button>
+        <button class="section-tab" data-section="technology">TECHNOLOGY</button>
+        <button class="section-tab" data-section="finance">FINANCE</button>
+        <button class="section-tab" data-section="tools">TOOLS</button>
+        <button class="section-tab" data-section="web-services">WEB & EXTENSIONS</button>
+        <button class="section-tab" data-section="research">RESEARCH</button>
+      </nav>
       <ol id="news-list" class="news-list" aria-live="polite"></ol>
     </section>
 
@@ -60,13 +70,27 @@
             <button class="action-btn" id="refresh-projects" title="Refresh project data">
               <span class="action-icon">↻</span> REFRESH
             </button>
-            <a class="action-btn generate" href="https://github.com/sublimeplus/ai-updates/actions/workflows/generate-projects.yml" target="_blank" rel="noopener" title="Generate new projects from latest news via GitHub Actions">
+            <a class="action-btn generate" href="https://github.com/sublimeplus/ai-updates/actions/workflows/generate-projects.yml" target="_blank" rel="noopener" title="Generate new projects via GitHub Actions — select 'main' branch then click Run workflow">
               <span class="action-icon">⚡</span> GENERATE NEW
             </a>
           </div>
         </div>
       </div>
       <div id="project-grid" class="project-grid"></div>
+    </section>
+
+    <!-- Saved / Favorites view -->
+    <section id="view-saved" class="view">
+      <div class="view-intro">
+        <p class="kicker mono">YOUR SAVED ITEMS · STORED IN THIS BROWSER</p>
+        <p class="sub">Favorited news and courses are saved locally and persist across refreshes.</p>
+      </div>
+      <nav class="section-tabs mono" id="saved-tabs">
+        <button class="saved-tab active" data-saved="fav-news">SAVED NEWS</button>
+        <button class="saved-tab" data-saved="fav-projects">SAVED COURSES</button>
+        <button class="saved-tab" data-saved="history">HISTORY</button>
+      </nav>
+      <div id="saved-content"></div>
     </section>
 
     <!-- Course walkthrough view -->
@@ -80,7 +104,7 @@
   </main>
 
   <footer class="site-footer mono">
-    <span>AUTO-UPDATES DAILY VIA GITHUB ACTIONS · SUMMARIES BY FREE GITHUB MODELS API</span>
+    <span>AUTO-UPDATES TWICE DAILY (8 AM & 5 PM EGY) VIA GITHUB ACTIONS</span>
     <span id="footer-model"></span>
   </footer>
 

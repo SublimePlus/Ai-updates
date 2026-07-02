@@ -30,7 +30,7 @@ OUT_PATH = os.path.join(ROOT, "site", "data", "news.json")
 
 USER_AGENT = "SublimeAISignal/1.0 (daily AI news digest; github.com/sublimeplus/ai-updates)"
 MAX_AGE_HOURS = 72
-TOP_N = 10
+TOP_N = 15
 
 # (name, url, category, weight)
 RSS_FEEDS = [
@@ -70,6 +70,59 @@ BIG_NEWS_PATTERN = re.compile(
     r"record|first|beats?|outperform\w+|partners?\w*|acqui\w+|funding|raises)\b",
     re.IGNORECASE,
 )
+
+SECTION_FINANCE = re.compile(
+    r"\b(fund\w*|invest\w*|revenue|valuation|ipo|series\s+[a-d]|billion|million\s+dollar|"
+    r"acqui\w+|market\s+cap|stock|profit|rais\w+\s+\$|venture|startup\s+fund|economy)\b",
+    re.IGNORECASE,
+)
+SECTION_TOOLS = re.compile(
+    r"\b(open[- ]?source|framework|library|sdk|cli\b|ollama|local\w*\s+(?:model|llm|ai)|"
+    r"self[- ]?host|install|download|package|pip\s+install|npm|weights?|gguf|onnx)\b",
+    re.IGNORECASE,
+)
+SECTION_WEB = re.compile(
+    r"\b(api\b|saas|plugin|extension|chrome|browser|web\s+(?:app|service)|cloud|"
+    r"platform|subscription|integration|copilot|chatbot|assistant)\b",
+    re.IGNORECASE,
+)
+SECTION_RESEARCH = re.compile(
+    r"\b(paper|arxiv|benchmark|dataset|training\s+(?:data|run)|novel\s+(?:approach|method)|"
+    r"state[- ]of[- ]the[- ]art|sota|peer[- ]review|methodology|ablation)\b",
+    re.IGNORECASE,
+)
+
+SOURCE_SECTION_MAP = {
+    "arXiv": "research",
+    "Hugging Face Blog": "tools",
+}
+
+
+def classify_section(item):
+    source = item.get("source", "")
+    if source in SOURCE_SECTION_MAP:
+        return SOURCE_SECTION_MAP[source]
+    text = f"{item['title']} {item.get('desc', '')}"
+    scores = [
+        ("finance", len(SECTION_FINANCE.findall(text))),
+        ("tools", len(SECTION_TOOLS.findall(text))),
+        ("web-services", len(SECTION_WEB.findall(text))),
+        ("research", len(SECTION_RESEARCH.findall(text))),
+    ]
+    best = max(scores, key=lambda x: x[1])
+    if best[1] >= 2:
+        return best[0]
+    cat = item.get("category", "")
+    if cat == "research":
+        return "research"
+    if cat == "video":
+        return "ai-news"
+    if source.startswith("r/LocalLLaMA"):
+        return "tools"
+    tech_sources = {"MIT Tech Review AI", "The Verge AI", "VentureBeat AI", "TechCrunch AI"}
+    if source in tech_sources:
+        return "technology"
+    return "ai-news"
 
 
 def log(msg):
@@ -349,20 +402,19 @@ def score_items(items, now):
 
 
 def pick_top(items, n=TOP_N):
-    """Greedy pick with diversity: max 2 per source, max 4 per category."""
+    """Greedy pick with diversity: max 3 per source, max 6 per category."""
     picked = []
     per_source, per_category = {}, {}
-    for item in items:  # items arrive sorted by score desc
+    for item in items:
         if len(picked) >= n:
             break
-        if per_source.get(item["source"], 0) >= 2:
+        if per_source.get(item["source"], 0) >= 3:
             continue
-        if per_category.get(item["category"], 0) >= 4:
+        if per_category.get(item["category"], 0) >= 6:
             continue
         picked.append(item)
         per_source[item["source"]] = per_source.get(item["source"], 0) + 1
         per_category[item["category"]] = per_category.get(item["category"], 0) + 1
-    # backfill if diversity constraints left empty slots
     for item in items:
         if len(picked) >= n:
             break
@@ -477,6 +529,9 @@ def main():
 
     ai_ok = summarize(top)
 
+    for i in top:
+        i["section"] = classify_section(i)
+
     output = {
         "updatedAt": now.isoformat(timespec="seconds"),
         "generator": "github-actions",
@@ -489,6 +544,7 @@ def main():
                 "url": i["url"],
                 "source": i["source"],
                 "category": i["category"],
+                "section": i["section"],
                 "publishedAt": i["published"].isoformat(timespec="seconds"),
                 "engagement": i["engagement"],
                 "summary": i["summary"],
@@ -502,6 +558,62 @@ def main():
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     log(f"Wrote {OUT_PATH} with {len(top)} items (aiGenerated={ai_ok})")
+
+    generate_email_html(output)
+
+
+def generate_email_html(data):
+    items = data["items"]
+    date_str = data["updatedAt"][:10]
+    rows = ""
+    for item in items:
+        rows += f"""<tr><td style="padding:12px 16px;border-bottom:1px solid #1a2332;">
+          <span style="color:#5eead4;font-size:12px;font-weight:600;letter-spacing:1px;">
+            N&deg;{item['rank']:02d} &middot; {html.escape(item['section'].upper().replace('-',' '))}
+          </span>
+          <h3 style="margin:4px 0 6px;font-size:16px;">
+            <a href="{html.escape(item['url'])}" style="color:#d7e2f4;text-decoration:none;">{html.escape(item['title'])}</a>
+          </h3>
+          <p style="color:#7b89a8;font-size:14px;margin:0 0 8px;">{html.escape(item['summary'])}</p>
+          <table width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td style="padding:8px 10px;background:rgba(94,234,212,0.06);border-left:2px solid #5eead4;font-size:13px;color:#7b89a8;width:50%;">
+              <strong style="color:#5eead4;font-size:10px;letter-spacing:1px;display:block;">USE IT TODAY</strong>
+              {html.escape(item['lifeIdea'])}
+            </td>
+            <td style="padding:8px 10px;background:rgba(167,139,250,0.06);border-left:2px solid #a78bfa;font-size:13px;color:#7b89a8;width:50%;">
+              <strong style="color:#a78bfa;font-size:10px;letter-spacing:1px;display:block;">SUBLIME ANGLE</strong>
+              {html.escape(item['sublimeAngle'])}
+            </td>
+          </tr></table>
+        </td></tr>"""
+
+    email_html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#04060d;font-family:'Segoe UI',Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#04060d;">
+<tr><td align="center" style="padding:24px 16px;">
+<table width="640" cellpadding="0" cellspacing="0" style="background:#0b1120;border:1px solid rgba(94,234,212,0.2);border-radius:4px;">
+  <tr><td style="padding:24px 20px;border-bottom:1px solid rgba(94,234,212,0.14);">
+    <h1 style="margin:0;color:#d7e2f4;font-size:20px;letter-spacing:2px;">
+      SUBLIME <span style="color:#5eead4;">//</span> AI SIGNAL
+    </h1>
+    <p style="margin:6px 0 0;color:#7b89a8;font-size:12px;letter-spacing:1px;">
+      DAILY BRIEFING &middot; {date_str}
+    </p>
+  </td></tr>
+  {rows}
+  <tr><td style="padding:16px 20px;text-align:center;">
+    <a href="https://sublimeplus.github.io/Ai-updates/" style="color:#5eead4;font-size:12px;letter-spacing:1px;text-decoration:none;">
+      VIEW FULL DASHBOARD &rarr;
+    </a>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>"""
+
+    email_path = os.path.join(ROOT, "site", "data", "email.html")
+    with open(email_path, "w", encoding="utf-8") as f:
+        f.write(email_html)
+    log(f"Wrote email template to {email_path}")
 
 
 if __name__ == "__main__":

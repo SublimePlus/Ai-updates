@@ -2,8 +2,8 @@
 (() => {
   "use strict";
 
-  const REFRESH_MS = 30 * 60 * 1000; // re-check data every 30 minutes
-  const state = { news: null, projects: null, course: null, lesson: [0, 0] };
+  const REFRESH_MS = 30 * 60 * 1000;
+  const state = { news: null, projects: null, course: null, lesson: [0, 0], section: "all", savedTab: "fav-news" };
 
   const $ = (sel) => document.querySelector(sel);
 
@@ -23,7 +23,6 @@
     return `${Math.round(hours / 24)}d ago`;
   }
 
-  /* Minimal markdown → HTML (escapes first, so model output stays safe) */
   function md(text) {
     let src = esc(text ?? "");
     const blocks = [];
@@ -58,6 +57,33 @@
     }
     closeList();
     return out.replace(/ (\d+) /g, (_, i) => `<code class="code-block">${blocks[+i]}</code>`);
+  }
+
+  /* ---------- favorites & history ---------- */
+
+  function getFavs(key) {
+    try { return JSON.parse(localStorage.getItem(`signal-fav:${key}`)) || []; }
+    catch { return []; }
+  }
+  function setFavs(key, arr) { localStorage.setItem(`signal-fav:${key}`, JSON.stringify(arr)); }
+  function isFav(key, id) { return getFavs(key).includes(id); }
+  function toggleFav(key, id) {
+    const favs = getFavs(key);
+    const idx = favs.indexOf(id);
+    if (idx === -1) favs.push(id); else favs.splice(idx, 1);
+    setFavs(key, favs);
+    return idx === -1;
+  }
+
+  function addHistory(type, title, url) {
+    const history = getHistory();
+    history.unshift({ type, title, url, ts: new Date().toISOString() });
+    if (history.length > 50) history.length = 50;
+    localStorage.setItem("signal-history", JSON.stringify(history));
+  }
+  function getHistory() {
+    try { return JSON.parse(localStorage.getItem("signal-history")) || []; }
+    catch { return []; }
   }
 
   /* ---------- data loading ---------- */
@@ -103,13 +129,21 @@
       ? `DIGEST MODEL: ${news.model.toUpperCase()}`
       : "DIGEST: FEED EXCERPTS (AI PENDING FIRST RUN)";
 
-    $("#news-list").innerHTML = news.items.map((n) => `
+    const items = state.section === "all"
+      ? news.items
+      : news.items.filter((n) => (n.section || "ai-news") === state.section);
+
+    $("#news-list").innerHTML = items.length ? items.map((n) => {
+      const favored = isFav("news", n.title);
+      const section = n.section || "ai-news";
+      return `
       <li class="news-card">
         <div class="news-rank">${String(n.rank).padStart(2, "0")}</div>
         <div class="news-body">
-          <h3 class="news-title"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></h3>
+          <h3 class="news-title"><a href="${esc(n.url)}" target="_blank" rel="noopener" data-track-title="${esc(n.title)}">${esc(n.title)}</a></h3>
           <div class="news-meta">
             <span class="chip ${esc(n.category)}">${esc(n.category)}</span>
+            <span class="section-chip">${esc(section.replace(/-/g, " "))}</span>
             <span>${esc(n.source)}</span>
             <span>· ${timeAgo(n.publishedAt)}</span>
             ${n.engagement ? `<span>· ${esc(n.engagement)}</span>` : ""}
@@ -120,8 +154,45 @@
             <div class="idea-box sublime"><strong>◆ SUBLIME ANGLE</strong>${esc(n.sublimeAngle)}</div>
           </div>
         </div>
-      </li>`).join("");
+        <button class="fav-btn ${favored ? "active" : ""}" data-fav-key="news" data-fav-id="${esc(n.title)}" title="${favored ? "Remove from saved" : "Save this item"}">★</button>
+      </li>`;
+    }).join("") : '<li class="saved-empty">No items in this section yet.</li>';
+
+    bindFavButtons();
+    bindTrackLinks();
   }
+
+  function bindFavButtons() {
+    document.querySelectorAll(".fav-btn").forEach((btn) =>
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const key = btn.dataset.favKey;
+        const id = btn.dataset.favId;
+        const nowFav = toggleFav(key, id);
+        btn.classList.toggle("active", nowFav);
+        btn.title = nowFav ? "Remove from saved" : "Save this item";
+      })
+    );
+  }
+
+  function bindTrackLinks() {
+    document.querySelectorAll("[data-track-title]").forEach((a) =>
+      a.addEventListener("click", () => {
+        addHistory("news", a.dataset.trackTitle, a.href);
+      })
+    );
+  }
+
+  /* ---------- section tabs ---------- */
+
+  document.querySelectorAll(".section-tab").forEach((tab) =>
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".section-tab").forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      state.section = tab.dataset.section;
+      renderNews();
+    })
+  );
 
   /* ---------- render: projects ---------- */
 
@@ -152,9 +223,15 @@
       const total = lessonCount(p);
       const done = doneCount(p);
       const pct = total ? Math.round((100 * done) / total) : 0;
+      const favored = isFav("projects", p.id);
+      const section = p.section || "ai-news";
       return `
       <div class="project-card">
-        <div class="project-head"><h3 class="project-title">${esc(p.title)}</h3></div>
+        <div class="project-head">
+          <h3 class="project-title">${esc(p.title)}</h3>
+          <button class="fav-btn ${favored ? "active" : ""}" data-fav-key="projects" data-fav-id="${esc(p.id)}" title="${favored ? "Remove from saved" : "Save this course"}">★</button>
+        </div>
+        <span class="section-chip">${esc(section.replace(/-/g, " "))}</span>
         <p class="project-tagline">${esc(p.tagline)}</p>
         <div class="project-facts">
           <span>${esc(p.difficulty)}</span>
@@ -169,9 +246,10 @@
       </div>`;
     }).join("");
 
-    document.querySelectorAll(".start-btn").forEach((btn) =>
+    document.querySelectorAll("#project-grid .start-btn").forEach((btn) =>
       btn.addEventListener("click", () => openCourse(btn.dataset.project))
     );
+    bindFavButtons();
   }
 
   /* ---------- render: course ---------- */
@@ -266,6 +344,95 @@
     $("#course-content").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  /* ---------- render: saved ---------- */
+
+  function renderSaved() {
+    const container = $("#saved-content");
+    const tab = state.savedTab;
+
+    if (tab === "fav-news") {
+      const favIds = getFavs("news");
+      if (!favIds.length || !state.news) {
+        container.innerHTML = '<div class="saved-empty">No saved news yet. Click the ★ icon on any news item to save it.</div>';
+        return;
+      }
+      const items = state.news.items.filter((n) => favIds.includes(n.title));
+      if (!items.length) {
+        container.innerHTML = '<div class="saved-empty">Saved items no longer in current data. They\'ll reappear next refresh if still in feed.</div>';
+        return;
+      }
+      container.innerHTML = `<ol class="news-list">${items.map((n) => `
+        <li class="news-card">
+          <div class="news-rank">${String(n.rank).padStart(2, "0")}</div>
+          <div class="news-body">
+            <h3 class="news-title"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></h3>
+            <div class="news-meta">
+              <span class="chip ${esc(n.category)}">${esc(n.category)}</span>
+              <span>${esc(n.source)}</span>
+              <span>· ${timeAgo(n.publishedAt)}</span>
+            </div>
+            <p class="news-summary">${esc(n.summary)}</p>
+          </div>
+          <button class="fav-btn active" data-fav-key="news" data-fav-id="${esc(n.title)}" title="Remove from saved">★</button>
+        </li>`).join("")}</ol>`;
+      bindFavButtons();
+    } else if (tab === "fav-projects") {
+      const favIds = getFavs("projects");
+      if (!favIds.length || !state.projects) {
+        container.innerHTML = '<div class="saved-empty">No saved courses yet. Click the ★ icon on any course card to save it.</div>';
+        return;
+      }
+      const items = state.projects.projects.filter((p) => favIds.includes(p.id));
+      if (!items.length) {
+        container.innerHTML = '<div class="saved-empty">Saved courses no longer in current data.</div>';
+        return;
+      }
+      container.innerHTML = `<div class="project-grid">${items.map((p) => {
+        const total = lessonCount(p);
+        const done = doneCount(p);
+        const pct = total ? Math.round((100 * done) / total) : 0;
+        return `
+        <div class="project-card">
+          <div class="project-head">
+            <h3 class="project-title">${esc(p.title)}</h3>
+            <button class="fav-btn active" data-fav-key="projects" data-fav-id="${esc(p.id)}" title="Remove from saved">★</button>
+          </div>
+          <p class="project-tagline">${esc(p.tagline)}</p>
+          <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+          <button class="start-btn" data-project="${esc(p.id)}">
+            ${done ? (done === total ? "✓ COMPLETED — REVIEW" : `RESUME · ${pct}%`) : "START COURSE →"}
+          </button>
+        </div>`;
+      }).join("")}</div>`;
+      document.querySelectorAll("#saved-content .start-btn").forEach((btn) =>
+        btn.addEventListener("click", () => openCourse(btn.dataset.project))
+      );
+      bindFavButtons();
+    } else if (tab === "history") {
+      const history = getHistory();
+      if (!history.length) {
+        container.innerHTML = '<div class="saved-empty">No history yet. Links you click will appear here.</div>';
+        return;
+      }
+      container.innerHTML = `<div class="history-list">${history.map((h) => `
+        <a class="history-item" href="${esc(h.url)}" target="_blank" rel="noopener">
+          <span class="history-type">${esc(h.type)}</span>
+          <span class="history-title">${esc(h.title)}</span>
+          <span class="history-time">${timeAgo(h.ts)}</span>
+        </a>`).join("")}</div>`;
+    }
+  }
+
+  /* saved sub-tabs */
+  document.querySelectorAll(".saved-tab").forEach((tab) =>
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".saved-tab").forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      state.savedTab = tab.dataset.saved;
+      renderSaved();
+    })
+  );
+
   /* ---------- view switching ---------- */
 
   function switchView(name) {
@@ -276,6 +443,7 @@
       t.classList.toggle("active", active);
       t.setAttribute("aria-selected", String(active));
     });
+    if (name === "saved") renderSaved();
   }
 
   function renderAll() {

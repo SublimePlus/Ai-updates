@@ -24,17 +24,20 @@ IDEAS_SYSTEM = (
     "You design tiny hands-on learning projects for a busy startup founder "
     "(building a company called Sublime) who wants to keep up with AI by "
     "building, not just reading.\n"
-    "From the news items provided, propose EXACTLY 4 mini-projects. Rules:\n"
+    "From the news items provided, propose EXACTLY 6 mini-projects. Rules:\n"
     "- Each takes 1-4 hours total, beginner-to-intermediate friendly.\n"
     "- Must be buildable with FREE tools only and WITHOUT creating accounts "
     "on new platforms (GitHub, a laptop, Python/JS, local open-source tools, "
     "and free keyless APIs are fine).\n"
     "- Each must teach a skill connected to one of the news items.\n"
+    "- Cover diverse categories: AI models, tools/frameworks, finance/business, "
+    "web services, and research — not all from the same topic.\n"
     "- Prefer projects that could later feed into building a startup.\n"
-    "Reply with ONLY a JSON array of 4 objects:\n"
+    "Reply with ONLY a JSON array of 6 objects:\n"
     '[{"id": "kebab-case-slug", "title": "...", "tagline": "one line", '
     '"inspiredBy": "<title of the news item>", "difficulty": "Beginner|Intermediate", '
     '"timeEstimate": "~2 hours", "skills": ["..","..",".."], '
+    '"section": "ai-news|technology|finance|tools|web-services|research", '
     '"outcome": "what exists at the end", "stretchGoals": ["..",".."]}]'
 )
 
@@ -87,7 +90,7 @@ def main():
         temperature=0.8,
     )
     specs = github_models.extract_json(reply)
-    if not isinstance(specs, list) or not 3 <= len(specs) <= 5:
+    if not isinstance(specs, list) or not 3 <= len(specs) <= 8:
         log(f"Unexpected project spec shape ({type(specs)}, {len(specs) if isinstance(specs, list) else '-'}) — aborting")
         sys.exit(1)
 

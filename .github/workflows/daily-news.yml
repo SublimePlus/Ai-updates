@@ -2,8 +2,8 @@ name: Daily AI News Update
 
 on:
   schedule:
-    # Every day at 08:00 UTC
-    - cron: "0 8 * * *"
+    # 8 AM Egypt (UTC+2) = 06:00 UTC, 5 PM Egypt = 15:00 UTC
+    - cron: "0 6,15 * * *"
   workflow_dispatch:
 
 permissions:
@@ -25,11 +25,27 @@ jobs:
           GH_MODELS_MODEL: "openai/gpt-4o-mini"
         run: python scripts/update_news.py
 
+      - name: Send email digest
+        if: hashFiles('site/data/email.html') != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.GMAIL_ADDRESS }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "AI Signal — ${{ github.event.repository.name }} digest"
+          to: ${{ secrets.GMAIL_ADDRESS }}
+          from: "Sublime AI Signal <${{ secrets.GMAIL_ADDRESS }}>"
+          html_body: file://site/data/email.html
+        continue-on-error: true
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site/data/news.json
+          rm -f site/data/email.html
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "signal: update daily AI news digest"
           git push
