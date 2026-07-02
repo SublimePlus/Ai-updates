@@ -169,30 +169,25 @@
       </li>`;
     }).join("") : '<li class="saved-empty">No items in this section yet.</li>';
 
-    bindFavButtons();
-    bindTrackLinks();
   }
 
-  function bindFavButtons() {
-    document.querySelectorAll(".fav-btn").forEach((btn) =>
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const key = btn.dataset.favKey;
-        const id = btn.dataset.favId;
-        const nowFav = toggleFav(key, id);
-        btn.classList.toggle("active", nowFav);
-        btn.title = nowFav ? "Remove from saved" : "Save this item";
-      })
-    );
-  }
+  /* One delegated handler for every star button, bound once.
+     Re-binding per render stacked duplicate listeners, so a single
+     click toggled the favorite twice and appeared to do nothing. */
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".fav-btn");
+    if (!btn) return;
+    e.stopPropagation();
+    const nowFav = toggleFav(btn.dataset.favKey, btn.dataset.favId);
+    btn.classList.toggle("active", nowFav);
+    btn.title = nowFav ? "Remove from saved" : "Save this item";
+    if (btn.closest("#saved-content")) renderSaved();
+  });
 
-  function bindTrackLinks() {
-    document.querySelectorAll("[data-track-title]").forEach((a) =>
-      a.addEventListener("click", () => {
-        addHistory("news", a.dataset.trackTitle, a.href);
-      })
-    );
-  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-track-title]");
+    if (a) addHistory("news", a.dataset.trackTitle, a.href);
+  });
 
   /* ---------- section tabs ---------- */
 
@@ -260,7 +255,6 @@
     document.querySelectorAll("#project-grid .start-btn").forEach((btn) =>
       btn.addEventListener("click", () => openCourse(btn.dataset.project))
     );
-    bindFavButtons();
   }
 
   /* ---------- render: course ---------- */
@@ -386,7 +380,6 @@
           </div>
           <button class="fav-btn active" data-fav-key="news" data-fav-id="${esc(n.title)}" title="Remove from saved">★</button>
         </li>`).join("")}</ol>`;
-      bindFavButtons();
     } else if (tab === "fav-projects") {
       const favIds = getFavs("projects");
       if (!favIds.length || !state.projects) {
@@ -418,7 +411,6 @@
       document.querySelectorAll("#saved-content .start-btn").forEach((btn) =>
         btn.addEventListener("click", () => openCourse(btn.dataset.project))
       );
-      bindFavButtons();
     } else if (tab === "history") {
       const history = getHistory();
       if (!history.length) {
