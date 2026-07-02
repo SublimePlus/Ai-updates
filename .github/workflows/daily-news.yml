@@ -21,7 +21,7 @@ jobs:
 
       - name: Fetch and summarize news
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_MODELS_TOKEN || secrets.GITHUB_TOKEN }}
           GH_MODELS_MODEL: "openai/gpt-4o-mini"
         run: python scripts/update_news.py
 
