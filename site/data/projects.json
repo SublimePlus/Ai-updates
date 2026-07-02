@@ -12,6 +12,7 @@
       "difficulty": "Beginner",
       "timeEstimate": "~1.5 hours",
       "skills": ["Ollama", "local inference", "prompt engineering"],
+      "section": "tools",
       "outcome": "A local AI assistant you can talk to privately, with a saved prompt template for daily journaling.",
       "stretchGoals": ["Add a second model and compare outputs", "Write a shell alias that opens the journal in one command"],
       "modules": [
@@ -82,6 +83,7 @@
       "difficulty": "Beginner",
       "timeEstimate": "~1 hour",
       "skills": ["prompt engineering", "workflow automation", "markdown"],
+      "section": "technology",
       "outcome": "A structured markdown file of reusable, tested prompts for your top 5 recurring tasks.",
       "stretchGoals": ["Add a 'prompt score' for each (rate how well it works 1-5 after each use)", "Create a Claude Project with your top prompts as instructions"],
       "modules": [
@@ -152,6 +154,7 @@
       "difficulty": "Intermediate",
       "timeEstimate": "~2 hours",
       "skills": ["model evaluation", "Python", "JSON", "critical thinking"],
+      "section": "ai-news",
       "outcome": "A Python script and spreadsheet that benchmarks 3+ models on tasks relevant to YOUR work, not generic leaderboards.",
       "stretchGoals": ["Add automated scoring with a judge model", "Publish your scorecard as a blog post"],
       "modules": [
@@ -222,6 +225,7 @@
       "difficulty": "Intermediate",
       "timeEstimate": "~2.5 hours",
       "skills": ["Python", "AI agents", "tool use", "web scraping"],
+      "section": "research",
       "outcome": "A working agent that takes a question, searches the web, reads the results, and writes a concise answer — all in under 100 lines of Python.",
       "stretchGoals": ["Add a file-writing tool so the agent saves reports to disk", "Give the agent a calculator tool for numerical questions"],
       "modules": [
@@ -279,6 +283,148 @@
               "content": "You just built a working AI agent in under 100 lines. Here's what this means for Sublime:\n\n1. **Agents are just loops + tools.** You don't need LangChain, CrewAI, or any framework to ship agentic features. A founder who understands the pattern can build exactly what's needed.\n\n2. **The tools are the product.** The model's reasoning ability is rented (via API or local model). What makes YOUR agent valuable is the specific tools you give it. For Sublime, the tools would connect to your users' data and workflows.\n\n3. **Small models can drive simple agents.** A 3B model successfully picked tools and chained actions. For Sublime features with well-defined tool sets, you don't always need a frontier model — which means lower cost per user.\n\n4. **The failure modes are instructive.** Where did your agent stumble? Those failure modes (wrong tool choice, bad parsing, hallucinated actions) are the same ones you'll need to handle in production. You've now seen them firsthand.\n\n**Next step:** think about one Sublime workflow that could be an agent — what tools would it need?",
               "code": "",
               "checkpoint": "You've listed one potential Sublime workflow as an agent, with the specific tools it would need."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-funding-tracker-spreadsheet",
+      "title": "Build an AI Funding Tracker in a Spreadsheet",
+      "tagline": "Turn funding news into a structured dataset you can query and learn from.",
+      "inspiredBy": "Chamath Palihapitiya goes full-time CEO at 8090 Labs after $135M Series A",
+      "difficulty": "Beginner",
+      "timeEstimate": "~1.5 hours",
+      "skills": ["data analysis", "spreadsheets", "prompt engineering", "market research"],
+      "section": "finance",
+      "outcome": "A structured spreadsheet tracking AI startup funding rounds with a reusable AI prompt to fill it from any news article.",
+      "stretchGoals": ["Add a chart showing funding trends over time", "Write a Python script to auto-fetch and parse funding news"],
+      "modules": [
+        {
+          "title": "Module 1: Why Track Funding Yourself",
+          "lessons": [
+            {
+              "title": "Funding signals decode the market for free",
+              "duration": "8 min",
+              "content": "This week, Chamath went full-time CEO at 8090 Labs with a $135M Series A. South Korea committed $880B to AI infrastructure. These aren't just headlines — they're data points.\n\nEvery funding round tells you:\n- **What problem investors believe is worth solving** (the company's pitch)\n- **How much conviction there is** (round size, investor tier)\n- **Where the market is heading** (sector, geography, timing)\n\nMost founders read funding news passively. You're going to turn it into a structured dataset — a personal market intelligence tool that gets smarter every week.\n\n**Why a spreadsheet?** Because it's free, it's queryable, and the act of structuring data forces you to think about what actually matters. No fancy tools needed.",
+              "code": "",
+              "checkpoint": "You can name 3 things a funding round tells you about market direction."
+            },
+            {
+              "title": "Design the tracker schema",
+              "duration": "10 min",
+              "content": "Open any spreadsheet (Google Sheets, LibreOffice, Excel — all free). Create these columns:\n\n| Column | Example |\n|--------|--------|\n| Date | 2026-07-01 |\n| Company | 8090 Labs |\n| Round | Series A |\n| Amount | $135M |\n| Lead Investor | Salesforce Ventures |\n| Sector | AI-native software |\n| Pain Point | Automated business software |\n| CEO Background | Chamath Palihapitiya, former Social Capital |\n| My Take | Signals that AI-native SaaS is investable, not just AI infra |\n\nThe \"Pain Point\" and \"My Take\" columns are the most valuable — they force you to think like an investor. **Fill in the first row** with the 8090 Labs data from this week's news.",
+              "code": "Date,Company,Round,Amount,Lead Investor,Sector,Pain Point,CEO Background,My Take\n2026-07-01,8090 Labs,Series A,$135M,Salesforce Ventures,AI-native software,Automated business software,Chamath Palihapitiya - former Social Capital,AI-native SaaS is investable beyond infra plays",
+              "checkpoint": "You have a spreadsheet with headers and at least one row filled in from real news."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: AI-Assisted Data Entry",
+          "lessons": [
+            {
+              "title": "Build a prompt to extract funding data",
+              "duration": "12 min",
+              "content": "Filling the tracker by hand is slow. Let's build an AI prompt that extracts structured data from any funding article.\n\nHere's the prompt template:\n\n```\nExtract funding data from this article into CSV format with these exact columns:\nDate, Company, Round, Amount, Lead Investor, Sector, Pain Point, CEO Background\n\nRules:\n- Date in YYYY-MM-DD format\n- Amount with $ and M/B suffix\n- Pain Point: one sentence on what problem they solve\n- If any field is unknown, write \"unknown\"\n- Output ONLY the CSV row, no headers, no explanation\n\nArticle:\n{{PASTE ARTICLE TEXT}}\n```\n\nTest it with a real article. Paste the output into your spreadsheet. Add your \"My Take\" column manually — that's the part the AI can't do for you.\n\n**Pro tip:** save this prompt as a snippet (see the Prompt Library project) so you can use it in seconds whenever you see funding news.",
+              "code": "Extract funding data from this article into CSV format with these exact columns:\nDate, Company, Round, Amount, Lead Investor, Sector, Pain Point, CEO Background\n\nRules:\n- Date in YYYY-MM-DD format\n- Amount with $ and M/B suffix\n- Pain Point: one sentence on what problem they solve\n- If any field is unknown, write \"unknown\"\n- Output ONLY the CSV row, no headers, no explanation\n\nArticle:\n{{PASTE ARTICLE TEXT}}",
+              "checkpoint": "Your extraction prompt correctly outputs a CSV row from a real funding article."
+            },
+            {
+              "title": "Batch-fill from this week's signal",
+              "duration": "15 min",
+              "content": "Go through this week's AI Signal news and find every item that mentions funding, investment, or acquisition. Use your extraction prompt on each one.\n\nFrom this week's seed data alone, you should find at least:\n- 8090 Labs ($135M Series A)\n- South Korea's $880B national plan (government investment, not VC — note the difference)\n\nAlso search \"AI funding this week\" and add 3-5 more from outside the Signal. Your tracker should have at least 5 rows when you're done.\n\nNow look at the data as a whole:\n- Which sectors got the most funding?\n- Are rounds getting bigger or smaller?\n- Any geographic patterns?\n\nYou're doing what analysts at venture firms do, but free, in 30 minutes, powered by AI for the grunt work.",
+              "code": "",
+              "checkpoint": "Your tracker has 5+ rows and you've noted one pattern you see in the data."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Making It Useful for Sublime",
+          "lessons": [
+            {
+              "title": "Weekly update ritual (10 minutes/week)",
+              "duration": "8 min",
+              "content": "A tracker is only useful if you maintain it. Here's a sustainable ritual:\n\n**Every Monday morning, 10 minutes:**\n1. Open the AI Signal or your RSS reader\n2. Search \"AI funding\" in Google News\n3. Paste any new articles into your extraction prompt\n4. Add the CSV rows to your spreadsheet\n5. Write one \"My Take\" sentence for each\n6. Glance at the full sheet — any trend jumps out?\n\nThat's it. Over a month, you'll have 20-30 data points. Over a quarter, 60-90. That's enough to see real patterns — which sectors are heating up, which are cooling, where the smart money is going.\n\nSet a recurring calendar event now: \"AI Funding Tracker — 10 min\" every Monday at 9 AM.",
+              "code": "",
+              "checkpoint": "You have a calendar event set for weekly tracker updates."
+            },
+            {
+              "title": "Connecting back: market intelligence for Sublime",
+              "duration": "8 min",
+              "content": "You just built a personal market intelligence tool from a headline and a spreadsheet.\n\nFor Sublime:\n\n1. **Structured data is power.** Turning unstructured news into queryable data is exactly what Sublime could do for users. Your extraction prompt is a prototype of that feature.\n\n2. **AI + human judgment.** The AI did the extraction; you added the insight (\"My Take\"). The best AI products don't replace human judgment — they clear the path so humans can focus on judgment.\n\n3. **Patterns over headlines.** After a few weeks, your tracker will reveal things no single article shows: sector trends, investor clustering, funding velocity. Sublime could offer this kind of longitudinal insight to its users.\n\n**Next step:** review your tracker and ask: does the data suggest any adjacent market Sublime should watch? Write down one idea.",
+              "code": "",
+              "checkpoint": "You've identified one market insight from your tracker that could inform Sublime's direction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chrome-extension-ai-summarizer",
+      "title": "Build a Tiny Chrome Extension That Summarizes Pages",
+      "tagline": "Ship a real browser extension in under 2 hours — no frameworks, no accounts.",
+      "inspiredBy": "California partners with Anthropic to give Claude to every state agency",
+      "difficulty": "Intermediate",
+      "timeEstimate": "~2 hours",
+      "skills": ["JavaScript", "Chrome extensions", "API integration", "UI design"],
+      "section": "web-services",
+      "outcome": "A working Chrome extension that summarizes the current webpage using a local AI model via Ollama.",
+      "stretchGoals": ["Add a keyboard shortcut to trigger summarization", "Store summaries in extension storage for a reading history"],
+      "modules": [
+        {
+          "title": "Module 1: Extension Basics",
+          "lessons": [
+            {
+              "title": "How Chrome extensions actually work",
+              "duration": "10 min",
+              "content": "A Chrome extension is just a folder with a `manifest.json` and some HTML/JS files. No special tools, no build step, no account needed to develop locally.\n\nThe three key pieces:\n- **manifest.json** — metadata and permissions (which sites it can access, what it can do)\n- **popup.html/js** — the UI that appears when you click the extension icon\n- **content script (optional)** — JS that runs inside web pages\n\nWe'll build a popup extension: you click the icon, it grabs the current page's text, sends it to a local Ollama model, and shows the summary.\n\n**Why this project?** California is rolling out AI assistants to every state agency. You're building the same concept — an AI layer on top of existing workflows — but as a browser extension you control.",
+              "code": "",
+              "checkpoint": "You can name the 3 core files in a Chrome extension and what each does."
+            },
+            {
+              "title": "Create the project scaffold",
+              "duration": "12 min",
+              "content": "Create a folder called `ai-summarizer-ext` with these files:\n\n**manifest.json** tells Chrome what your extension does. We need:\n- `activeTab` permission (access the current tab's content)\n- A popup (the UI)\n- An icon (we'll use an emoji-based SVG for simplicity)\n\n**popup.html** is minimal — a button, a loading indicator, and a results area.\n\nCreate all files as shown in the code block. The popup is deliberately simple: one button, one output area. No frameworks.\n\nTo load it in Chrome:\n1. Go to `chrome://extensions`\n2. Enable \"Developer mode\" (toggle in top-right)\n3. Click \"Load unpacked\" and select your folder\n4. You'll see the extension icon appear in your toolbar",
+              "code": "// manifest.json\n{\n  \"manifest_version\": 3,\n  \"name\": \"AI Page Summarizer\",\n  \"version\": \"1.0\",\n  \"description\": \"Summarize any page with local AI\",\n  \"permissions\": [\"activeTab\", \"scripting\"],\n  \"action\": {\n    \"default_popup\": \"popup.html\",\n    \"default_title\": \"Summarize this page\"\n  }\n}\n\n// popup.html\n<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { width: 360px; padding: 16px; font-family: system-ui; background: #0b1120; color: #d7e2f4; }\n    h3 { margin: 0 0 12px; font-size: 14px; color: #5eead4; }\n    #summarize { background: #5eead4; color: #0b1120; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; width: 100%; }\n    #summarize:hover { background: #22d3ee; }\n    #summarize:disabled { opacity: 0.5; }\n    #result { margin-top: 12px; font-size: 13px; line-height: 1.5; white-space: pre-wrap; }\n    .loading { color: #7b89a8; }\n  </style>\n</head>\n<body>\n  <h3>AI PAGE SUMMARIZER</h3>\n  <button id=\"summarize\">SUMMARIZE THIS PAGE</button>\n  <div id=\"result\"></div>\n  <script src=\"popup.js\"></script>\n</body>\n</html>",
+              "checkpoint": "Your extension folder has manifest.json and popup.html, and it loads in Chrome without errors."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Connecting to Local AI",
+          "lessons": [
+            {
+              "title": "Extract page text and call Ollama",
+              "duration": "20 min",
+              "content": "Create `popup.js` — the brain of the extension. It does three things:\n\n1. **Extracts text** from the current tab using Chrome's scripting API\n2. **Sends it to Ollama** running locally on port 11434\n3. **Displays the summary** in the popup\n\nOllama exposes a REST API at `http://localhost:11434/api/generate`. We send a POST with the model name, a prompt containing the page text, and `stream: false` to get the full response at once.\n\nThe prompt is critical: we ask for a concise summary with key takeaways, not a verbose rewrite. We also truncate the page text to 4000 characters to keep the local model fast.\n\n**Prerequisite:** Make sure Ollama is running (`ollama serve` in a terminal) with a model pulled (`ollama pull llama3.2:3b`).",
+              "code": "// popup.js\ndocument.getElementById('summarize').addEventListener('click', async () => {\n  const btn = document.getElementById('summarize');\n  const result = document.getElementById('result');\n  btn.disabled = true;\n  result.className = 'loading';\n  result.textContent = 'Extracting page text...';\n\n  try {\n    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });\n    const [{ result: pageText }] = await chrome.scripting.executeScript({\n      target: { tabId: tab.id },\n      func: () => document.body.innerText.substring(0, 4000)\n    });\n\n    if (!pageText || pageText.trim().length < 50) {\n      result.textContent = 'Not enough text on this page to summarize.';\n      btn.disabled = false;\n      return;\n    }\n\n    result.textContent = 'Sending to local AI model...';\n    const resp = await fetch('http://localhost:11434/api/generate', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({\n        model: 'llama3.2:3b',\n        prompt: `Summarize this webpage in 3-5 bullet points. Focus on key facts and takeaways. Be concise.\\n\\nPage text:\\n${pageText}`,\n        stream: false\n      })\n    });\n\n    const data = await resp.json();\n    result.className = '';\n    result.textContent = data.response || 'No response from model.';\n  } catch (err) {\n    result.className = '';\n    result.textContent = `Error: ${err.message}\\n\\nMake sure Ollama is running:\\n  ollama serve`;\n  }\n  btn.disabled = false;\n});",
+              "checkpoint": "Clicking 'Summarize' extracts page text and shows a summary from your local Ollama model."
+            },
+            {
+              "title": "Handle edge cases and polish",
+              "duration": "15 min",
+              "content": "Your extension works, but let's handle the real world:\n\n**Problem 1: Ollama not running.** We catch the fetch error and show a helpful message telling the user to start Ollama.\n\n**Problem 2: Page with no text** (images, videos, SPAs). We check if extracted text is too short and show a message.\n\n**Problem 3: Very long pages.** We already truncate to 4000 chars, but for better results, try extracting just the `<article>` tag or `<main>` content first:\n\n```javascript\n// Better extraction (replace the func in executeScript)\nfunc: () => {\n  const main = document.querySelector('article') || document.querySelector('main') || document.body;\n  return main.innerText.substring(0, 4000);\n}\n```\n\n**Problem 4: CORS.** Ollama's API allows localhost by default, so this works. If you hit CORS issues, start Ollama with `OLLAMA_ORIGINS=* ollama serve`.\n\nMake these improvements and test on 3 different types of pages: a news article, a GitHub README, and a Wikipedia page.",
+              "code": "",
+              "checkpoint": "Your extension gracefully handles Ollama being offline, pages with no text, and works on 3 different page types."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Ship It and Learn From It",
+          "lessons": [
+            {
+              "title": "Use it for a day",
+              "duration": "10 min",
+              "content": "Keep the extension installed and use it throughout your day. Every time you open a long article, click Summarize first.\n\nNotice:\n- **Where it saves time:** long articles, technical docs, research papers\n- **Where it fails:** pages with mostly images, very short pages, content behind paywalls\n- **Quality patterns:** does the model miss nuance? Hallucinate details? Get the gist but miss the point?\n\nWrite down your observations. This is product research — you're experiencing the UX of an AI tool firsthand, noticing friction points that benchmarks can't measure.\n\nAfter a day, you'll have informed opinions about:\n- Whether local models are \"good enough\" for summarization\n- What UX touches would make this genuinely useful vs. a novelty\n- Whether this is worth building into a more polished product",
+              "code": "",
+              "checkpoint": "You've used the extension on 5+ pages and written down what worked, what didn't, and why."
+            },
+            {
+              "title": "Connecting back: browser extensions as Sublime features",
+              "duration": "8 min",
+              "content": "You just shipped a real browser extension with AI capabilities in under 2 hours. Here's what this means for Sublime:\n\n1. **Browser extensions are underrated distribution.** California is deploying AI as a centralized tool; a browser extension meets users where they already are. If Sublime has a web-facing product, an extension is one of the cheapest distribution channels.\n\n2. **Local AI for privacy-sensitive features.** Your extension sends nothing to the cloud. For any Sublime feature handling sensitive user data, this architecture — local model, no API calls — eliminates both cost and privacy concerns.\n\n3. **The manifest v3 pattern.** Chrome's extension platform is well-documented, free to develop on, and reaches billions of browsers. The barrier is low; the reach is enormous.\n\n4. **Prompt quality matters more than model quality.** A well-crafted summarization prompt on a 3B model often beats a lazy prompt on a frontier model. That's a cost advantage Sublime can exploit.\n\n**Next step:** list one Sublime workflow that could live as a browser extension. What data would it access, and what would the AI do with it?",
+              "code": "",
+              "checkpoint": "You've identified one potential Sublime browser extension and described what it would do."
             }
           ]
         }

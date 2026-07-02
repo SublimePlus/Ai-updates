@@ -13,6 +13,7 @@
   --cyan-bright: #22d3ee;
   --violet: #a78bfa;
   --amber: #fbbf24;
+  --red: #f87171;
   --radius: 4px;
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -119,6 +120,36 @@ body {
   text-shadow: 0 0 18px rgba(94, 234, 212, 0.55);
 }
 
+/* ------- section sub-tabs ------- */
+.section-tabs {
+  display: flex; gap: 2px; flex-wrap: wrap;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.section-tab, .saved-tab {
+  appearance: none; cursor: pointer;
+  background: transparent; border: none;
+  font-family: var(--font-mono); font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.12em; color: var(--dim);
+  padding: 9px 14px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.section-tab:hover, .saved-tab:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+
+.section-tab.active {
+  color: var(--cyan); background: rgba(94, 234, 212, 0.08);
+  box-shadow: inset 0 -2px 0 var(--cyan);
+}
+
+.saved-tab.active {
+  color: var(--violet); background: rgba(167, 139, 250, 0.08);
+  box-shadow: inset 0 -2px 0 var(--violet);
+}
+
 /* ------- views ------- */
 main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 auto; }
 
@@ -189,12 +220,24 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
 
 .action-icon { display: inline-block; font-size: 0.9rem; }
 
+/* ------- favorite button ------- */
+.fav-btn {
+  appearance: none; background: none; border: none; cursor: pointer;
+  font-size: 1.1rem; line-height: 1; padding: 4px;
+  color: var(--faint);
+  transition: color 0.2s, transform 0.15s;
+}
+
+.fav-btn:hover { color: var(--amber); transform: scale(1.15); }
+
+.fav-btn.active { color: var(--amber); text-shadow: 0 0 10px rgba(251, 191, 36, 0.5); }
+
 /* ------- news list ------- */
 .news-list { list-style: none; display: grid; gap: 18px; }
 
 .news-card {
   position: relative;
-  display: grid; grid-template-columns: 68px 1fr; gap: 18px;
+  display: grid; grid-template-columns: 68px 1fr auto; gap: 18px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -220,11 +263,13 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
   padding-top: 4px;
 }
 
-.news-rank::before { content: "N°"; display: block; font-size: 0.55rem; color: var(--faint); letter-spacing: 0.2em; margin-bottom: 4px; }
+.news-rank::before { content: "N\00b0"; display: block; font-size: 0.55rem; color: var(--faint); letter-spacing: 0.2em; margin-bottom: 4px; }
 
 .news-card:nth-child(-n+3) .news-rank { color: var(--cyan); text-shadow: 0 0 16px rgba(94, 234, 212, 0.45); }
 
 .news-body { min-width: 0; }
+
+.news-fav { display: flex; align-items: flex-start; padding-top: 4px; }
 
 .news-title { font-size: 1.12rem; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
 
@@ -249,6 +294,15 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
 .chip.video { color: var(--amber); border-color: rgba(251, 191, 36, 0.35); }
 .chip.social { color: var(--violet); border-color: rgba(167, 139, 250, 0.35); }
 .chip.research { color: var(--cyan-bright); border-color: rgba(34, 211, 238, 0.35); }
+
+.section-chip {
+  padding: 2px 9px; border-radius: 2px;
+  font-family: var(--font-mono); font-size: 0.55rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: var(--violet);
+}
 
 .news-summary { color: var(--text); font-size: 0.94rem; margin-bottom: 14px; }
 
@@ -452,6 +506,31 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
 .complete-btn:hover { background: rgba(94, 234, 212, 0.16); box-shadow: 0 0 18px rgba(94, 234, 212, 0.2); }
 .complete-btn.done { background: transparent; color: var(--faint); border-color: var(--line); }
 
+/* ------- saved view ------- */
+.saved-empty {
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+  text-align: center; color: var(--dim);
+  font-size: 0.9rem;
+}
+
+.saved-empty .mono { display: block; color: var(--violet); font-size: 0.68rem; letter-spacing: 0.2em; margin-bottom: 10px; }
+
+.history-item {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.history-item:hover { background: rgba(255,255,255,0.02); }
+
+.history-title { color: var(--text); font-size: 0.92rem; }
+.history-title a { color: var(--text); text-decoration: none; }
+.history-title a:hover { color: var(--cyan); }
+
+.history-meta { font-family: var(--font-mono); font-size: 0.62rem; color: var(--faint); letter-spacing: 0.1em; white-space: nowrap; }
+
 /* ------- states & footer ------- */
 .empty-state {
   border: 1px dashed var(--line-strong);
@@ -474,4 +553,7 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
   .news-card { grid-template-columns: 1fr; gap: 8px; }
   .news-rank { display: flex; align-items: baseline; gap: 8px; font-size: 1.2rem; }
   .news-rank::before { margin-bottom: 0; }
+  .news-fav { position: absolute; top: 12px; right: 12px; }
+  .section-tabs { gap: 0; }
+  .section-tab, .saved-tab { padding: 8px 10px; font-size: 0.56rem; }
 }
