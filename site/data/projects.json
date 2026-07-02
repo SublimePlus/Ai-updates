@@ -1,430 +1,493 @@
 {
-  "generatedAt": "2026-07-02T09:00:00+00:00",
-  "generator": "seed",
-  "model": "seed walkthrough · curated by claude",
-  "basedOnNewsFrom": "2026-07-02T09:00:00+00:00",
+  "generatedAt": "2026-07-02T19:49:02+00:00",
+  "generator": "github-actions",
+  "model": "openai/gpt-4o-mini",
+  "basedOnNewsFrom": "2026-07-02T19:32:23+00:00",
   "projects": [
     {
-      "id": "local-llm-private-journal",
-      "title": "Run a Private AI Journal on Your Laptop",
-      "tagline": "Use a free open-weight model locally — no cloud, no subscription, total privacy.",
-      "inspiredBy": "Zyphra releases ZAYA1-8B fully open under Apache 2.0, trained on AMD hardware",
+      "id": "ai-patent-inventor",
+      "title": "Understanding AI and Patent Laws",
+      "tagline": "Explore the legal boundaries of AI in innovation.",
+      "inspiredBy": "AI can't be listed as inventor on patent applications, Japan's top court rules",
       "difficulty": "Beginner",
-      "timeEstimate": "~1.5 hours",
-      "skills": ["Ollama", "local inference", "prompt engineering"],
-      "section": "tools",
-      "outcome": "A local AI assistant you can talk to privately, with a saved prompt template for daily journaling.",
-      "stretchGoals": ["Add a second model and compare outputs", "Write a shell alias that opens the journal in one command"],
-      "modules": [
-        {
-          "title": "Module 1: Setting Up Local AI",
-          "lessons": [
-            {
-              "title": "Why run AI locally?",
-              "duration": "8 min",
-              "content": "Cloud AI services are powerful, but they send every prompt to a remote server. For personal use — journaling, brainstorming, drafting — you might not want that.\n\nOpen-weight models like ZAYA1-8B (this week's news) run entirely on your machine. No account, no API key, no billing. The trade-off: they're smaller and less capable than cloud frontier models. But for structured tasks with good prompts, they're surprisingly useful.\n\n**Why this matters for a startup founder:** understanding the cost-capability spectrum of AI models is the single most valuable intuition you can build. Every feature you design for Sublime will sit somewhere on this spectrum.",
-              "code": "",
-              "checkpoint": "You can explain in one sentence why someone would choose a local model over a cloud API."
-            },
-            {
-              "title": "Install Ollama and pull a model",
-              "duration": "12 min",
-              "content": "Ollama is the simplest way to run open models locally. It handles downloading, quantization, and serving — you just type `ollama run`.\n\n**Install Ollama** (one command, no account needed):\n- macOS/Linux: `curl -fsSL https://ollama.com/install.sh | sh`\n- Windows: download from ollama.com\n\nThen pull a small, fast model:\n\n```bash\nollama pull llama3.2:3b\n```\n\nThis downloads a ~2GB model. It runs well even on a laptop without a GPU. Once it finishes, test it:\n\n```bash\nollama run llama3.2:3b \"What is the capital of Japan?\"\n```\n\nYou should get an answer in a few seconds. That response was generated entirely on your machine — nothing left your laptop.",
-              "code": "# Install\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Pull a small model (~2GB)\nollama pull llama3.2:3b\n\n# Test it\nollama run llama3.2:3b \"What is the capital of Japan?\"",
-              "checkpoint": "Running `ollama list` shows llama3.2:3b and `ollama run llama3.2:3b` answers a question."
-            }
-          ]
-        },
-        {
-          "title": "Module 2: Building the Journal Prompt",
-          "lessons": [
-            {
-              "title": "Design a system prompt for journaling",
-              "duration": "10 min",
-              "content": "A system prompt shapes how the model behaves for every message in a conversation. For journaling, we want the model to:\n\n1. Ask reflective questions instead of giving generic advice\n2. Keep responses short (journaling should be *your* writing)\n3. Summarize patterns it notices across the session\n\nHere's a starting prompt — save it to a file called `journal-prompt.txt`:\n\nThe key insight: **a well-designed prompt turns a generic model into a specialized tool.** This is the same skill you'll use to build AI features in Sublime — the model is the engine, but the prompt is the product.",
-              "code": "You are a reflective journaling partner. Rules:\n- Ask ONE thoughtful follow-up question after each entry.\n- Never give advice unless explicitly asked.\n- Keep responses under 3 sentences.\n- At the end of a session, when I say \"summarize\", list the 3 main themes from today's entries.\n\nStart by asking what's on my mind today.",
-              "checkpoint": "You have a file `journal-prompt.txt` with a system prompt you've customized to your style."
-            },
-            {
-              "title": "Run a journal session with Modelfile",
-              "duration": "15 min",
-              "content": "Ollama uses `Modelfile` to bundle a system prompt with a model so you can launch it with one command. Create a file called `Modelfile` (no extension):\n\n```\nFROM llama3.2:3b\nSYSTEM \"\"\"<paste your journal-prompt.txt content here>\"\"\"\nPARAMETER temperature 0.7\n```\n\nThen create your custom model:\n\n```bash\nollama create my-journal -f Modelfile\nollama run my-journal\n```\n\nYou're now in a live journal session. Write freely. When you're done, type `summarize` and the model will pull out your recurring themes.\n\n**Experiment:** try changing `temperature` to 0.3 (more focused, predictable) or 0.9 (more creative, surprising) and notice the difference.",
-              "code": "# Create the Modelfile\ncat > Modelfile << 'EOF'\nFROM llama3.2:3b\nSYSTEM \"\"\"You are a reflective journaling partner. Rules:\n- Ask ONE thoughtful follow-up question after each entry.\n- Never give advice unless explicitly asked.\n- Keep responses under 3 sentences.\n- When I say 'summarize', list the 3 main themes from today's entries.\nStart by asking what's on my mind today.\"\"\"\nPARAMETER temperature 0.7\nEOF\n\n# Build and run\nollama create my-journal -f Modelfile\nollama run my-journal",
-              "checkpoint": "Running `ollama run my-journal` starts a journaling conversation that asks you a reflective question."
-            }
-          ]
-        },
-        {
-          "title": "Module 3: Making It a Habit",
-          "lessons": [
-            {
-              "title": "One-command launcher and daily alias",
-              "duration": "8 min",
-              "content": "The difference between a tool you built and a tool you use is friction. Let's make it zero-friction.\n\nAdd this to your `~/.bashrc` or `~/.zshrc`:\n\n```bash\nalias journal='ollama run my-journal'\n```\n\nReload your shell (`source ~/.zshrc`) and now typing `journal` drops you straight into a private AI journaling session.\n\n**Optional:** pipe today's date as the first message so the model knows context:\n\n```bash\nalias journal='echo \"Today is $(date +\"%A, %B %d %Y\"). Let\\'s begin.\" | ollama run my-journal'\n```",
-              "code": "# Add to ~/.zshrc or ~/.bashrc\nalias journal='ollama run my-journal'\n\n# Reload\nsource ~/.zshrc\n\n# Now just type:\njournal",
-              "checkpoint": "Typing `journal` in a new terminal window starts your AI journaling session."
-            },
-            {
-              "title": "Connecting back: what this means for Sublime",
-              "duration": "8 min",
-              "content": "You just built a personalized AI tool in under two hours with zero cost and zero accounts. Here's what that teaches you about building Sublime:\n\n1. **Prompt = Product.** The model was generic; your system prompt made it a journaling tool. Every AI feature in Sublime is really a prompt design problem.\n\n2. **Local-first is viable.** For features where privacy matters or margins are tight, an open model running on the user's hardware (or a cheap server) can replace API calls entirely.\n\n3. **The cost spectrum.** You now have hands-on intuition for where local models sit vs. cloud APIs — small tasks with good prompts work great locally; complex reasoning still needs frontier models. Designing features around this trade-off is a real competitive advantage.\n\n**Next step:** think about one feature in Sublime where a local/open model would be good enough. Write down what the system prompt would look like.",
-              "code": "",
-              "checkpoint": "You've written down one Sublime feature idea that could run on a local open model, with a draft system prompt."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "prompt-library-for-work",
-      "title": "Build a Personal Prompt Library",
-      "tagline": "Steal California's playbook: systematize AI prompts for your most repetitive tasks.",
-      "inspiredBy": "California partners with Anthropic to give Claude to every state agency",
-      "difficulty": "Beginner",
-      "timeEstimate": "~1 hour",
-      "skills": ["prompt engineering", "workflow automation", "markdown"],
-      "section": "technology",
-      "outcome": "A structured markdown file of reusable, tested prompts for your top 5 recurring tasks.",
-      "stretchGoals": ["Add a 'prompt score' for each (rate how well it works 1-5 after each use)", "Create a Claude Project with your top prompts as instructions"],
-      "modules": [
-        {
-          "title": "Module 1: Identifying Your Repetitive Tasks",
-          "lessons": [
-            {
-              "title": "The California lesson: standardize before you scale",
-              "duration": "8 min",
-              "content": "This week, California announced a state-wide partnership with Anthropic — giving Claude to every agency, city and county. But the real story isn't the tool, it's the method: they're pairing it with **standardized training and prompt templates** so thousands of workers get consistent results.\n\nYou're one person, but the same principle applies. Most of us use AI ad-hoc: open a chat, type something vaguely, get a vaguely useful answer. A prompt library flips that — you invest 5 minutes writing a great prompt once, then reuse it every time.\n\n**The ROI math:** if a prompt saves you 10 minutes on a task you do 3x per week, that's 26 hours per year from one prompt.",
-              "code": "",
-              "checkpoint": "You understand the difference between ad-hoc prompting and a reusable prompt library."
-            },
-            {
-              "title": "Audit your week for repeat tasks",
-              "duration": "10 min",
-              "content": "Open a blank note and spend 10 minutes listing tasks from your last week that:\n\n- You've done more than twice\n- Involve writing, summarizing, analyzing, or formatting\n- Feel tedious but don't require deep creative thought\n\nExamples:\n- Summarizing meeting notes into action items\n- Writing follow-up emails after calls\n- Turning rough ideas into structured outlines\n- Reviewing a document for tone and clarity\n- Drafting social media posts from a longer piece\n\nPick your **top 5**. These are the tasks worth building prompts for. Rank them by frequency × tedium.",
-              "code": "",
-              "checkpoint": "You have a ranked list of 5 repetitive tasks that AI could help with."
-            }
-          ]
-        },
-        {
-          "title": "Module 2: Writing Reusable Prompts",
-          "lessons": [
-            {
-              "title": "The anatomy of a reusable prompt",
-              "duration": "12 min",
-              "content": "A reusable prompt has four parts:\n\n1. **Role** — who is the AI acting as? (\"You are a concise technical editor.\")\n2. **Task** — what specifically to do (\"Rewrite the following for clarity...\")\n3. **Constraints** — rules and format (\"Max 3 bullet points. No jargon.\")\n4. **Placeholder** — where your input goes (\"Text to edit: {{INPUT}}\")\n\nHere's a real example for summarizing meeting notes:\n\n```\nYou are a project manager's assistant.\n\nSummarize these meeting notes into:\n1. Three key decisions made\n2. Action items with owners (format: \"- [ ] Task — @Owner\")\n3. One unresolved question to follow up on\n\nKeep the total under 150 words. Use plain language.\n\nMeeting notes:\n{{PASTE NOTES HERE}}\n```\n\nNotice: no fluff, very specific output format, clear constraints. **Test it** — paste real notes in and see if the output matches what you'd write by hand. Tweak until it does.",
-              "code": "# Template: Meeting Notes → Action Items\n\nYou are a project manager's assistant.\n\nSummarize these meeting notes into:\n1. Three key decisions made\n2. Action items with owners (format: \"- [ ] Task — @Owner\")\n3. One unresolved question to follow up on\n\nKeep the total under 150 words. Use plain language.\n\nMeeting notes:\n{{PASTE NOTES HERE}}",
-              "checkpoint": "You've written and tested one reusable prompt that produces consistent results."
-            },
-            {
-              "title": "Build prompts for all five tasks",
-              "duration": "20 min",
-              "content": "Now create a markdown file called `prompts.md` and write one prompt section for each of your 5 tasks. Use this structure for each:\n\n```markdown\n## Task: [Name]\n**When to use:** [one line]\n**Time saved:** ~[X] min per use\n\n### Prompt\n[Your prompt with {{PLACEHOLDER}} for input]\n\n### Example output\n[Paste one real result so future-you remembers what good looks like]\n\n---\n```\n\n**Tips:**\n- Be embarrassingly specific in constraints. \"Write casually\" → \"Write like a smart friend texting, not a LinkedIn post.\"\n- Include output format: bullet points, numbered list, table, JSON — the model follows formatting instructions well.\n- Test each prompt with real input before saving it. Adjust until the output is copy-paste-ready at least 80% of the time.",
-              "code": "",
-              "checkpoint": "You have a `prompts.md` file with 5 tested, reusable prompt sections."
-            }
-          ]
-        },
-        {
-          "title": "Module 3: Using It Daily",
-          "lessons": [
-            {
-              "title": "Make it frictionless to access",
-              "duration": "8 min",
-              "content": "A prompt library only works if it's faster to open than to retype from memory. Options:\n\n- **Simplest:** Pin `prompts.md` in your file manager or bookmark it in your notes app.\n- **Better:** Create a Claude Project and paste your top prompts into the Project Instructions. Every new conversation in that project automatically uses them.\n- **Power move:** Use a text expander (like Raycast snippets on Mac, or Espanso on any OS — both free). Type `;meeting` and it expands to your full meeting-notes prompt.\n\nPick one method and set it up now. The goal: going from \"I need to summarize these notes\" to having the prompt ready should take under 5 seconds.",
-              "code": "",
-              "checkpoint": "You can access any of your 5 prompts in under 5 seconds using your chosen method."
-            },
-            {
-              "title": "Connecting back: prompts as a product skill",
-              "duration": "5 min",
-              "content": "You just built what California is spending millions to roll out: a structured prompt library that turns AI from a novelty into a reliable tool.\n\nFor Sublime, this skill translates directly:\n\n1. **Every AI feature is a prompt.** When you build AI into Sublime, the prompts you write for users ARE the product experience. You just practiced the craft.\n\n2. **Prompt templates = product templates.** If Sublime helps users with repetitive tasks, shipping pre-built prompt templates (like your `prompts.md`) is a feature users will pay for.\n\n3. **Iteration matters.** You noticed that first-draft prompts rarely work perfectly. Build that iteration loop into Sublime's product process — user feedback on AI output quality is gold.\n\n**Next step:** look at your 5 prompts and ask: could any of these be a feature inside Sublime?",
-              "code": "",
-              "checkpoint": "You've identified at least one prompt that could become a Sublime feature."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "model-comparison-scorecard",
-      "title": "Build an AI Model Comparison Scorecard",
-      "tagline": "Sonnet 5, GPT-5.6, open models — test them yourself instead of trusting benchmarks.",
-      "inspiredBy": "Anthropic launches Claude Sonnet 5 — now the default for every Free and Pro user",
-      "difficulty": "Intermediate",
       "timeEstimate": "~2 hours",
-      "skills": ["model evaluation", "Python", "JSON", "critical thinking"],
-      "section": "ai-news",
-      "outcome": "A Python script and spreadsheet that benchmarks 3+ models on tasks relevant to YOUR work, not generic leaderboards.",
-      "stretchGoals": ["Add automated scoring with a judge model", "Publish your scorecard as a blog post"],
-      "modules": [
-        {
-          "title": "Module 1: Why Generic Benchmarks Lie to You",
-          "lessons": [
-            {
-              "title": "Leaderboards vs. your actual tasks",
-              "duration": "8 min",
-              "content": "This week, Sonnet 5 launched claiming to be \"close to Opus 4.8 on many tasks\" and GPT-5.5 Instant reported a 52.5% hallucination reduction. Those are aggregate numbers across thousands of test cases.\n\nThe problem: **your tasks aren't average.** A model that ranks #1 on coding benchmarks might be mediocre at the specific kind of email drafting you do daily. The only benchmark that matters is one built from your real work.\n\nIn this project, you'll build a personal evaluation harness — a set of test prompts drawn from your actual tasks, with criteria you define, scored across multiple models. It takes ~2 hours but gives you decision-making power that no leaderboard post can.\n\n**This is a startup founder superpower:** knowing which model to use for which task, based on evidence rather than hype.",
-              "code": "",
-              "checkpoint": "You can explain why a model that tops a public leaderboard might underperform on your specific use case."
-            },
-            {
-              "title": "Design your test suite",
-              "duration": "15 min",
-              "content": "Create a file called `eval_prompts.json`. It holds 5-8 test cases — real prompts from your work, each with criteria for what a good answer looks like.\n\nStructure:\n\n```json\n[\n  {\n    \"id\": \"summarize-email\",\n    \"prompt\": \"Summarize this email thread into 3 bullet points...\\n\\n[paste a real email]\",\n    \"criteria\": \"Captures all action items; under 80 words; no hallucinated details\",\n    \"category\": \"summarization\"\n  }\n]\n```\n\nGood test cases to include:\n- A summarization task (email, article, meeting notes)\n- A writing task (draft a message in your voice)\n- A reasoning task (analyze a tradeoff, debug a problem)\n- A formatting task (turn messy text into structured output)\n- A knowledge task (something you can fact-check)\n\nUse **real data from your work** — that's the whole point.",
-              "code": "[\n  {\n    \"id\": \"summarize-email\",\n    \"prompt\": \"Summarize this email into 3 bullet points: ...\",\n    \"criteria\": \"Captures action items; under 80 words; no hallucinations\",\n    \"category\": \"summarization\"\n  },\n  {\n    \"id\": \"draft-followup\",\n    \"prompt\": \"Draft a follow-up email after a sales call where...\",\n    \"criteria\": \"Professional but warm; includes next steps; under 150 words\",\n    \"category\": \"writing\"\n  },\n  {\n    \"id\": \"debug-logic\",\n    \"prompt\": \"This function returns wrong results when input is empty: ...\",\n    \"criteria\": \"Identifies the root cause; fix is correct; explanation is clear\",\n    \"category\": \"reasoning\"\n  }\n]",
-              "checkpoint": "You have `eval_prompts.json` with at least 5 test cases using real data from your work."
-            }
-          ]
-        },
-        {
-          "title": "Module 2: Running the Evaluation",
-          "lessons": [
-            {
-              "title": "Build the eval runner script",
-              "duration": "20 min",
-              "content": "We'll write a Python script that sends each test prompt to multiple models and saves the results. It uses free tiers only:\n\n- **Claude Sonnet 5** via claude.ai (free tier — copy-paste)\n- **ChatGPT** via chatgpt.com (free tier — copy-paste)\n- **Local model** via Ollama (if you did Project 1)\n\nFor the local model, we can automate it. For cloud models on free tiers, the script generates the prompts and you paste the responses back. The script then collates everything into a scorecard.\n\nCreate `eval_runner.py`:\n\nThe script reads your test cases, optionally hits a local Ollama model, and writes a `results.json` file with all responses organized for scoring.",
-              "code": "import json, subprocess, sys\nfrom datetime import datetime\n\ndef load_prompts(path=\"eval_prompts.json\"):\n    with open(path) as f:\n        return json.load(f)\n\ndef run_ollama(prompt, model=\"llama3.2:3b\"):\n    try:\n        r = subprocess.run(\n            [\"ollama\", \"run\", model, prompt],\n            capture_output=True, text=True, timeout=120\n        )\n        return r.stdout.strip()\n    except Exception as e:\n        return f\"[error: {e}]\"\n\ndef main():\n    prompts = load_prompts()\n    results = []\n    for p in prompts:\n        entry = {\"id\": p[\"id\"], \"category\": p[\"category\"],\n                 \"criteria\": p[\"criteria\"], \"responses\": {}}\n        # Auto-run local model\n        print(f\"Running local model on: {p['id']}\")\n        entry[\"responses\"][\"llama3.2:3b\"] = run_ollama(p[\"prompt\"])\n        # Placeholder for cloud models (manual paste)\n        entry[\"responses\"][\"sonnet-5\"] = \"<paste from claude.ai>\"\n        entry[\"responses\"][\"gpt-free\"] = \"<paste from chatgpt.com>\"\n        results.append(entry)\n    \n    output = {\"date\": datetime.now().isoformat(), \"results\": results}\n    with open(\"results.json\", \"w\") as f:\n        json.dump(output, f, indent=2)\n    print(f\"Saved {len(results)} results to results.json\")\n    print(\"Now paste cloud model responses into results.json\")\n\nif __name__ == \"__main__\":\n    main()",
-              "checkpoint": "Running `python eval_runner.py` produces a `results.json` with local model responses filled in."
-            },
-            {
-              "title": "Score and compare",
-              "duration": "15 min",
-              "content": "Open `results.json` and paste the cloud model responses (run each prompt in claude.ai and chatgpt.com free tier). Then score each response 1-5 on the criteria you defined.\n\nAdd a `scores` field to each entry:\n\n```json\n\"scores\": {\n  \"llama3.2:3b\": {\"score\": 3, \"notes\": \"Got the gist but missed one action item\"},\n  \"sonnet-5\": {\"score\": 5, \"notes\": \"Perfect, nailed the format\"},\n  \"gpt-free\": {\"score\": 4, \"notes\": \"Good but slightly verbose\"}\n}\n```\n\nThen generate your scorecard — a simple markdown table:\n\n| Task | Local (3B) | Sonnet 5 | GPT Free |\n|------|-----------|----------|----------|\n| Summarize email | 3 | 5 | 4 |\n| Draft followup | 2 | 5 | 4 |\n| ... | ... | ... | ... |\n| **Average** | **2.6** | **4.8** | **4.0** |\n\nYou now have data, not opinions. You know exactly which model to use for which task in YOUR workflow.",
-              "code": "",
-              "checkpoint": "You have a completed scorecard table showing how 3+ models perform on your specific tasks."
-            }
-          ]
-        },
-        {
-          "title": "Module 3: Insights and Sublime Applications",
-          "lessons": [
-            {
-              "title": "Read the scorecard like a founder",
-              "duration": "10 min",
-              "content": "Look at your scorecard and answer these questions:\n\n1. **Is there a clear winner?** Often there isn't — different models win on different task types. That's the insight.\n\n2. **Where does the local model surprise you?** If it scores 4+ on any task, that's a feature you could run at near-zero cost.\n\n3. **What's the quality gap between free and paid tiers?** This tells you your \"cost of quality\" — how much it's worth to use a paid API vs. free.\n\n4. **Which tasks have the widest score spread?** Those are where model selection matters most — and where Sublime could differentiate by routing to the right model.\n\nWrite down your top 3 findings. These are now data-backed beliefs about the AI landscape — much more valuable than reading someone else's benchmark blog.",
-              "code": "",
-              "checkpoint": "You've written 3 data-backed findings about model strengths/weaknesses for your specific use cases."
-            },
-            {
-              "title": "Connecting back: model routing as a Sublime feature",
-              "duration": "8 min",
-              "content": "You just built what AI companies charge enterprise customers thousands for: a custom evaluation framework.\n\nFor Sublime:\n\n1. **Model routing is a product feature.** Your scorecard showed that no single model wins everything. A product that automatically routes tasks to the best model (cheap local model for simple tasks, frontier model for complex ones) saves money and improves quality.\n\n2. **Evaluation is ongoing.** New models drop every few weeks (Sonnet 5 and GPT-5.6 both landed this week). Your eval script lets you benchmark a new model in 30 minutes instead of guessing.\n\n3. **Your test suite is your moat.** The prompts in `eval_prompts.json` encode YOUR domain knowledge. A competitor using generic benchmarks will make worse model choices than you.\n\n**Next step:** rerun this evaluation whenever a major model launches. Your script makes it a 30-minute task instead of a day-long exercise.",
-              "code": "",
-              "checkpoint": "You've identified whether model routing could be a feature in Sublime and which tasks would benefit most."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tiny-agent-with-smolagents",
-      "title": "Build a Tiny AI Agent That Searches and Summarizes",
-      "tagline": "Code-first agents in ~50 lines — no framework bloat, just Python.",
-      "inspiredBy": "Code-first agents go mainstream: Hugging Face's smolagents fits in ~1,000 lines",
-      "difficulty": "Intermediate",
-      "timeEstimate": "~2.5 hours",
-      "skills": ["Python", "AI agents", "tool use", "web scraping"],
+      "skills": [
+        "Legal research",
+        "AI understanding",
+        "Critical thinking"
+      ],
       "section": "research",
-      "outcome": "A working agent that takes a question, searches the web, reads the results, and writes a concise answer — all in under 100 lines of Python.",
-      "stretchGoals": ["Add a file-writing tool so the agent saves reports to disk", "Give the agent a calculator tool for numerical questions"],
+      "outcome": "A brief report summarizing your findings on AI's role in patents.",
+      "stretchGoals": [
+        "Create a presentation on AI and intellectual property",
+        "Draft a mock patent application for AI-generated inventions"
+      ],
       "modules": [
         {
-          "title": "Module 1: What Agents Actually Are",
+          "title": "Module 1: Introduction to AI and Patent Law",
           "lessons": [
             {
-              "title": "Demystifying 'AI agents'",
-              "duration": "8 min",
-              "content": "\"AI agents\" is 2026's most overhyped buzzword, but the core idea is simple:\n\n**An agent is a loop:** the model receives a task → decides which tool to use → reads the tool's output → decides the next step → repeats until done.\n\nThat's it. The \"intelligence\" is the model's ability to pick the right tool and interpret results. The \"agent framework\" is just the loop that runs this.\n\nThis week's news: Hugging Face's `smolagents` proved you don't need a 10,000-line framework — the core routing logic fits in ~1,000 lines. We'll go even simpler: our agent will be under 100 lines, using only Python's standard library plus one model call.\n\n**Why this matters:** if you understand the loop, you can build agents without depending on any framework. Frameworks change; the pattern doesn't.",
+              "title": "Understanding AI",
+              "duration": "15 min",
+              "content": "Artificial Intelligence (AI) refers to the simulation of human intelligence in machines designed to think and act like humans. Understanding AI is crucial as it plays an increasingly significant role in innovation across various fields. By grasping the fundamentals of AI, you will be better equipped to analyze its legal implications. AI systems can generate inventions, but the legal status of these inventions remains unclear. This lesson will help you define AI and explore its capabilities and limitations, setting the stage for understanding how it interacts with patent laws.",
               "code": "",
-              "checkpoint": "You can describe the agent loop (task → tool selection → execution → observation → repeat) in your own words."
+              "checkpoint": "You can summarize the key features of AI in your own words."
             },
             {
-              "title": "Set up the project",
-              "duration": "10 min",
-              "content": "Create a new directory and set up a minimal Python project:\n\n```bash\nmkdir tiny-agent && cd tiny-agent\n```\n\nWe need:\n- Python 3.10+ (pre-installed on most systems)\n- An Ollama model running locally (from Project 1), OR access to a free AI chat\n\nIf you have Ollama running:\n```bash\nollama pull llama3.2:3b\n```\n\nWe'll build three files:\n1. `tools.py` — the tools the agent can use (web search, page reader)\n2. `agent.py` — the agent loop\n3. `run.py` — the entry point\n\nNo pip installs needed — we're using only the standard library.",
-              "code": "mkdir tiny-agent && cd tiny-agent\ntouch tools.py agent.py run.py",
-              "checkpoint": "You have a `tiny-agent` directory with three empty Python files."
-            }
-          ]
-        },
-        {
-          "title": "Module 2: Tools and the Agent Loop",
-          "lessons": [
-            {
-              "title": "Build the tools",
+              "title": "An Overview of Patent Law",
               "duration": "20 min",
-              "content": "An agent's tools are just Python functions with descriptions the model can read. We'll build two:\n\n1. **`web_search(query)`** — uses DuckDuckGo's HTML (no API key needed) to get search snippets\n2. **`read_page(url)`** — fetches a URL and extracts the text\n\nEach tool returns a string the model will read as its \"observation.\" Keep outputs concise — models work better with focused input.\n\nThe key design rule: **tools should be pure functions with clear input/output.** The model picks which tool to call and what arguments to pass; the tool just does the work and returns text.",
-              "code": "# tools.py\nimport re\nimport urllib.request\nimport urllib.parse\n\ndef web_search(query):\n    \"\"\"Search the web and return top 5 result snippets.\"\"\"\n    url = \"https://html.duckduckgo.com/html/?q=\" + urllib.parse.quote(query)\n    req = urllib.request.Request(url, headers={\"User-Agent\": \"TinyAgent/1.0\"})\n    with urllib.request.urlopen(req, timeout=15) as resp:\n        html = resp.read().decode(\"utf-8\", \"replace\")\n    results = re.findall(\n        r'class=\"result__a\"[^>]*href=\"(.*?)\".*?class=\"result__snippet\">(.*?)</a>',\n        html, re.DOTALL\n    )\n    lines = []\n    for url_encoded, snippet in results[:5]:\n        text = re.sub(r'<.*?>', '', snippet).strip()\n        lines.append(f\"- {text}\")\n    return \"\\n\".join(lines) if lines else \"No results found.\"\n\ndef read_page(url):\n    \"\"\"Fetch a URL and return first 1500 chars of text.\"\"\"\n    req = urllib.request.Request(url, headers={\"User-Agent\": \"TinyAgent/1.0\"})\n    with urllib.request.urlopen(req, timeout=15) as resp:\n        html = resp.read().decode(\"utf-8\", \"replace\")\n    text = re.sub(r'<script.*?</script>', '', html, flags=re.DOTALL)\n    text = re.sub(r'<style.*?</style>', '', text, flags=re.DOTALL)\n    text = re.sub(r'<.*?>', ' ', text)\n    text = re.sub(r'\\s+', ' ', text).strip()\n    return text[:1500]\n\nTOOLS = {\n    \"web_search\": {\n        \"fn\": web_search,\n        \"desc\": \"Search the web. Input: a search query string.\"\n    },\n    \"read_page\": {\n        \"fn\": read_page,\n        \"desc\": \"Read a web page. Input: a URL.\"\n    }\n}",
-              "checkpoint": "Running `python -c \"from tools import web_search; print(web_search('python programming'))\"` returns search snippets."
-            },
-            {
-              "title": "Build the agent loop",
-              "duration": "25 min",
-              "content": "The agent loop has four steps:\n\n1. **System prompt** tells the model it has tools and how to call them\n2. **User message** with the question\n3. **Parse** the model's response for tool calls (we use a simple `ACTION: tool_name(input)` format)\n4. **Execute** the tool, append the result as an observation, and loop back\n\nThe loop stops when the model outputs `FINAL ANSWER:` instead of an action.\n\nThis is the entire agent — no magic, no framework. The model's reasoning ability drives the loop; our code just connects the pieces.",
-              "code": "# agent.py\nimport subprocess, re, json\nfrom tools import TOOLS\n\nSYSTEM = \"\"\"You are a research assistant with these tools:\n{tool_list}\n\nTo use a tool, write EXACTLY: ACTION: tool_name(\"input\")\nThen wait for OBSERVATION.\nWhen you have enough information, write: FINAL ANSWER: your concise answer.\n\nAlways search before answering. Use 1-3 tool calls max.\"\"\"\n\ndef make_system_prompt():\n    tool_list = \"\\n\".join(f\"- {name}: {t['desc']}\" for name, t in TOOLS.items())\n    return SYSTEM.format(tool_list=tool_list)\n\ndef call_model(messages, model=\"llama3.2:3b\"):\n    prompt = \"\\n\".join(f\"{m['role']}: {m['content']}\" for m in messages)\n    r = subprocess.run(\n        [\"ollama\", \"run\", model, prompt],\n        capture_output=True, text=True, timeout=120\n    )\n    return r.stdout.strip()\n\ndef run_agent(question, max_steps=4):\n    messages = [\n        {\"role\": \"system\", \"content\": make_system_prompt()},\n        {\"role\": \"user\", \"content\": question}\n    ]\n    for step in range(max_steps):\n        reply = call_model(messages)\n        print(f\"\\n--- Step {step+1} ---\\n{reply}\")\n        \n        if \"FINAL ANSWER:\" in reply:\n            return reply.split(\"FINAL ANSWER:\", 1)[1].strip()\n        \n        match = re.search(r'ACTION:\\s*(\\w+)\\(\"(.+?)\"\\)', reply)\n        if not match:\n            return reply  # model didn't follow format, return raw\n        \n        tool_name, tool_input = match.group(1), match.group(2)\n        if tool_name in TOOLS:\n            result = TOOLS[tool_name][\"fn\"](tool_input)\n            messages.append({\"role\": \"assistant\", \"content\": reply})\n            messages.append({\"role\": \"user\", \"content\": f\"OBSERVATION: {result}\"})\n        else:\n            messages.append({\"role\": \"user\", \"content\": f\"OBSERVATION: Unknown tool '{tool_name}'\"})\n    \n    return \"Agent reached max steps without a final answer.\"",
-              "checkpoint": "You can read through `agent.py` and explain what happens at each step of the loop."
+              "content": "Patents are legal rights granted to inventors, giving them exclusive rights to their inventions for a limited period. Understanding patent law is essential for recognizing how innovations are protected. This lesson will cover the basics of patent eligibility, the types of patents, and the criteria for patentability: novelty, non-obviousness, and usefulness. With a solid grasp of patent law, you will be able to critically evaluate how AI-generated inventions fit into existing frameworks and the implications of recent legal decisions.",
+              "code": "",
+              "checkpoint": "Draft a list of key criteria that make an invention patentable."
             }
           ]
         },
         {
-          "title": "Module 3: Run It and Learn From It",
+          "title": "Module 2: Analyzing AI's Role in Patent Applications",
           "lessons": [
             {
-              "title": "Test your agent",
-              "duration": "10 min",
-              "content": "Create the entry point and run it:\n\n```python\n# run.py\nfrom agent import run_agent\nimport sys\n\nquestion = \" \".join(sys.argv[1:]) or \"What is the latest AI news today?\"\nprint(f\"\\nQuestion: {question}\\n\")\nanswer = run_agent(question)\nprint(f\"\\n=== ANSWER ===\\n{answer}\")\n```\n\nRun it:\n```bash\npython run.py \"What did Anthropic announce this week?\"\n```\n\nWatch the steps print out — you'll see the model decide to search, read the results, and formulate an answer. It won't be perfect (a 3B model has limits), but it works.\n\n**Experiment:** Try questions that need 2+ tool calls, like \"Compare the price of Claude Sonnet 5 vs GPT-5.6.\" Watch how the agent chains searches.",
-              "code": "# run.py\nfrom agent import run_agent\nimport sys\n\nquestion = \" \".join(sys.argv[1:]) or \"What is the latest AI news today?\"\nprint(f\"\\nQuestion: {question}\\n\")\nanswer = run_agent(question)\nprint(f\"\\n=== ANSWER ===\\n{answer}\")",
-              "checkpoint": "Running `python run.py 'your question'` produces a multi-step agent trace ending in a coherent answer."
+              "title": "Case Study: AI and Inventorship",
+              "duration": "25 min",
+              "content": "In light of recent rulings, such as Japan's top court decision, it is essential to analyze the role of AI in patent applications. This lesson will explore specific case studies where AI has contributed to the invention process. We will examine how these cases were approached legally and the outcomes. By reviewing these examples, you will gain insight into the contentious issue of whether AI can be recognized as an inventor and the implications of such a designation.",
+              "code": "",
+              "checkpoint": "Identify a case study and summarize its key details regarding AI's role."
             },
             {
-              "title": "Connecting back: agents as Sublime features",
-              "duration": "8 min",
-              "content": "You just built a working AI agent in under 100 lines. Here's what this means for Sublime:\n\n1. **Agents are just loops + tools.** You don't need LangChain, CrewAI, or any framework to ship agentic features. A founder who understands the pattern can build exactly what's needed.\n\n2. **The tools are the product.** The model's reasoning ability is rented (via API or local model). What makes YOUR agent valuable is the specific tools you give it. For Sublime, the tools would connect to your users' data and workflows.\n\n3. **Small models can drive simple agents.** A 3B model successfully picked tools and chained actions. For Sublime features with well-defined tool sets, you don't always need a frontier model — which means lower cost per user.\n\n4. **The failure modes are instructive.** Where did your agent stumble? Those failure modes (wrong tool choice, bad parsing, hallucinated actions) are the same ones you'll need to handle in production. You've now seen them firsthand.\n\n**Next step:** think about one Sublime workflow that could be an agent — what tools would it need?",
+              "title": "Legal Research Methods",
+              "duration": "30 min",
+              "content": "To effectively understand the legal landscape surrounding AI and patents, you need to know how to conduct thorough legal research. This lesson will guide you through essential legal research methods, including using online databases and legal journals. You will learn how to locate relevant case law, statutes, and scholarly articles. This skill is vital for developing a well-informed perspective on the ongoing debates about AI's role in innovation and patent law.",
               "code": "",
-              "checkpoint": "You've listed one potential Sublime workflow as an agent, with the specific tools it would need."
+              "checkpoint": "Conduct research on a specific legal case and summarize your findings."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Compiling Your Findings",
+          "lessons": [
+            {
+              "title": "Drafting Your Report",
+              "duration": "30 min",
+              "content": "Now that you have gathered your insights on AI and patent law, it’s time to compile your findings into a coherent report. This lesson will guide you through structuring your report, including an introduction, analysis of case studies, and a conclusion. Focus on articulating your understanding of how AI fits within the current patent landscape and the implications of the legal rulings. A well-organized report will serve as a valuable resource for understanding the intersection of technology and law.",
+              "code": "",
+              "checkpoint": "Create an outline for your report based on the lessons learned."
+            },
+            {
+              "title": "Connecting to Current Events and Startups",
+              "duration": "20 min",
+              "content": "Understanding the implications of AI in patent law is not just theoretical; it has real-world applications, especially for startups. In this lesson, we will discuss how emerging companies can navigate these legal waters. By linking your findings to current events, such as the Japan ruling, you will see how legal precedents can influence innovation. This connection will help you appreciate the practical importance of your research and how it can inform business strategies in the tech industry.",
+              "code": "",
+              "checkpoint": "Write a brief paragraph on how your findings could impact startup strategies."
             }
           ]
         }
       ]
     },
     {
-      "id": "ai-funding-tracker-spreadsheet",
-      "title": "Build an AI Funding Tracker in a Spreadsheet",
-      "tagline": "Turn funding news into a structured dataset you can query and learn from.",
-      "inspiredBy": "Chamath Palihapitiya goes full-time CEO at 8090 Labs after $135M Series A",
+      "id": "game-creation-with-pocket",
+      "title": "Build a Mini-Game with Pocket",
+      "tagline": "Create an interactive game using AI prompts.",
+      "inspiredBy": "Meta quietly launches vibe-coded gaming app Pocket",
+      "difficulty": "Beginner",
+      "timeEstimate": "~3 hours",
+      "skills": [
+        "Game design",
+        "Prompt engineering",
+        "Basic programming"
+      ],
+      "section": "tools",
+      "outcome": "A simple playable mini-game created using Pocket's AI prompts.",
+      "stretchGoals": [
+        "Add multiple levels to the game",
+        "Implement scoring and rewards"
+      ],
+      "modules": [
+        {
+          "title": "Module 1: Setting Up Pocket and Understanding Game Design",
+          "lessons": [
+            {
+              "title": "Lesson 1: Introduction to Pocket",
+              "duration": "15 min",
+              "content": "In this lesson, we'll explore Pocket, a platform that leverages AI to help you create engaging games. Understanding the tool is essential because it simplifies game development by allowing you to focus on creativity and design rather than complex programming. Pocket uses prompts to guide the creation process, making it accessible for beginners. Let's get started by setting up your environment!",
+              "code": "",
+              "checkpoint": "Successfully navigate to Pocket's website and create a new project."
+            },
+            {
+              "title": "Lesson 2: Basics of Game Design",
+              "duration": "20 min",
+              "content": "Before diving into creation, it’s crucial to understand the fundamentals of game design. A good game has clear objectives, engaging mechanics, and a fun user experience. This lesson will cover the basic elements of game design, including characters, goals, and obstacles. We’ll brainstorm ideas for your mini-game and outline what you want the player to achieve. A solid design will guide our development process.",
+              "code": "",
+              "checkpoint": "Draft a one-page outline of your mini-game concept."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Building Your Mini-Game with AI Prompts",
+          "lessons": [
+            {
+              "title": "Lesson 1: Creating Game Elements Using Prompts",
+              "duration": "25 min",
+              "content": "Now that you have your game concept, let's start building! We'll use Pocket's AI prompts to create characters and settings. The prompts are designed to generate ideas based on your input, so don’t hesitate to experiment with different descriptions. This will help you bring your vision to life and create a unique experience for players.",
+              "code": "# Example of a prompt in Python\nprompt = 'Create a character that is a brave knight with a magical sword.'\nprint(prompt)",
+              "checkpoint": "Generate at least three unique characters using Pocket's prompts."
+            },
+            {
+              "title": "Lesson 2: Implementing Game Mechanics",
+              "duration": "30 min",
+              "content": "In this lesson, we will define the rules and mechanics of your game. Mechanics are the actions that players can take to achieve objectives. Using Pocket, you can input prompts to create challenges, levels, or scoring systems. This is where your game starts to take shape, so focus on how players will interact with your world and what makes it fun!",
+              "code": "# Example of a game mechanic prompt\nmechanic_prompt = 'Describe a challenge where the player must solve a riddle to proceed.'\nprint(mechanic_prompt)",
+              "checkpoint": "Create at least two game mechanics using Pocket prompts."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Finalizing Your Game and Connecting Skills to Real-World Applications",
+          "lessons": [
+            {
+              "title": "Lesson 1: Testing and Polishing Your Mini-Game",
+              "duration": "30 min",
+              "content": "With your game mechanics and elements in place, it’s time to test your game! Play through it multiple times to find any bugs or areas for improvement. Use feedback to make adjustments and refine the player experience. This step is crucial to ensure your game is enjoyable and functional before sharing it with others.",
+              "code": "",
+              "checkpoint": "Playtest your game and document at least three areas for improvement."
+            },
+            {
+              "title": "Lesson 2: Connecting Your Game to Current Trends and Entrepreneurship",
+              "duration": "20 min",
+              "content": "To wrap up, let’s reflect on how the skills you’ve developed through creating this game can be applied to the current landscape of gaming and entrepreneurship. The gaming industry is rapidly evolving, and understanding AI’s role can be a significant advantage. Think about how you could expand this game into a startup idea or adapt it for new audiences. This reflection will enhance your learning and help you think critically about your projects.",
+              "code": "",
+              "checkpoint": "Write a brief paragraph about how your game could connect to current gaming trends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-coding-assistant",
+      "title": "Using AI to Write Code Efficiently",
+      "tagline": "Leverage AI tools to assist with coding tasks.",
+      "inspiredBy": "Kimi K2.7 Code is generally available in GitHub Copilot",
+      "difficulty": "Intermediate",
+      "timeEstimate": "~4 hours",
+      "skills": [
+        "Coding",
+        "AI integration",
+        "Debugging"
+      ],
+      "section": "tools",
+      "outcome": "A small project built using AI coding assistance, improving coding efficiency.",
+      "stretchGoals": [
+        "Document the process and challenges faced",
+        "Create a tutorial on using AI for coding"
+      ],
+      "modules": [
+        {
+          "title": "Module 1: Setting Up Your Environment",
+          "lessons": [
+            {
+              "title": "Installing Python and Visual Studio Code",
+              "duration": "20 min",
+              "content": "To leverage AI for coding, you'll need a proper development environment. Python is a versatile programming language favored for its simplicity and wide array of libraries. Visual Studio Code (VS Code) is a powerful code editor with rich support for Python and extensions like GitHub Copilot. Start by downloading Python from the official website and follow the instructions to install it. Next, download Visual Studio Code and install it. Once installed, open VS Code and set it up for Python development by installing the Python extension from the marketplace. This setup lays the foundation for an efficient coding process where AI tools can assist you.",
+              "code": "",
+              "checkpoint": "Verify Python and VS Code are installed by running 'python --version' in the terminal."
+            },
+            {
+              "title": "Setting Up GitHub Copilot",
+              "duration": "20 min",
+              "content": "GitHub Copilot is an AI-powered code assistant that suggests code snippets as you type. To use it, you'll need a GitHub account and the Copilot extension for Visual Studio Code. First, sign in to your GitHub account and navigate to the GitHub Copilot page to enable access. Then, in VS Code, go to the Extensions view (Ctrl+Shift+X), search for 'GitHub Copilot', and install it. Once set up, you can start typing code, and Copilot will offer suggestions to enhance your coding efficiency. This integration will streamline your development process and help you learn by example.",
+              "code": "",
+              "checkpoint": "Confirm Copilot is active by observing suggestions as you type a simple function."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Building Your First Project with AI Assistance",
+          "lessons": [
+            {
+              "title": "Creating a Simple Calculator",
+              "duration": "30 min",
+              "content": "In this lesson, we will build a simple calculator application using Python. This project will help you understand how to use AI assistance effectively while coding. Start a new Python file in Visual Studio Code. Begin by defining functions for basic operations like addition, subtraction, multiplication, and division. Use GitHub Copilot to assist in writing these functions by typing comments that describe what you want to achieve. This way, you will see how the AI can help you generate code and improve your understanding of Python syntax and structure.",
+              "code": "def add(x, y):\n    return x + y\n\ndef subtract(x, y):\n    return x - y\n\ndef multiply(x, y):\n    return x * y\n\ndef divide(x, y):\n    if y != 0:\n        return x / y\n    else:\n        return 'Error! Division by zero.'",
+              "checkpoint": "Run the calculator functions in the terminal and ensure they return correct results."
+            },
+            {
+              "title": "Implementing User Input and Looping",
+              "duration": "30 min",
+              "content": "Now that you have the basic functions, it's time to enhance your calculator by allowing user input. This involves using the `input()` function in Python to get numbers from the user and a `while` loop to keep the program running until the user decides to exit. As you write this part, use GitHub Copilot to help generate the input handling code. This will give you practice in using loops and conditionals effectively while also showcasing the AI's capability to suggest solutions based on your requirements.",
+              "code": "while True:\n    print('Select operation:')\n    print('1. Add')\n    print('2. Subtract')\n    print('3. Multiply')\n    print('4. Divide')\n    print('5. Exit')\n    choice = input('Enter choice: ')\n    if choice == '5':\n        break\n    num1 = float(input('Enter first number: '))\n    num2 = float(input('Enter second number: '))\n    if choice == '1':\n        print('Result:', add(num1, num2))\n    # Add similar branches for other operations",
+              "checkpoint": "Run the program and successfully perform multiple calculations."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Finalizing Your Project and Reflecting on Learning",
+          "lessons": [
+            {
+              "title": "Polishing the Calculator and Adding Features",
+              "duration": "30 min",
+              "content": "In this lesson, we will finalize our calculator project by adding features like error handling and input validation. For instance, check if the user inputs valid numbers before performing calculations. Use GitHub Copilot to help generate these additional features. Polishing your project is essential as it not only improves user experience but also reinforces your understanding of coding best practices. This step is crucial for any software development process, ensuring your application is robust and user-friendly.",
+              "code": "try:\n    num1 = float(input('Enter first number: '))\n    num2 = float(input('Enter second number: '))\nexcept ValueError:\n    print('Invalid input! Please enter numeric values.')",
+              "checkpoint": "Run the finalized calculator with various inputs to ensure it handles errors gracefully."
+            },
+            {
+              "title": "Connecting AI Coding Skills to Real-World Applications",
+              "duration": "30 min",
+              "content": "Having built and polished your calculator using AI assistance, it's time to reflect on the skills you've developed and how they relate to real-world applications. Consider how AI tools like GitHub Copilot can enhance productivity for developers and streamline the coding process, especially for startups. The ability to efficiently write and debug code can significantly reduce time to market for new products. Document your experience and challenges faced during the project, as this reflection will not only solidify your learning but also provide insights for others interested in using AI in coding.",
+              "code": "",
+              "checkpoint": "Write a brief summary of your project experience and submit it as a document."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-fake-news-awareness",
+      "title": "Creating an AI Fake News Detector",
+      "tagline": "Build a simple model to identify fake news.",
+      "inspiredBy": "AI fake news complaining about how AI fake news is the death of real news",
+      "difficulty": "Intermediate",
+      "timeEstimate": "~3 hours",
+      "skills": [
+        "Natural language processing",
+        "Data analysis",
+        "Machine learning basics"
+      ],
+      "section": "ai-news",
+      "outcome": "A basic AI model that can categorize news articles as real or fake.",
+      "stretchGoals": [
+        "Enhance the model's accuracy with more data",
+        "Visualize the results with graphs"
+      ],
+      "modules": [
+        {
+          "title": "Module 1: Setting Up Your Environment and Understanding Fake News",
+          "lessons": [
+            {
+              "title": "Lesson 1: Installing Required Libraries",
+              "duration": "15 min",
+              "content": "To build an AI model for detecting fake news, we first need to set up our environment. We'll be using Python, a versatile programming language that has excellent libraries for data analysis and machine learning. In this lesson, you will install essential libraries such as `pandas`, `numpy`, and `scikit-learn` using pip. These libraries will help you with data manipulation and model building. To install these libraries, open your terminal or command prompt and run the following commands:\n\n\npip install pandas numpy scikit-learn\n",
+              "code": "",
+              "checkpoint": "Verify the installation by importing the libraries in a Python script without errors."
+            },
+            {
+              "title": "Lesson 2: Understanding the Dataset",
+              "duration": "20 min",
+              "content": "Before diving into model creation, it's crucial to understand the dataset we'll be using. For this project, we will use a publicly available dataset containing labeled articles as either real or fake. Understanding the structure, features, and potential biases in the dataset will help us build a more effective model. We'll load the dataset using `pandas` and explore its contents to get a feel for the data. This exploration will include checking for missing values and distribution of labels.\n\nExample code to load and preview the dataset:\n\npython\nimport pandas as pd\n\n# Load the dataset\ndf = pd.read_csv('path_to_your_dataset.csv')\n# Display the first few rows\nprint(df.head())\n",
+              "code": "import pandas as pd\n\n# Load the dataset\ndf = pd.read_csv('path_to_your_dataset.csv')\n# Display the first few rows\nprint(df.head())",
+              "checkpoint": "Successfully load and preview the dataset without errors."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Building the Fake News Detection Model",
+          "lessons": [
+            {
+              "title": "Lesson 1: Data Preprocessing",
+              "duration": "30 min",
+              "content": "Data preprocessing is a vital step in preparing your dataset for machine learning. This involves cleaning the text data by removing unnecessary characters, converting text to lowercase, and tokenizing the text. We will also split our dataset into training and testing sets to evaluate our model's performance later. In this lesson, you will learn how to implement these preprocessing steps using `pandas` and `scikit-learn`.\n\npython\nfrom sklearn.model_selection import train_test_split\n\ndf['text'] = df['text'].str.replace('[^a-zA-Z ]', '').str.lower()\nX = df['text']\ny = df['label']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+              "code": "from sklearn.model_selection import train_test_split\n\ndf['text'] = df['text'].str.replace('[^a-zA-Z ]', '').str.lower()\nX = df['text']\ny = df['label']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)",
+              "checkpoint": "Check that the data is cleaned and split into training and testing sets."
+            },
+            {
+              "title": "Lesson 2: Training the Model",
+              "duration": "30 min",
+              "content": "With our data preprocessed, we can now build and train our AI model. We will use a simple logistic regression model, which is effective for binary classification tasks like fake news detection. In this lesson, you will learn how to create the model and train it on our training set. We will also evaluate its accuracy on the test set to see how well it performs.\n\nHere’s how to implement the model training:\n\npython\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.feature_extraction.text import CountVectorizer\nfrom sklearn.metrics import accuracy_score\n\nvectorizer = CountVectorizer()\nX_train_counts = vectorizer.fit_transform(X_train)\nmodel = LogisticRegression()\nmodel.fit(X_train_counts, y_train)\nX_test_counts = vectorizer.transform(X_test)\ny_pred = model.predict(X_test_counts)\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy}')\n",
+              "code": "from sklearn.linear_model import LogisticRegression\nfrom sklearn.feature_extraction.text import CountVectorizer\nfrom sklearn.metrics import accuracy_score\n\nvectorizer = CountVectorizer()\nX_train_counts = vectorizer.fit_transform(X_train)\nmodel = LogisticRegression()\nmodel.fit(X_train_counts, y_train)\nX_test_counts = vectorizer.transform(X_test)\ny_pred = model.predict(X_test_counts)\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy}')",
+              "checkpoint": "Confirm that the model trains successfully and outputs an accuracy score."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Evaluating and Enhancing Your Model",
+          "lessons": [
+            {
+              "title": "Lesson 1: Evaluating Model Performance",
+              "duration": "20 min",
+              "content": "After training the model, it’s essential to evaluate its performance comprehensively. We will look at metrics such as precision, recall, and the confusion matrix to understand how well our model distinguishes between real and fake news articles. These metrics will help identify areas for improvement.\n\nYou can calculate these metrics using the following code:\n\npython\nfrom sklearn.metrics import classification_report\n\nreport = classification_report(y_test, y_pred)\nprint(report)\n",
+              "code": "from sklearn.metrics import classification_report\n\nreport = classification_report(y_test, y_pred)\nprint(report)",
+              "checkpoint": "Generate and review the classification report for model evaluation."
+            },
+            {
+              "title": "Lesson 2: Connecting Skills to Real-World Applications",
+              "duration": "15 min",
+              "content": "To wrap up, we will discuss how your newfound skills in building a fake news detection model can be applied in real-world scenarios. The prevalence of misinformation makes this skill incredibly valuable. You can also think about how this model could evolve into a startup idea, providing tools for news verification or misinformation alerts. Reflect on the news item that inspired this project and consider how AI can contribute positively to media literacy and public awareness.",
+              "code": "",
+              "checkpoint": "Write a brief reflection on how the model can be used in real-world applications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "financial-ai-strategies",
+      "title": "Analyzing AI's Impact on Financial Markets",
+      "tagline": "Explore how AI influences investment strategies.",
+      "inspiredBy": "Jobs Report Signals Cooling Labor Market | Open Interest 7/2/2026",
+      "difficulty": "Beginner",
+      "timeEstimate": "~2 hours",
+      "skills": [
+        "Financial analysis",
+        "Market research",
+        "Data interpretation"
+      ],
+      "section": "finance",
+      "outcome": "A report analyzing how AI trends affect investment decisions.",
+      "stretchGoals": [
+        "Develop a simple investment strategy based on AI trends",
+        "Create a mock portfolio influenced by AI insights"
+      ],
+      "modules": [
+        {
+          "title": "Module 1: Setting Up Your Financial Analysis Environment",
+          "lessons": [
+            {
+              "title": "Lesson 1: Introduction to Financial Data Sources",
+              "duration": "15 min",
+              "content": "To analyze AI's impact on financial markets, you'll need access to relevant financial data. There are many free data sources available online. Websites like Yahoo Finance and Alpha Vantage offer APIs to fetch historical stock prices and other financial metrics. Understanding where to find this data is crucial as it forms the foundation of your analysis. In this lesson, you'll learn how to access this data and prepare your tools for analysis.",
+              "code": "",
+              "checkpoint": "Successfully access financial data from a chosen source."
+            },
+            {
+              "title": "Lesson 2: Setting Up Python and Libraries",
+              "duration": "20 min",
+              "content": "Python is a powerful tool for financial analysis due to its rich ecosystem of libraries. In this lesson, you will install Python and essential libraries such as Pandas for data manipulation and Matplotlib for visualization. These tools will help you process and visualize the financial data you collect. We'll also go through how to set up a simple script to fetch data using the APIs you learned about in the previous lesson.",
+              "code": "!pip install pandas matplotlib requests",
+              "checkpoint": "Confirm that Pandas and Matplotlib are installed and working."
+            },
+            {
+              "title": "Lesson 3: Fetching and Cleaning Financial Data",
+              "duration": "25 min",
+              "content": "Now that you have your environment set up, it's time to fetch and clean the financial data. In this lesson, you'll write a Python script to pull data from your chosen financial API. You'll also learn how to clean the data, handling any missing values or inconsistencies. Clean data is essential for accurate analysis, and you'll see how to transform your raw data into a usable format for further analysis.",
+              "code": "import requests\nimport pandas as pd\n\ndef fetch_data(symbol):\n    url = f'https://api.example.com/data/{symbol}'  # Replace with actual API URL\n    response = requests.get(url)\n    return pd.DataFrame(response.json())\n\n# Example usage\n# df = fetch_data('AAPL')\n# print(df.head())",
+              "checkpoint": "Run the script and verify that the data is fetched and displayed correctly."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Analyzing AI Trends in Financial Markets",
+          "lessons": [
+            {
+              "title": "Lesson 1: Identifying Key AI Trends",
+              "duration": "20 min",
+              "content": "AI is transforming the financial sector in various ways, from algorithmic trading to risk management. In this lesson, you will review recent articles and reports on AI's impact on financial markets. Understanding these trends will help you recognize how they influence investment strategies. You'll also learn how to summarize these trends effectively for your report.",
+              "code": "",
+              "checkpoint": "Compile a list of at least three key AI trends affecting finance."
+            },
+            {
+              "title": "Lesson 2: Correlating AI Trends with Market Data",
+              "duration": "25 min",
+              "content": "To analyze the influence of AI on investment decisions, you need to correlate the identified AI trends with historical market data. In this lesson, you will learn how to use statistical methods to establish relationships between AI advancements and stock price movements. This will involve calculating correlation coefficients and visualizing the results using graphs.",
+              "code": "import matplotlib.pyplot as plt\n\n# Example correlation code\n# df['ai_trend'] = ai_trend_data\n# correlation = df['ai_trend'].corr(df['stock_price'])\n# plt.scatter(df['ai_trend'], df['stock_price'])\n# plt.title('AI Trend vs Stock Price')\n# plt.show()",
+              "checkpoint": "Calculate and visualize correlations between AI trends and stock prices."
+            },
+            {
+              "title": "Lesson 3: Drawing Insights for Investment Strategies",
+              "duration": "30 min",
+              "content": "In this final lesson of Module 2, you will synthesize your findings into actionable insights. Based on the correlations and trends you've analyzed, you'll develop a preliminary framework for an investment strategy influenced by AI. You'll learn how to present your findings clearly, so they can inform real-world investment decisions. This will set the stage for your final report.",
+              "code": "",
+              "checkpoint": "Draft a strategy outline based on your analysis."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Creating Your AI-Influenced Financial Report",
+          "lessons": [
+            {
+              "title": "Lesson 1: Structuring Your Report",
+              "duration": "15 min",
+              "content": "Your report should clearly communicate your findings on AI's impact on financial markets. In this lesson, you will learn how to structure your report, including sections for the introduction, methodology, findings, and conclusions. A well-organized report helps convey your insights effectively, making it easier for readers to understand the implications of your analysis.",
+              "code": "",
+              "checkpoint": "Create an outline for your report including all necessary sections."
+            },
+            {
+              "title": "Lesson 2: Writing and Visualizing Your Findings",
+              "duration": "30 min",
+              "content": "Now it's time to bring your report to life. In this lesson, you'll write the content based on your analysis and insights. You'll also learn how to incorporate visualizations from your data analysis to enhance your report. Clear visuals can help illustrate trends and correlations, making your findings more accessible.",
+              "code": "",
+              "checkpoint": "Complete the first draft of your report including text and visuals."
+            },
+            {
+              "title": "Lesson 3: Connecting to Current Events and Future Opportunities",
+              "duration": "25 min",
+              "content": "To conclude your project, you will connect your findings back to the inspired news article about the jobs report and discuss potential startup opportunities in the financial AI space. This lesson will help you understand the broader implications of your analysis and how AI can shape future investment strategies. You will reflect on how startups can leverage these insights to create innovative solutions in finance.",
+              "code": "",
+              "checkpoint": "Write a paragraph connecting your report findings to the news item and propose a startup idea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-in-business-operations",
+      "title": "Streamlining Business Operations with AI",
+      "tagline": "Identify AI tools that can improve business processes.",
+      "inspiredBy": "Achieving operational excellence with AI",
       "difficulty": "Beginner",
       "timeEstimate": "~1.5 hours",
-      "skills": ["data analysis", "spreadsheets", "prompt engineering", "market research"],
-      "section": "finance",
-      "outcome": "A structured spreadsheet tracking AI startup funding rounds with a reusable AI prompt to fill it from any news article.",
-      "stretchGoals": ["Add a chart showing funding trends over time", "Write a Python script to auto-fetch and parse funding news"],
+      "skills": [
+        "Operational analysis",
+        "Business strategy",
+        "AI tool exploration"
+      ],
+      "section": "business",
+      "outcome": "A list of AI tools and their applications in business.",
+      "stretchGoals": [
+        "Create a mock business process improvement plan",
+        "Evaluate the cost-benefit analysis of proposed AI tools"
+      ],
       "modules": [
         {
-          "title": "Module 1: Why Track Funding Yourself",
+          "title": "Module 1: Introduction to AI in Business Operations",
           "lessons": [
             {
-              "title": "Funding signals decode the market for free",
-              "duration": "8 min",
-              "content": "This week, Chamath went full-time CEO at 8090 Labs with a $135M Series A. South Korea committed $880B to AI infrastructure. These aren't just headlines — they're data points.\n\nEvery funding round tells you:\n- **What problem investors believe is worth solving** (the company's pitch)\n- **How much conviction there is** (round size, investor tier)\n- **Where the market is heading** (sector, geography, timing)\n\nMost founders read funding news passively. You're going to turn it into a structured dataset — a personal market intelligence tool that gets smarter every week.\n\n**Why a spreadsheet?** Because it's free, it's queryable, and the act of structuring data forces you to think about what actually matters. No fancy tools needed.",
-              "code": "",
-              "checkpoint": "You can name 3 things a funding round tells you about market direction."
-            },
-            {
-              "title": "Design the tracker schema",
+              "title": "Understanding AI and Its Importance",
               "duration": "10 min",
-              "content": "Open any spreadsheet (Google Sheets, LibreOffice, Excel — all free). Create these columns:\n\n| Column | Example |\n|--------|--------|\n| Date | 2026-07-01 |\n| Company | 8090 Labs |\n| Round | Series A |\n| Amount | $135M |\n| Lead Investor | Salesforce Ventures |\n| Sector | AI-native software |\n| Pain Point | Automated business software |\n| CEO Background | Chamath Palihapitiya, former Social Capital |\n| My Take | Signals that AI-native SaaS is investable, not just AI infra |\n\nThe \"Pain Point\" and \"My Take\" columns are the most valuable — they force you to think like an investor. **Fill in the first row** with the 8090 Labs data from this week's news.",
-              "code": "Date,Company,Round,Amount,Lead Investor,Sector,Pain Point,CEO Background,My Take\n2026-07-01,8090 Labs,Series A,$135M,Salesforce Ventures,AI-native software,Automated business software,Chamath Palihapitiya - former Social Capital,AI-native SaaS is investable beyond infra plays",
-              "checkpoint": "You have a spreadsheet with headers and at least one row filled in from real news."
-            }
-          ]
-        },
-        {
-          "title": "Module 2: AI-Assisted Data Entry",
-          "lessons": [
-            {
-              "title": "Build a prompt to extract funding data",
-              "duration": "12 min",
-              "content": "Filling the tracker by hand is slow. Let's build an AI prompt that extracts structured data from any funding article.\n\nHere's the prompt template:\n\n```\nExtract funding data from this article into CSV format with these exact columns:\nDate, Company, Round, Amount, Lead Investor, Sector, Pain Point, CEO Background\n\nRules:\n- Date in YYYY-MM-DD format\n- Amount with $ and M/B suffix\n- Pain Point: one sentence on what problem they solve\n- If any field is unknown, write \"unknown\"\n- Output ONLY the CSV row, no headers, no explanation\n\nArticle:\n{{PASTE ARTICLE TEXT}}\n```\n\nTest it with a real article. Paste the output into your spreadsheet. Add your \"My Take\" column manually — that's the part the AI can't do for you.\n\n**Pro tip:** save this prompt as a snippet (see the Prompt Library project) so you can use it in seconds whenever you see funding news.",
-              "code": "Extract funding data from this article into CSV format with these exact columns:\nDate, Company, Round, Amount, Lead Investor, Sector, Pain Point, CEO Background\n\nRules:\n- Date in YYYY-MM-DD format\n- Amount with $ and M/B suffix\n- Pain Point: one sentence on what problem they solve\n- If any field is unknown, write \"unknown\"\n- Output ONLY the CSV row, no headers, no explanation\n\nArticle:\n{{PASTE ARTICLE TEXT}}",
-              "checkpoint": "Your extraction prompt correctly outputs a CSV row from a real funding article."
+              "content": "Artificial Intelligence (AI) has become a game-changer in business operations. It offers tools and techniques that can automate mundane tasks, analyze large datasets, and provide insights that drive decision-making. By streamlining processes, businesses can reduce costs, improve efficiency, and enhance customer satisfaction. In this lesson, we will explore the fundamental concepts of AI and why it is crucial for modern businesses to adopt AI technologies. Understanding these fundamentals will empower you to identify opportunities where AI can be integrated into your operations.",
+              "code": "",
+              "checkpoint": "Learner can summarize the benefits of AI in business operations."
             },
             {
-              "title": "Batch-fill from this week's signal",
+              "title": "Exploring Free AI Tools",
               "duration": "15 min",
-              "content": "Go through this week's AI Signal news and find every item that mentions funding, investment, or acquisition. Use your extraction prompt on each one.\n\nFrom this week's seed data alone, you should find at least:\n- 8090 Labs ($135M Series A)\n- South Korea's $880B national plan (government investment, not VC — note the difference)\n\nAlso search \"AI funding this week\" and add 3-5 more from outside the Signal. Your tracker should have at least 5 rows when you're done.\n\nNow look at the data as a whole:\n- Which sectors got the most funding?\n- Are rounds getting bigger or smaller?\n- Any geographic patterns?\n\nYou're doing what analysts at venture firms do, but free, in 30 minutes, powered by AI for the grunt work.",
+              "content": "There are numerous free AI tools available that can help improve business processes. In this lesson, we will introduce a few popular tools such as Google Colab for data analysis, ChatGPT for customer support automation, and Zapier for workflow automation. Each tool serves a unique purpose, and understanding their functionalities is essential. We will guide you through accessing these tools without the need for any paid subscriptions. By the end of this lesson, you will have a foundational understanding of these tools and how they can be leveraged in your business operations.",
               "code": "",
-              "checkpoint": "Your tracker has 5+ rows and you've noted one pattern you see in the data."
+              "checkpoint": "Learner can access at least one AI tool and describe its purpose."
             }
           ]
         },
         {
-          "title": "Module 3: Making It Useful for Sublime",
+          "title": "Module 2: Applying AI Tools to Business Processes",
           "lessons": [
             {
-              "title": "Weekly update ritual (10 minutes/week)",
-              "duration": "8 min",
-              "content": "A tracker is only useful if you maintain it. Here's a sustainable ritual:\n\n**Every Monday morning, 10 minutes:**\n1. Open the AI Signal or your RSS reader\n2. Search \"AI funding\" in Google News\n3. Paste any new articles into your extraction prompt\n4. Add the CSV rows to your spreadsheet\n5. Write one \"My Take\" sentence for each\n6. Glance at the full sheet — any trend jumps out?\n\nThat's it. Over a month, you'll have 20-30 data points. Over a quarter, 60-90. That's enough to see real patterns — which sectors are heating up, which are cooling, where the smart money is going.\n\nSet a recurring calendar event now: \"AI Funding Tracker — 10 min\" every Monday at 9 AM.",
+              "title": "Identifying Suitable Business Processes for AI",
+              "duration": "15 min",
+              "content": "Not all business processes are suitable for AI integration. In this lesson, you will learn how to evaluate your current processes to identify which ones could benefit from AI. We will discuss criteria such as repetitiveness, data-driven decision-making, and time-consuming tasks. By the end of this lesson, you will be able to select a specific process in your mock business that could be improved with AI, setting the stage for practical applications in the next module.",
               "code": "",
-              "checkpoint": "You have a calendar event set for weekly tracker updates."
+              "checkpoint": "Learner can identify a business process that may benefit from AI."
             },
             {
-              "title": "Connecting back: market intelligence for Sublime",
-              "duration": "8 min",
-              "content": "You just built a personal market intelligence tool from a headline and a spreadsheet.\n\nFor Sublime:\n\n1. **Structured data is power.** Turning unstructured news into queryable data is exactly what Sublime could do for users. Your extraction prompt is a prototype of that feature.\n\n2. **AI + human judgment.** The AI did the extraction; you added the insight (\"My Take\"). The best AI products don't replace human judgment — they clear the path so humans can focus on judgment.\n\n3. **Patterns over headlines.** After a few weeks, your tracker will reveal things no single article shows: sector trends, investor clustering, funding velocity. Sublime could offer this kind of longitudinal insight to its users.\n\n**Next step:** review your tracker and ask: does the data suggest any adjacent market Sublime should watch? Write down one idea.",
-              "code": "",
-              "checkpoint": "You've identified one market insight from your tracker that could inform Sublime's direction."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "chrome-extension-ai-summarizer",
-      "title": "Build a Tiny Chrome Extension That Summarizes Pages",
-      "tagline": "Ship a real browser extension in under 2 hours — no frameworks, no accounts.",
-      "inspiredBy": "California partners with Anthropic to give Claude to every state agency",
-      "difficulty": "Intermediate",
-      "timeEstimate": "~2 hours",
-      "skills": ["JavaScript", "Chrome extensions", "API integration", "UI design"],
-      "section": "web-services",
-      "outcome": "A working Chrome extension that summarizes the current webpage using a local AI model via Ollama.",
-      "stretchGoals": ["Add a keyboard shortcut to trigger summarization", "Store summaries in extension storage for a reading history"],
-      "modules": [
-        {
-          "title": "Module 1: Extension Basics",
-          "lessons": [
-            {
-              "title": "How Chrome extensions actually work",
-              "duration": "10 min",
-              "content": "A Chrome extension is just a folder with a `manifest.json` and some HTML/JS files. No special tools, no build step, no account needed to develop locally.\n\nThe three key pieces:\n- **manifest.json** — metadata and permissions (which sites it can access, what it can do)\n- **popup.html/js** — the UI that appears when you click the extension icon\n- **content script (optional)** — JS that runs inside web pages\n\nWe'll build a popup extension: you click the icon, it grabs the current page's text, sends it to a local Ollama model, and shows the summary.\n\n**Why this project?** California is rolling out AI assistants to every state agency. You're building the same concept — an AI layer on top of existing workflows — but as a browser extension you control.",
-              "code": "",
-              "checkpoint": "You can name the 3 core files in a Chrome extension and what each does."
-            },
-            {
-              "title": "Create the project scaffold",
-              "duration": "12 min",
-              "content": "Create a folder called `ai-summarizer-ext` with these files:\n\n**manifest.json** tells Chrome what your extension does. We need:\n- `activeTab` permission (access the current tab's content)\n- A popup (the UI)\n- An icon (we'll use an emoji-based SVG for simplicity)\n\n**popup.html** is minimal — a button, a loading indicator, and a results area.\n\nCreate all files as shown in the code block. The popup is deliberately simple: one button, one output area. No frameworks.\n\nTo load it in Chrome:\n1. Go to `chrome://extensions`\n2. Enable \"Developer mode\" (toggle in top-right)\n3. Click \"Load unpacked\" and select your folder\n4. You'll see the extension icon appear in your toolbar",
-              "code": "// manifest.json\n{\n  \"manifest_version\": 3,\n  \"name\": \"AI Page Summarizer\",\n  \"version\": \"1.0\",\n  \"description\": \"Summarize any page with local AI\",\n  \"permissions\": [\"activeTab\", \"scripting\"],\n  \"action\": {\n    \"default_popup\": \"popup.html\",\n    \"default_title\": \"Summarize this page\"\n  }\n}\n\n// popup.html\n<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { width: 360px; padding: 16px; font-family: system-ui; background: #0b1120; color: #d7e2f4; }\n    h3 { margin: 0 0 12px; font-size: 14px; color: #5eead4; }\n    #summarize { background: #5eead4; color: #0b1120; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; width: 100%; }\n    #summarize:hover { background: #22d3ee; }\n    #summarize:disabled { opacity: 0.5; }\n    #result { margin-top: 12px; font-size: 13px; line-height: 1.5; white-space: pre-wrap; }\n    .loading { color: #7b89a8; }\n  </style>\n</head>\n<body>\n  <h3>AI PAGE SUMMARIZER</h3>\n  <button id=\"summarize\">SUMMARIZE THIS PAGE</button>\n  <div id=\"result\"></div>\n  <script src=\"popup.js\"></script>\n</body>\n</html>",
-              "checkpoint": "Your extension folder has manifest.json and popup.html, and it loads in Chrome without errors."
-            }
-          ]
-        },
-        {
-          "title": "Module 2: Connecting to Local AI",
-          "lessons": [
-            {
-              "title": "Extract page text and call Ollama",
+              "title": "Creating a Simple Implementation Plan",
               "duration": "20 min",
-              "content": "Create `popup.js` — the brain of the extension. It does three things:\n\n1. **Extracts text** from the current tab using Chrome's scripting API\n2. **Sends it to Ollama** running locally on port 11434\n3. **Displays the summary** in the popup\n\nOllama exposes a REST API at `http://localhost:11434/api/generate`. We send a POST with the model name, a prompt containing the page text, and `stream: false` to get the full response at once.\n\nThe prompt is critical: we ask for a concise summary with key takeaways, not a verbose rewrite. We also truncate the page text to 4000 characters to keep the local model fast.\n\n**Prerequisite:** Make sure Ollama is running (`ollama serve` in a terminal) with a model pulled (`ollama pull llama3.2:3b`).",
-              "code": "// popup.js\ndocument.getElementById('summarize').addEventListener('click', async () => {\n  const btn = document.getElementById('summarize');\n  const result = document.getElementById('result');\n  btn.disabled = true;\n  result.className = 'loading';\n  result.textContent = 'Extracting page text...';\n\n  try {\n    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });\n    const [{ result: pageText }] = await chrome.scripting.executeScript({\n      target: { tabId: tab.id },\n      func: () => document.body.innerText.substring(0, 4000)\n    });\n\n    if (!pageText || pageText.trim().length < 50) {\n      result.textContent = 'Not enough text on this page to summarize.';\n      btn.disabled = false;\n      return;\n    }\n\n    result.textContent = 'Sending to local AI model...';\n    const resp = await fetch('http://localhost:11434/api/generate', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({\n        model: 'llama3.2:3b',\n        prompt: `Summarize this webpage in 3-5 bullet points. Focus on key facts and takeaways. Be concise.\\n\\nPage text:\\n${pageText}`,\n        stream: false\n      })\n    });\n\n    const data = await resp.json();\n    result.className = '';\n    result.textContent = data.response || 'No response from model.';\n  } catch (err) {\n    result.className = '';\n    result.textContent = `Error: ${err.message}\\n\\nMake sure Ollama is running:\\n  ollama serve`;\n  }\n  btn.disabled = false;\n});",
-              "checkpoint": "Clicking 'Summarize' extracts page text and shows a summary from your local Ollama model."
-            },
-            {
-              "title": "Handle edge cases and polish",
-              "duration": "15 min",
-              "content": "Your extension works, but let's handle the real world:\n\n**Problem 1: Ollama not running.** We catch the fetch error and show a helpful message telling the user to start Ollama.\n\n**Problem 2: Page with no text** (images, videos, SPAs). We check if extracted text is too short and show a message.\n\n**Problem 3: Very long pages.** We already truncate to 4000 chars, but for better results, try extracting just the `<article>` tag or `<main>` content first:\n\n```javascript\n// Better extraction (replace the func in executeScript)\nfunc: () => {\n  const main = document.querySelector('article') || document.querySelector('main') || document.body;\n  return main.innerText.substring(0, 4000);\n}\n```\n\n**Problem 4: CORS.** Ollama's API allows localhost by default, so this works. If you hit CORS issues, start Ollama with `OLLAMA_ORIGINS=* ollama serve`.\n\nMake these improvements and test on 3 different types of pages: a news article, a GitHub README, and a Wikipedia page.",
+              "content": "Now that you have identified a business process, it’s time to create a basic implementation plan for integrating an AI tool. This lesson will guide you through the steps of defining objectives, selecting the right AI tool, and outlining the key steps for implementation. We will provide a template to ensure you cover all essential aspects, including timeline and resources needed. This plan will serve as a roadmap for applying AI in your chosen business process.",
               "code": "",
-              "checkpoint": "Your extension gracefully handles Ollama being offline, pages with no text, and works on 3 different page types."
+              "checkpoint": "Learner can draft a basic implementation plan for an AI tool."
             }
           ]
         },
         {
-          "title": "Module 3: Ship It and Learn From It",
+          "title": "Module 3: Finalizing Your AI Tool Application",
           "lessons": [
             {
-              "title": "Use it for a day",
-              "duration": "10 min",
-              "content": "Keep the extension installed and use it throughout your day. Every time you open a long article, click Summarize first.\n\nNotice:\n- **Where it saves time:** long articles, technical docs, research papers\n- **Where it fails:** pages with mostly images, very short pages, content behind paywalls\n- **Quality patterns:** does the model miss nuance? Hallucinate details? Get the gist but miss the point?\n\nWrite down your observations. This is product research — you're experiencing the UX of an AI tool firsthand, noticing friction points that benchmarks can't measure.\n\nAfter a day, you'll have informed opinions about:\n- Whether local models are \"good enough\" for summarization\n- What UX touches would make this genuinely useful vs. a novelty\n- Whether this is worth building into a more polished product",
-              "code": "",
-              "checkpoint": "You've used the extension on 5+ pages and written down what worked, what didn't, and why."
+              "title": "Building Your AI Tool Application",
+              "duration": "20 min",
+              "content": "In this lesson, you will finalize your AI tool application by integrating the tool with the selected business process. We will walk through a case study using Google Colab to automate data reporting, demonstrating how to set up a simple data pipeline. You will learn how to input your data, run basic analyses, and generate outputs that can streamline your reporting process. This hands-on example will illustrate the practical application of AI in enhancing business operations.",
+              "code": "# Example Python code for a simple data report in Google Colab\nimport pandas as pd\n\ndata = {'Sales': [200, 300, 400], 'Month': ['January', 'February', 'March']}\ndf = pd.DataFrame(data)\n\n# Generate a report\nreport = df.describe()\nprint(report)",
+              "checkpoint": "Learner successfully runs the provided code and generates a report."
             },
             {
-              "title": "Connecting back: browser extensions as Sublime features",
-              "duration": "8 min",
-              "content": "You just shipped a real browser extension with AI capabilities in under 2 hours. Here's what this means for Sublime:\n\n1. **Browser extensions are underrated distribution.** California is deploying AI as a centralized tool; a browser extension meets users where they already are. If Sublime has a web-facing product, an extension is one of the cheapest distribution channels.\n\n2. **Local AI for privacy-sensitive features.** Your extension sends nothing to the cloud. For any Sublime feature handling sensitive user data, this architecture — local model, no API calls — eliminates both cost and privacy concerns.\n\n3. **The manifest v3 pattern.** Chrome's extension platform is well-documented, free to develop on, and reaches billions of browsers. The barrier is low; the reach is enormous.\n\n4. **Prompt quality matters more than model quality.** A well-crafted summarization prompt on a 3B model often beats a lazy prompt on a frontier model. That's a cost advantage Sublime can exploit.\n\n**Next step:** list one Sublime workflow that could live as a browser extension. What data would it access, and what would the AI do with it?",
+              "title": "Connecting Skills to Real-World Applications",
+              "duration": "10 min",
+              "content": "In this final lesson, we will connect the skills and tools you have acquired to real-world applications. We will discuss recent news articles that highlight how companies are successfully implementing AI in their operations. Additionally, we will explore how the knowledge gained can be leveraged to build a startup focused on operational excellence through AI. This will help you understand the broader implications of your learning and inspire you to think about your own business ventures.",
               "code": "",
-              "checkpoint": "You've identified one potential Sublime browser extension and described what it would do."
+              "checkpoint": "Learner can summarize a recent news article related to AI in business."
             }
           ]
         }
