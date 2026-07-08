@@ -94,6 +94,15 @@
     return resp.json();
   }
 
+  function setStatus(text, mode) {
+    const line = $("#status-line");
+    const dot = $(".pulse-dot");
+    line.textContent = text;
+    line.classList.toggle("offline", mode === "offline");
+    dot?.classList.toggle("offline", mode === "offline");
+    dot?.classList.toggle("calibrating", mode === "calibrating");
+  }
+
   async function refresh() {
     try {
       const [news, projects] = await Promise.all([
@@ -105,10 +114,9 @@
       state.news = news;
       state.projects = projects;
       if (changed) renderAll();
-      $("#status-line").textContent =
-        `LIVE · SIGNAL UPDATED ${timeAgo(news.updatedAt).toUpperCase()}`;
+      setStatus(`LIVE · SIGNAL UPDATED ${timeAgo(news.updatedAt).toUpperCase()}`, "live");
     } catch (err) {
-      $("#status-line").textContent = "OFFLINE · SERVE OVER HTTP TO LOAD DATA";
+      setStatus("OFFLINE · SERVE OVER HTTP TO LOAD DATA", "offline");
       $("#news-list").innerHTML =
         `<div class="empty-state"><span class="mono">NO DATA LINK</span>
          Could not load data files (${esc(err.message)}).<br>
