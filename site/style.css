@@ -91,6 +91,15 @@ body {
   animation: pulse 2.2s ease-in-out infinite;
 }
 
+.pulse-dot.calibrating { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+
+.pulse-dot.offline {
+  background: var(--red); box-shadow: 0 0 8px var(--red);
+  animation: pulse 0.9s ease-in-out infinite;
+}
+
+#status-line.offline { color: var(--red); }
+
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.7); }
