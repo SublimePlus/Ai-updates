@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T10:37:19+00:00",
+  "updatedAt": "2026-07-11T18:08:10+00:00",
   "generator": "github-actions",
   "model": "openai/gpt-4o-mini",
   "aiGenerated": true,
@@ -12,62 +12,62 @@
       "category": "social",
       "section": "web-services",
       "publishedAt": "2026-07-10T20:47:09+00:00",
-      "engagement": "1,103 points on Hacker News",
-      "summary": "Apple is suing OpenAI, claiming that former employees took trade secrets when they left to join the AI company. This legal battle highlights ongoing concerns about intellectual property in the tech industry.",
-      "lifeIdea": "Research and document your company’s unique processes and ideas to protect your intellectual property today.",
-      "sublimeAngle": "Understanding legal challenges in tech can help Sublime develop robust IP protection strategies."
+      "engagement": "1,445 points on Hacker News",
+      "summary": "Apple is suing OpenAI, claiming that former employees took trade secrets when they left. This lawsuit highlights the importance of protecting intellectual property in the tech industry.",
+      "lifeIdea": "Review your company's confidentiality agreements to ensure all employees understand the importance of protecting trade secrets.",
+      "sublimeAngle": "Understanding legal protection of intellectual property can help Sublime safeguard its innovations and maintain competitive advantage."
     },
     {
       "rank": 2,
+      "title": "Ghost Font: A font that humans can read but AI cannot",
+      "url": "https://www.mixfont.com/ghost-font",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "ai-news",
+      "publishedAt": "2026-07-11T09:36:53+00:00",
+      "engagement": "144 points on Hacker News",
+      "summary": "A new font called Ghost Font is designed to be readable by humans but not by AI. This innovation raises questions about digital privacy and security in an AI-driven world.",
+      "lifeIdea": "Experiment with creating simple documents using Ghost Font to see how it affects readability and privacy in your communications.",
+      "sublimeAngle": "Exploring unique data protection methods like Ghost Font could inspire Sublime's approach to user privacy features."
+    },
+    {
+      "rank": 3,
       "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
       "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-07-10T18:29:19+00:00",
-      "engagement": "459 points on Hacker News",
-      "summary": "GPT-5.6 Sol Ultra has successfully proven a complex mathematical conjecture known as the Cycle Double Cover Conjecture. This breakthrough showcases the growing capabilities of AI in solving advanced problems.",
-      "lifeIdea": "Explore free online math tools or forums to engage with complex problems relevant to your field today.",
-      "sublimeAngle": "Leveraging AI's problem-solving abilities could inspire innovative features for Sublime’s offerings."
+      "engagement": "500 points on Hacker News",
+      "summary": "The latest AI model, GPT-5.6 Sol Ultra, has successfully proven a complex mathematical conjecture. This advancement showcases the growing capabilities of AI in solving intricate problems.",
+      "lifeIdea": "Research recent breakthroughs in AI and identify one problem in your field that could be addressed with these technologies.",
+      "sublimeAngle": "Leveraging advanced AI solutions could enhance Sublime's offerings and position it as a leader in innovative construction technologies."
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "How the terrorist group Boko Haram uses frontier AI",
       "url": "https://casp.ac/reports/ai-enabled-terrorism",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-07-10T18:49:26+00:00",
-      "engagement": "207 points on Hacker News",
-      "summary": "Boko Haram is reportedly using advanced AI technologies for their operations, raising concerns about the misuse of AI. This highlights the need for ethical guidelines in AI development and deployment.",
-      "lifeIdea": "Start a discussion with your team about the ethical implications of AI in your projects today.",
-      "sublimeAngle": "Focusing on ethical AI practices could differentiate Sublime in a crowded market."
+      "engagement": "221 points on Hacker News",
+      "summary": "Boko Haram is reportedly using advanced AI technologies to enhance their operations. This troubling trend illustrates the potential misuse of AI in harmful ways.",
+      "lifeIdea": "Stay informed about the ethical implications of AI by reading articles on its impact in various sectors, including security.",
+      "sublimeAngle": "Understanding the dark side of AI can help Sublime develop ethical guidelines and responsible usage policies for its technology."
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "GPT-5.6, Grok 4.5, Claude, and Muse Spark build the same 4 apps",
       "url": "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-07-10T20:52:28+00:00",
-      "engagement": "146 points on Hacker News",
-      "summary": "Multiple AI models, including GPT-5.6 and Grok 4.5, are now capable of building the same four applications, indicating rapid advancements in AI capabilities. This suggests a competitive landscape for app development.",
-      "lifeIdea": "Analyze the features of these AI applications to identify gaps and opportunities for your own projects today.",
-      "sublimeAngle": "Staying ahead of AI trends can help Sublime develop unique applications that stand out."
-    },
-    {
-      "rank": 5,
-      "title": "A font that humans can read but AI cannot",
-      "url": "https://www.mixfont.com/ghost-font",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-07-11T09:36:53+00:00",
-      "engagement": "32 points on Hacker News",
-      "summary": "A new font has been developed that is readable by humans but difficult for AI to interpret. This innovation could have implications for security and accessibility in digital communication.",
-      "lifeIdea": "Experiment with this font in your marketing materials to see how it affects engagement today.",
-      "sublimeAngle": "Innovating in user interface design can enhance Sublime's appeal and usability."
+      "engagement": "151 points on Hacker News",
+      "summary": "Recent AI models like GPT-5.6, Grok 4.5, Claude, and Muse Spark have all developed similar applications. This indicates a trend where various AI systems are converging on similar solutions.",
+      "lifeIdea": "Analyze the features of these four AI applications and identify one that could be integrated into Sublime's offerings.",
+      "sublimeAngle": "Recognizing trends in AI application development can help Sublime stay competitive by adopting popular features early."
     },
     {
       "rank": 6,
@@ -78,9 +78,9 @@
       "section": "web-services",
       "publishedAt": "2026-07-10T17:25:44+00:00",
       "engagement": "",
-      "summary": "OpenAI has introduced GPT 5.6 Sol, showcasing new capabilities that enhance its AI functionalities. This development signals a significant advancement in AI technology that could reshape various industries.",
-      "lifeIdea": "Watch the latest video on GPT 5.6 Sol to understand its features and think about how they could apply to your projects.",
-      "sublimeAngle": "Leveraging insights from GPT 5.6 Sol could inspire innovative features for Sublime's offerings."
+      "summary": "OpenAI is releasing a new version, GPT 5.6, which promises enhanced capabilities. This update is generating excitement in the tech community, indicating a strong return of OpenAI's innovation.",
+      "lifeIdea": "Watch the YouTube video on GPT 5.6 to understand its new features and consider how they could apply to your work.",
+      "sublimeAngle": "Staying updated on GPT 5.6 can help Sublime leverage the latest AI advancements for product development."
     },
     {
       "rank": 7,
@@ -90,10 +90,10 @@
       "category": "social",
       "section": "web-services",
       "publishedAt": "2026-07-10T21:20:29+00:00",
-      "engagement": "111 points on Hacker News",
-      "summary": "Apple has filed a lawsuit against OpenAI, alleging that it has misappropriated trade secrets. This legal battle highlights the growing tensions in the tech industry over intellectual property.",
-      "lifeIdea": "Research the implications of trade secret laws for tech startups to better understand how to protect your own company’s innovations.",
-      "sublimeAngle": "Understanding intellectual property issues could help Sublime safeguard its unique technologies and ideas."
+      "engagement": "113 points on Hacker News",
+      "summary": "Apple has filed a lawsuit against OpenAI, claiming that it has stolen company secrets. This legal battle highlights the ongoing tensions between tech companies over intellectual property.",
+      "lifeIdea": "Research the implications of intellectual property laws in tech to better understand the landscape in which Sublime will operate.",
+      "sublimeAngle": "Understanding IP issues can help Sublime navigate potential legal challenges and protect its innovations."
     },
     {
       "rank": 8,
@@ -103,10 +103,10 @@
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-07-10T20:00:28+00:00",
-      "engagement": "122 points on Hacker News",
-      "summary": "There is a community push to keep the Gemini 2.5 Flash platform operational, indicating its importance to users. This reflects the ongoing demand for certain tools within the tech ecosystem.",
-      "lifeIdea": "Engage with online communities to gather feedback on tools you use and consider how to keep valuable resources available.",
-      "sublimeAngle": "Listening to user needs can inform Sublime’s product development and customer retention strategies."
+      "engagement": "129 points on Hacker News",
+      "summary": "There is a growing concern among users about the potential discontinuation of Gemini 2.5 Flash. Many are advocating for its continued availability due to its current value.",
+      "lifeIdea": "Engage with online communities to gather feedback on tools like Gemini 2.5 Flash and assess their importance in your projects.",
+      "sublimeAngle": "Listening to user feedback can inform Sublime's product offerings and feature prioritization."
     },
     {
       "rank": 9,
@@ -117,9 +117,9 @@
       "section": "tools",
       "publishedAt": "2026-07-10T19:00:00+00:00",
       "engagement": "",
-      "summary": "Hugging Face's CEO emphasizes the importance of open-source AI, which is becoming increasingly vital for businesses. Open models and datasets are now widely used, particularly among Fortune 500 companies.",
-      "lifeIdea": "Explore open-source AI models on platforms like Hugging Face to see how they can enhance your projects today.",
-      "sublimeAngle": "Utilizing open-source resources could accelerate Sublime's development process and reduce costs."
+      "summary": "Hugging Face's CEO emphasizes the importance of open-source AI, which has become essential for many companies. This platform allows AI developers to share and utilize models and datasets effectively.",
+      "lifeIdea": "Explore Hugging Face's resources to find open-source models that could enhance your projects or inspire new ideas.",
+      "sublimeAngle": "Leveraging open-source AI can reduce costs and accelerate development for Sublime's offerings."
     },
     {
       "rank": 10,
@@ -130,9 +130,9 @@
       "section": "finance",
       "publishedAt": "2026-07-10T17:17:12+00:00",
       "engagement": "",
-      "summary": "SK Hynix's $26.5 billion IPO marks a significant moment for the AI chip industry, with calls for new U.S. manufacturing facilities. This underscores the rapid growth and investment in AI hardware.",
-      "lifeIdea": "Stay informed about trends in AI hardware by following industry news to identify potential partnerships or technologies for Sublime.",
-      "sublimeAngle": "Understanding AI hardware developments can guide Sublime in choosing the right tech stack for its products."
+      "summary": "SK Hynix has raised $26.5 billion in a significant IPO, prompting calls for the establishment of new chip manufacturing facilities in the U.S. This reflects the booming demand for AI hardware.",
+      "lifeIdea": "Stay informed about the AI chip market trends and consider how they might affect your hardware needs for Sublime.",
+      "sublimeAngle": "Understanding chip supply dynamics can aid Sublime in strategic planning for hardware requirements."
     },
     {
       "rank": 11,
@@ -142,13 +142,52 @@
       "category": "social",
       "section": "technology",
       "publishedAt": "2026-07-10T07:39:11+00:00",
-      "engagement": "278 points on Hacker News",
-      "summary": "Researchers have developed AI-generated videos that can specifically target areas of the brain for maximum engagement. This technology could be used to enhance various media experiences.",
-      "lifeIdea": "Explore free video editing tools to create a short video that focuses on a specific emotion or message to see how it resonates with your audience.",
-      "sublimeAngle": "Understanding how to create engaging content that targets specific emotions can help Sublime develop more impactful marketing materials."
+      "engagement": "283 points on Hacker News",
+      "summary": "New AI-generated videos are designed to specifically stimulate targeted brain regions for enhanced engagement. This technology could revolutionize how content is created and consumed.",
+      "lifeIdea": "Research free AI video generation tools and create a short video today that targets a specific audience interest or brain region.",
+      "sublimeAngle": "Exploring AI-generated content could inspire Sublime to develop unique marketing strategies or content offerings that captivate specific audiences."
     },
     {
       "rank": 12,
+      "title": "OpenAI bets on families as ChatGPT goes deeper into households",
+      "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-07-11T14:13:00+00:00",
+      "engagement": "",
+      "summary": "OpenAI is focusing on creating family-oriented experiences with ChatGPT, reflecting a shift towards household engagement. They are hiring a product manager to lead these efforts.",
+      "lifeIdea": "Conduct a quick survey among your family and friends today to identify their needs or interests regarding AI tools for everyday use.",
+      "sublimeAngle": "Understanding family needs could help Sublime tailor its offerings to appeal to households, enhancing user engagement and market reach."
+    },
+    {
+      "rank": 13,
+      "title": "Apple Sues OpenAI Over AI Talent Fight",
+      "url": "https://www.bloomberg.com/news/videos/2026-07-11/apple-sues-openai-over-ai-talent-fight-video",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-07-11T14:37:15+00:00",
+      "engagement": "",
+      "summary": "Apple is suing OpenAI over accusations of stealing trade secrets in the race for AI talent and technology. This lawsuit highlights the competitive landscape for AI innovation.",
+      "lifeIdea": "Follow news on AI talent acquisition today to understand industry trends and strategies that can inform your own hiring practices.",
+      "sublimeAngle": "Staying informed about talent competition can help Sublime develop better recruitment strategies and foster a culture of innovation."
+    },
+    {
+      "rank": 14,
+      "title": "OpenAI Engineer’s ‘LOL’ Moment Set Stage for Legal Fight With Apple",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-11/openai-engineer-s-lol-moment-set-stage-for-legal-fight-with-apple",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-07-11T13:59:00+00:00",
+      "engagement": "",
+      "summary": "An OpenAI engineer's departure from Apple has led to a legal battle over alleged trade secrets. This situation underscores the fierce competition for AI expertise.",
+      "lifeIdea": "Network with AI professionals on LinkedIn today to gain insights and learn about best practices in talent retention and acquisition.",
+      "sublimeAngle": "Building strong relationships in the AI community can provide Sublime with insights into talent management and industry standards."
+    },
+    {
+      "rank": 15,
       "title": "Meta turns off the Instagram feature that let users make AI deepfakes of public accounts",
       "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes",
       "source": "The Verge AI",
@@ -156,25 +195,25 @@
       "section": "web-services",
       "publishedAt": "2026-07-10T23:56:48+00:00",
       "engagement": "",
-      "summary": "Meta has disabled a controversial Instagram feature that allowed users to create AI deepfakes using public accounts without permission. The decision follows backlash over privacy concerns.",
-      "lifeIdea": "Research and write a brief blog post about the ethical implications of using AI for content creation, focusing on privacy and consent.",
-      "sublimeAngle": "This situation highlights the importance of ethical considerations in AI tools, which could shape how Sublime approaches user-generated content."
+      "summary": "Meta has disabled a controversial Instagram feature that allowed users to create AI deepfakes of public accounts without permission. The decision was made following public backlash.",
+      "lifeIdea": "Review social media policies today regarding user-generated content and consider how you can ensure ethical practices in your own projects.",
+      "sublimeAngle": "Developing ethical guidelines for content creation could position Sublime as a responsible leader in the AI space, attracting conscious consumers."
     },
     {
-      "rank": 13,
-      "title": "ChatGPT is now a partner for your most ambitious work",
-      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "source": "OpenAI Blog",
-      "category": "blog",
+      "rank": 16,
+      "title": "Why Fox is ‘the most Disciplined’ Media Entertainment Company in the Streaming Era",
+      "url": "https://www.bloomberg.com/news/videos/2026-07-11/michael-wolf-on-why-ai-is-changing-the-value-of-content-video",
+      "source": "Bloomberg Tech",
+      "category": "news",
       "section": "finance",
-      "publishedAt": "2026-07-09T10:00:00+00:00",
+      "publishedAt": "2026-07-11T12:03:23+00:00",
       "engagement": "",
-      "summary": "OpenAI has launched ChatGPT Work, a tool designed to assist users in managing projects by integrating across apps and files. It can help turn ambitious goals into actionable tasks.",
-      "lifeIdea": "Try using a project management tool like Trello or Asana today to organize your tasks and see how AI can streamline your workflow.",
-      "sublimeAngle": "Leveraging AI project management tools can improve productivity within Sublime, helping the team achieve more in less time."
+      "summary": "Media expert Michael Wolf highlights that free ad-supported content is thriving in the streaming wars, as traditional media companies adapt to new challenges. AI is also reshaping how content is valued in this competitive landscape.",
+      "lifeIdea": "Research free ad-supported content platforms to understand their business models and consider how you might incorporate similar strategies into Sublime.",
+      "sublimeAngle": "Understanding the success of free ad-supported models can inspire potential monetization strategies for Sublime."
     },
     {
-      "rank": 14,
+      "rank": 17,
       "title": "Apple sues OpenAI for allegedly stealing hardware secrets",
       "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets",
       "source": "The Verge AI",
@@ -182,12 +221,25 @@
       "section": "web-services",
       "publishedAt": "2026-07-10T22:33:47+00:00",
       "engagement": "",
-      "summary": "Apple is suing OpenAI, claiming that former employees stole trade secrets to aid OpenAI's hardware advancements. This lawsuit raises significant questions about intellectual property in tech.",
-      "lifeIdea": "Review your own team's practices on intellectual property to ensure all ideas and innovations are properly protected and documented.",
-      "sublimeAngle": "Understanding legal frameworks around intellectual property can help Sublime safeguard its innovations and avoid potential lawsuits."
+      "summary": "Apple is suing OpenAI, claiming that former Apple engineers stole trade secrets to enhance OpenAI's hardware plans. This lawsuit underscores the competitive tensions in the AI industry.",
+      "lifeIdea": "Stay updated on legal developments in the tech industry by setting up Google Alerts for AI-related lawsuits and news.",
+      "sublimeAngle": "Awareness of industry legal issues can help Sublime navigate potential pitfalls and protect its intellectual property."
     },
     {
-      "rank": 15,
+      "rank": 18,
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "source": "OpenAI Blog",
+      "category": "blog",
+      "section": "finance",
+      "publishedAt": "2026-07-09T10:00:00+00:00",
+      "engagement": "",
+      "summary": "ChatGPT Work is a new tool that can collaborate on projects by managing tasks across various apps and files. It aims to assist users in turning ambitious goals into completed work.",
+      "lifeIdea": "Experiment with ChatGPT Work to streamline a project you're currently working on, enhancing your productivity today.",
+      "sublimeAngle": "Leveraging AI tools like ChatGPT Work can improve Sublime's operational efficiency and project management capabilities."
+    },
+    {
+      "rank": 19,
       "title": "OpenAI’s Head of Safety Is Leaving the Company",
       "url": "https://www.wired.com/story/openai-head-of-safety-leaving/",
       "source": "Wired AI",
@@ -195,12 +247,25 @@
       "section": "technology",
       "publishedAt": "2026-07-11T01:07:26+00:00",
       "engagement": "",
-      "summary": "The Head of Safety at OpenAI is leaving the company amid efforts to better integrate research and safety teams. This shift may impact future safety protocols in AI development.",
-      "lifeIdea": "Schedule a team meeting to discuss the importance of safety protocols in your projects and brainstorm how to implement best practices.",
-      "sublimeAngle": "Focusing on safety protocols can position Sublime as a responsible leader in the AI space, building trust with users."
+      "summary": "OpenAI's Head of Safety, Johannes Heidecke, is leaving the company as it seeks to better align its research and safety teams. This shift may impact OpenAI's approach to safety protocols.",
+      "lifeIdea": "Explore safety best practices in AI by reading articles or joining online forums to understand how to implement them in your projects.",
+      "sublimeAngle": "Learning about safety practices in AI can help Sublime ensure its products are robust and trustworthy."
     },
     {
-      "rank": 16,
+      "rank": 20,
+      "title": "Long Context Isn’t Free — I Built a Safe Prompt-Pruning Layer That Makes LLM Systems Work",
+      "url": "https://towardsdatascience.com/long-context-isnt-free-i-built-a-safe-prompt-pruning-layer-that-makes-llm-systems-work/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-07-11T15:00:00+00:00",
+      "engagement": "",
+      "summary": "A new approach to managing large language models (LLMs) suggests that they fail not due to forgetting, but from remembering too much, which can degrade output quality. A prompt-pruning layer could enhance efficiency by reducing unnecessary information.",
+      "lifeIdea": "Try implementing a structured prompt system in your AI work to minimize redundancy and improve output quality.",
+      "sublimeAngle": "Enhancing output quality through efficient prompt management can give Sublime a competitive edge in AI-driven solutions."
+    },
+    {
+      "rank": 21,
       "title": "Quoting Nilay Patel",
       "url": "https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything",
       "source": "Simon Willison",
@@ -208,25 +273,12 @@
       "section": "tools",
       "publishedAt": "2026-07-10T17:05:26+00:00",
       "engagement": "",
-      "summary": "Creating augmented reality glasses requires a camera that constantly records and processes visuals. Current technology does not allow for a small, powerful chip to fit into the glasses' frame.",
-      "lifeIdea": "Research existing AR technologies and document potential improvements or features that could enhance user experience with augmented reality.",
-      "sublimeAngle": "Understanding the technical challenges of AR glasses can guide Sublime in developing innovative solutions or complementary products."
+      "summary": "Creating augmented reality glasses requires continuous recording and processing of visual information, which is currently a significant technical challenge. No existing chips can efficiently power this technology in a compact form factor.",
+      "lifeIdea": "Research existing AR glasses technology and jot down potential improvements or features you would like to see in your own product concept.",
+      "sublimeAngle": "Understanding the technical limitations of AR can guide Sublime in developing innovative solutions or partnerships in the augmented reality space."
     },
     {
-      "rank": 17,
-      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "url": "https://openai.com/index/deutsche-telekom",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "web-services",
-      "publishedAt": "2026-07-10T07:00:00+00:00",
-      "engagement": "",
-      "summary": "Deutsche Telekom is leveraging AI to enhance customer service, streamline employee workflows, and improve network operations. This transformation positions them as a leader in AI-driven telecommunications.",
-      "lifeIdea": "Explore free AI tools like ChatGPT to automate responses for customer inquiries or streamline a daily workflow in your business.",
-      "sublimeAngle": "Implementing AI-driven customer service solutions can enhance user experience for Sublime's clients and reduce operational costs."
-    },
-    {
-      "rank": 18,
+      "rank": 22,
       "title": "Meta removes controversial AI feature on Instagram after backlash",
       "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
       "source": "TechCrunch AI",
@@ -234,12 +286,38 @@
       "section": "web-services",
       "publishedAt": "2026-07-10T23:55:07+00:00",
       "engagement": "",
-      "summary": "Meta has removed a controversial AI feature on Instagram following user backlash, acknowledging that it did not meet user expectations. The feature's goal was to enhance creativity but ultimately missed the mark.",
-      "lifeIdea": "Gather feedback from your team or potential users about a feature you’re developing to ensure it aligns with their needs and preferences.",
-      "sublimeAngle": "Prioritizing user feedback can help Sublime create a product that resonates with its audience and avoids potential pitfalls."
+      "summary": "Meta has removed a controversial AI feature on Instagram after receiving significant user backlash, acknowledging it did not meet user expectations. The company aims to provide useful tools while giving users control over their content.",
+      "lifeIdea": "Gather feedback from your target audience about your startup's ideas or features using free survey tools like Google Forms.",
+      "sublimeAngle": "Learning from Meta's experience can help Sublime prioritize user feedback and avoid implementing features that may not resonate with customers."
     },
     {
-      "rank": 19,
+      "rank": 23,
+      "title": "That Is Embarrassing: Why Frontier AI Still Makes Things Up, and What to Do About It",
+      "url": "https://towardsdatascience.com/that-is-embarrassing-why-frontier-ai-still-makes-things-up-and-what-to-do-about-it/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-07-11T13:00:00+00:00",
+      "engagement": "",
+      "summary": "AI models still struggle with 'hallucinations,' which can lead to both humorous and harmful outcomes. Understanding the causes of these errors is crucial for improving AI reliability.",
+      "lifeIdea": "Explore online resources or forums to learn about common AI pitfalls and how to mitigate them in your projects.",
+      "sublimeAngle": "Improving your understanding of AI limitations will help Sublime develop more robust and reliable AI-driven solutions."
+    },
+    {
+      "rank": 24,
+      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+      "url": "https://openai.com/index/deutsche-telekom",
+      "source": "OpenAI Blog",
+      "category": "blog",
+      "section": "web-services",
+      "publishedAt": "2026-07-10T07:00:00+00:00",
+      "engagement": "",
+      "summary": "Deutsche Telekom is integrating AI into its operations, transforming customer service and workflows to enhance efficiency. This shift is positioning them as a leading AI-native telecommunications company.",
+      "lifeIdea": "Identify a simple workflow in your daily tasks that could be automated and experiment with free automation tools like Zapier.",
+      "sublimeAngle": "Studying Deutsche Telekom's AI adoption can inspire Sublime to implement similar efficiencies and innovations in its operations."
+    },
+    {
+      "rank": 25,
       "title": "OpenAI launches its new family of models with GPT-5.6",
       "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
       "source": "TechCrunch AI",
@@ -247,12 +325,12 @@
       "section": "technology",
       "publishedAt": "2026-07-09T22:24:24+00:00",
       "engagement": "",
-      "summary": "OpenAI has released its new model, GPT-5.6, which boasts improvements in several areas, including cybersecurity. This advancement signifies progress in AI capabilities.",
-      "lifeIdea": "Experiment with GPT-5.6 by creating a small project that utilizes its features to enhance a current task or workflow.",
-      "sublimeAngle": "Leveraging the latest AI advancements can position Sublime as an innovative leader in the tech space."
+      "summary": "OpenAI has launched its new model family, GPT-5.6, which offers enhanced capabilities in various areas, including cybersecurity. This development indicates ongoing advancements in AI technology.",
+      "lifeIdea": "Sign up for updates from OpenAI to stay informed about the latest AI advancements that could impact your startup.",
+      "sublimeAngle": "Keeping abreast of advancements in AI will help Sublime leverage cutting-edge technologies for competitive advantage."
     },
     {
-      "rank": 20,
+      "rank": 26,
       "title": "OpenAI rolls out GPT-5.6 after government greenlight — and announces ‘ChatGPT Work’",
       "url": "https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work",
       "source": "The Verge AI",
@@ -260,25 +338,12 @@
       "section": "finance",
       "publishedAt": "2026-07-09T17:32:30+00:00",
       "engagement": "",
-      "summary": "OpenAI's GPT-5.6 has been cleared for public rollout after regulatory approval, marking a significant milestone for the company. The new model is touted as the best they have produced.",
-      "lifeIdea": "Sign up for access to GPT-5.6 and explore its capabilities to brainstorm new ideas or enhance existing projects.",
-      "sublimeAngle": "Utilizing cutting-edge AI models will empower Sublime to develop smarter solutions and stay ahead of competitors."
+      "summary": "OpenAI has launched GPT-5.6 for public use after receiving government approval, calling it their best model yet. This includes the introduction of 'ChatGPT Work', aimed at enhancing productivity in workplaces.",
+      "lifeIdea": "Explore the new features of GPT-5.6 by signing up for the ChatGPT Work trial to see how it can enhance team collaboration.",
+      "sublimeAngle": "Leveraging GPT-5.6's capabilities could help Sublime improve its product offerings, especially in team-oriented tools."
     },
     {
-      "rank": 21,
-      "title": "OpenAI is FINALLY Releasing Hardware",
-      "url": "https://www.youtube.com/shorts/oXi5E3FvZKI",
-      "source": "YouTube · Matt Wolfe",
-      "category": "video",
-      "section": "technology",
-      "publishedAt": "2026-07-09T17:14:13+00:00",
-      "engagement": "",
-      "summary": "OpenAI is set to release its own hardware, marking a significant step in their technology offerings. This could enhance their AI capabilities and integration with existing systems.",
-      "lifeIdea": "Research and list potential hardware options that could support your AI initiatives using free online resources.",
-      "sublimeAngle": "Understanding OpenAI's hardware release could inspire you to develop specialized tools or integrations for Sublime's offerings."
-    },
-    {
-      "rank": 22,
+      "rank": 27,
       "title": "Apple sues OpenAI over alleged trade secret theft",
       "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
       "source": "TechCrunch AI",
@@ -286,12 +351,25 @@
       "section": "web-services",
       "publishedAt": "2026-07-10T21:00:29+00:00",
       "engagement": "",
-      "summary": "Apple is suing OpenAI for allegedly stealing trade secrets, claiming senior leadership was involved. This legal battle highlights the intense competition and ethical concerns in the AI industry.",
-      "lifeIdea": "Review your company's data privacy policies and ensure all team members understand ethical guidelines in AI development.",
-      "sublimeAngle": "This case emphasizes the importance of transparency and ethics in AI, which could be a core value for Sublime's brand identity."
+      "summary": "Apple has filed a lawsuit against OpenAI, claiming theft of trade secrets allegedly orchestrated by OpenAI's leadership. This reflects ongoing legal tensions in the AI industry over intellectual property.",
+      "lifeIdea": "Review your startup's IP policies today to ensure that your innovations are protected from potential legal issues.",
+      "sublimeAngle": "Understanding these legal challenges can inform Sublime's approach to protecting its own intellectual property."
     },
     {
-      "rank": 23,
+      "rank": 28,
+      "title": "OpenAI is FINALLY Releasing Hardware",
+      "url": "https://www.youtube.com/shorts/oXi5E3FvZKI",
+      "source": "YouTube · Matt Wolfe",
+      "category": "video",
+      "section": "technology",
+      "publishedAt": "2026-07-09T17:14:13+00:00",
+      "engagement": "",
+      "summary": "OpenAI is finally releasing its own hardware, signaling a new direction for the company. This move may enhance their AI capabilities and integration.",
+      "lifeIdea": "Research the specifications of OpenAI's new hardware to assess how it might improve your current AI tools.",
+      "sublimeAngle": "Utilizing OpenAI's hardware could provide Sublime with a competitive edge in performance and efficiency."
+    },
+    {
+      "rank": 29,
       "title": "Paris-based AI voice startup Gradium raises $100M seed, backed by Nvidia",
       "url": "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/",
       "source": "TechCrunch AI",
@@ -299,25 +377,12 @@
       "section": "finance",
       "publishedAt": "2026-07-09T18:34:35+00:00",
       "engagement": "",
-      "summary": "AI voice startup Gradium has raised $100 million in seed funding to expand its operations and attract talent in the competitive Bay Area. This funding will help them strengthen their position in the AI market.",
-      "lifeIdea": "Network with local AI professionals through free platforms like LinkedIn to identify potential talent for your startup.",
-      "sublimeAngle": "Gradium's funding success can inform your own fundraising strategies and talent acquisition plans for Sublime."
+      "summary": "Gradium, an AI voice startup based in Paris, has raised $100 million in seed funding to expand its operations in the Bay Area. This move aims to attract top talent in the AI sector.",
+      "lifeIdea": "Network with local AI professionals online today to explore potential collaborations or talent acquisition for your startup.",
+      "sublimeAngle": "Observing Gradium's growth strategy can inspire Sublime's own talent acquisition and expansion plans."
     },
     {
-      "rank": 24,
-      "title": "AI News: GPT-5.6 and the new Super App are a Massive Leap!",
-      "url": "https://www.youtube.com/watch?v=EOCRtSnvNNE",
-      "source": "YouTube · Matt Wolfe",
-      "category": "video",
-      "section": "web-services",
-      "publishedAt": "2026-07-10T14:41:53+00:00",
-      "engagement": "",
-      "summary": "A new video discusses the advancements in GPT-5.6 and a new Super App, which represent significant progress in AI technology. These developments could reshape how applications interact with users.",
-      "lifeIdea": "Watch the video on GPT-5.6 and take notes on features that could enhance your product offerings.",
-      "sublimeAngle": "Staying updated on these advancements can guide Sublime in integrating cutting-edge AI features into your products."
-    },
-    {
-      "rank": 25,
+      "rank": 30,
       "title": "How did the government decide OpenAI’s frontier model was safe to release?",
       "url": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/",
       "source": "TechCrunch AI",
@@ -325,77 +390,38 @@
       "section": "finance",
       "publishedAt": "2026-07-09T18:22:39+00:00",
       "engagement": "",
-      "summary": "The government has determined that OpenAI's frontier model is safe for release, though details of the decision process remain unclear. This raises questions about regulatory oversight in AI development.",
-      "lifeIdea": "Explore government resources or reports on AI regulations to better understand compliance for your startup.",
-      "sublimeAngle": "Understanding the regulatory landscape can help Sublime navigate compliance and potentially leverage it as a competitive advantage."
+      "summary": "The government's approval for OpenAI's model release raises questions about the safety evaluation process. The details of the discussions between government and AI companies remain unclear.",
+      "lifeIdea": "Stay informed about AI regulations by following relevant news sources to better understand the landscape affecting your startup.",
+      "sublimeAngle": "Gaining insights into regulatory processes can help Sublime navigate compliance as it develops its products."
     },
     {
-      "rank": 26,
-      "title": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in your feed’",
-      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "source": "The Verge AI",
-      "category": "news",
+      "rank": 31,
+      "title": "AI News: GPT-5.6 and the new Super App are a Massive Leap!",
+      "url": "https://www.youtube.com/watch?v=EOCRtSnvNNE",
+      "source": "YouTube · Matt Wolfe",
+      "category": "video",
       "section": "web-services",
-      "publishedAt": "2026-07-10T13:59:07+00:00",
+      "publishedAt": "2026-07-10T14:41:53+00:00",
       "engagement": "",
-      "summary": "Instagram head Adam Mosseri stated that if users dislike AI content, they shouldn't have it in their feed, emphasizing user control over AI visibility. He believes in transparency rather than filtering AI content.",
-      "lifeIdea": "Adjust your social media feed preferences today to better align with your interests and preferences regarding AI content.",
-      "sublimeAngle": "Understanding user preferences on AI content can help Sublime tailor its offerings to meet user demands and enhance engagement."
+      "summary": "The introduction of GPT-5.6 and a new Super App represents significant advancements in AI technology. These tools are expected to enhance user experience and capabilities in various applications.",
+      "lifeIdea": "Explore the features of GPT-5.6 by signing up for a free trial and experimenting with its capabilities in your projects.",
+      "sublimeAngle": "Leveraging the advancements of GPT-5.6 could help Sublime enhance its AI offerings and improve user engagement."
     },
     {
-      "rank": 27,
-      "title": "OpenAI Safety Head Heidecke to Leave Firm After Reshuffle: Wired",
-      "url": "https://www.bloomberg.com/news/articles/2026-07-11/openai-safety-head-heidecke-to-leave-firm-after-reshuffle-wired",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-07-11T02:15:21+00:00",
-      "engagement": "",
-      "summary": "OpenAI's head of safety, Johannes Heidecke, is leaving the company after a reorganization, highlighting potential shifts in leadership and direction within the AI sector. This change may impact OpenAI's future safety protocols and initiatives.",
-      "lifeIdea": "Research recent changes in AI leadership and their implications to stay informed about industry trends and safety practices.",
-      "sublimeAngle": "Staying updated on leadership changes in AI can guide Sublime’s strategic decisions and partnerships in the evolving landscape."
-    },
-    {
-      "rank": 28,
-      "title": "Would you host part of an AI data center in your home?",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-07-10T13:26:58+00:00",
-      "engagement": "",
-      "summary": "A solar energy company is launching a program to place AI data center units in customers' homes, paying them for hosting these compute nodes. This initiative aims to create a distributed network for AI processing.",
-      "lifeIdea": "Explore local energy programs that might allow you to participate in innovative tech initiatives like distributed computing.",
-      "sublimeAngle": "Considering similar partnerships could position Sublime as a leader in innovative, eco-friendly tech solutions that leverage existing infrastructures."
-    },
-    {
-      "rank": 29,
+      "rank": 32,
       "title": "A Model Explosion: GPT 5.6 Sol, Grok 4.5 and Meta Muse Rewrite the Rules",
       "url": "https://www.youtube.com/watch?v=mWlCituW7wo",
       "source": "YouTube · AI Explained",
       "category": "video",
-      "section": "ai-news",
+      "section": "technology",
       "publishedAt": "2026-07-10T12:40:15+00:00",
       "engagement": "",
-      "summary": "The emergence of models like GPT 5.6 and Grok 4.5 is reshaping the AI landscape, pushing boundaries on what AI can achieve. These advancements indicate rapid progress in AI capabilities and applications.",
-      "lifeIdea": "Watch a video on the latest AI models to understand their features and potential applications for your business.",
-      "sublimeAngle": "Keeping up with cutting-edge AI advancements can inspire new features and functionalities for Sublime’s offerings."
+      "summary": "GPT 5.6, Grok 4.5, and Meta Muse are creating a transformative shift in AI models. These innovations are setting new standards for performance and usability.",
+      "lifeIdea": "Join online forums or communities to discuss and learn from others about the latest features of GPT 5.6 and how to implement them.",
+      "sublimeAngle": "Understanding these new AI models can inspire Sublime to adopt cutting-edge technology, improving product functionality."
     },
     {
-      "rank": 30,
-      "title": "JPMorgan Builds AI Agents That Beat 60/40 Model in Backtests",
-      "url": "https://www.bloomberg.com/news/articles/2026-07-09/jpmorgan-builds-ai-agents-that-beat-60-40-portfolio-in-backtests",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-07-09T23:00:59+00:00",
-      "engagement": "",
-      "summary": "JPMorgan Chase is developing AI agents that outperform traditional investment models in backtests, indicating a shift towards AI-driven financial strategies. This reflects a growing trust in AI's capabilities for investment management.",
-      "lifeIdea": "Analyze how AI can be integrated into your budgeting or financial forecasting processes using free online tools.",
-      "sublimeAngle": "Leveraging AI for financial decision-making could enhance Sublime's operational efficiency and profitability."
-    },
-    {
-      "rank": 31,
+      "rank": 33,
       "title": "Profiling in PyTorch (Part 3): Attention is all you profile",
       "url": "https://huggingface.co/blog/torch-attention-profile",
       "source": "Hugging Face Blog",
@@ -403,12 +429,12 @@
       "section": "tools",
       "publishedAt": "2026-07-10T00:00:00+00:00",
       "engagement": "",
-      "summary": "This article discusses the importance of profiling in PyTorch to optimize performance, particularly focusing on attention mechanisms. It emphasizes how profiling can significantly enhance model efficiency and speed.",
-      "lifeIdea": "Explore free PyTorch profiling tools today to analyze and optimize your machine learning models.",
-      "sublimeAngle": "Understanding profiling techniques can help Sublime improve its AI product's performance, making it more efficient and appealing to users."
+      "summary": "A new blog post discusses profiling techniques in PyTorch, emphasizing the importance of attention mechanisms. These techniques can optimize model performance in AI applications.",
+      "lifeIdea": "Try profiling a simple PyTorch model using online resources and tutorials to improve its performance.",
+      "sublimeAngle": "Implementing advanced profiling techniques in Sublime's AI models can lead to enhanced efficiency and user satisfaction."
     },
     {
-      "rank": 32,
+      "rank": 34,
       "title": "Quoting OpenAI",
       "url": "https://simonwillison.net/2026/Jul/10/openai/#atom-everything",
       "source": "Simon Willison",
@@ -416,12 +442,12 @@
       "section": "tools",
       "publishedAt": "2026-07-10T01:05:57+00:00",
       "engagement": "",
-      "summary": "OpenAI clarifies the functionalities of ChatGPT Work, highlighting the separation of cloud and desktop work environments. This aims to streamline user experience while managing local and cloud-based tasks.",
-      "lifeIdea": "Test ChatGPT's Work features today to see how they can streamline your team's collaboration and task management.",
-      "sublimeAngle": "Leveraging insights from OpenAI’s approach can inspire Sublime to create a more cohesive collaboration tool for builders."
+      "summary": "OpenAI clarifies the functionalities of ChatGPT's Work feature, highlighting differences between cloud and desktop applications. This distinction is crucial for users managing files across platforms.",
+      "lifeIdea": "Review your current workflow and how you manage files between cloud and desktop apps, adjusting for better organization.",
+      "sublimeAngle": "Understanding user needs in file management can guide Sublime in developing better integration features for its platform."
     },
     {
-      "rank": 33,
+      "rank": 35,
       "title": "I Built My Second ETL Pipeline. This Time, I Started Thinking Like a Data Engineer",
       "url": "https://towardsdatascience.com/i-built-my-second-etl-pipeline-this-time-i-started-thinking-like-a-data-engineer/",
       "source": "Towards Data Science",
@@ -429,12 +455,12 @@
       "section": "research",
       "publishedAt": "2026-07-10T17:00:00+00:00",
       "engagement": "",
-      "summary": "The author shares their experience building a production-ready ETL pipeline using Python and other technologies, highlighting the importance of thinking like a data engineer. This approach enables better data handling and processing.",
-      "lifeIdea": "Create a simple ETL process today using free tools like Python and PostgreSQL to manage your data more effectively.",
-      "sublimeAngle": "Developing data engineering skills can enhance Sublime's data management capabilities, providing better insights for builders."
+      "summary": "An article details the construction of an ETL pipeline, emphasizing a data engineering mindset for better results. This approach can streamline data processing and integration.",
+      "lifeIdea": "Start building a simple ETL pipeline using free tools like Python and PostgreSQL to gain hands-on experience.",
+      "sublimeAngle": "Gaining skills in data engineering will help Sublime create more robust data handling processes for its applications."
     },
     {
-      "rank": 34,
+      "rank": 36,
       "title": "PySpark for Beginners: Building Intermediate-Level Skills",
       "url": "https://towardsdatascience.com/pyspark-for-beginners-building-intermediate-level-skills/",
       "source": "Towards Data Science",
@@ -442,35 +468,9 @@
       "section": "research",
       "publishedAt": "2026-07-10T15:00:00+00:00",
       "engagement": "",
-      "summary": "This guide provides a practical introduction to intermediate PySpark skills, including handling data partitions and execution plans. It's targeted at those looking to deepen their understanding of big data processing.",
-      "lifeIdea": "Start learning about data partitions and caching in PySpark today using free online resources and tutorials.",
-      "sublimeAngle": "Acquiring PySpark skills can enable Sublime to handle larger datasets efficiently, improving its data processing offerings."
-    },
-    {
-      "rank": 35,
-      "title": "Our approach to government and national security partnerships",
-      "url": "https://openai.com/index/government-national-security-partnerships",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "finance",
-      "publishedAt": "2026-07-08T13:30:00+00:00",
-      "engagement": "",
-      "summary": "OpenAI outlines its approach to partnerships with government and national security, focusing on responsible AI usage and public safety. This emphasizes the importance of ethical considerations in AI deployment.",
-      "lifeIdea": "Research best practices for ethical AI use today to ensure your startup aligns with responsible technology standards.",
-      "sublimeAngle": "Building a foundation of ethical AI practices can position Sublime as a trustworthy leader in the construction tech space."
-    },
-    {
-      "rank": 36,
-      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
-      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-07-09T13:00:00+00:00",
-      "engagement": "",
-      "summary": "Microsoft 365 Copilot now uses the new GPT-5.6 model, which enhances productivity with better AI capabilities across various applications. This upgrade promises faster and higher-quality work for users.",
-      "lifeIdea": "Explore Microsoft 365 Copilot to automate a repetitive task you handle daily, improving your efficiency instantly.",
-      "sublimeAngle": "Leveraging GPT-5.6's capabilities can inspire Sublime's product development, focusing on powerful AI integrations to enhance user productivity."
+      "summary": "This article helps beginners advance their PySpark skills by focusing on key concepts like partitions, caching, and execution plans. It serves as a practical guide to building intermediate-level capabilities in data processing.",
+      "lifeIdea": "Explore free online PySpark tutorials today to enhance your data handling skills for better project outcomes.",
+      "sublimeAngle": "Improving data processing skills with PySpark could streamline operations at Sublime, making data-driven decisions more efficient."
     },
     {
       "rank": 37,
@@ -481,25 +481,12 @@
       "section": "research",
       "publishedAt": "2026-07-10T13:30:00+00:00",
       "engagement": "",
-      "summary": "The reliance on vector databases for AI infrastructure is being questioned, as the future may depend on persistent neural states and strict latency measures. This shift suggests a need for more robust AI systems.",
-      "lifeIdea": "Research persistent neural state concepts online and brainstorm how they could apply to your current projects or product ideas.",
-      "sublimeAngle": "Understanding the evolution of AI infrastructure can guide Sublime in adopting cutting-edge technologies to stay competitive."
+      "summary": "The article argues that vector databases are a temporary solution and emphasizes the need for a new AI infrastructure that focuses on persistent neural states and latency management. This shift could redefine how AI systems are built.",
+      "lifeIdea": "Research persistent neural state technologies today to stay ahead in AI infrastructure advancements.",
+      "sublimeAngle": "Understanding the future of AI infrastructure can inform Sublime's product development, ensuring it remains relevant in the evolving tech landscape."
     },
     {
       "rank": 38,
-      "title": "The new GPT-5.6 family: Luna, Terra, Sol",
-      "url": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything",
-      "source": "Simon Willison",
-      "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-07-09T19:46:38+00:00",
-      "engagement": "",
-      "summary": "OpenAI has launched the GPT-5.6 family of models, available in three sizes, with varying pricing based on input/output tokens. This new release offers users more options for their AI needs.",
-      "lifeIdea": "Experiment with the smallest GPT-5.6 model for a small project to see how it can enhance your current workflows.",
-      "sublimeAngle": "Utilizing different sizes of GPT-5.6 can help Sublime tailor solutions for diverse customer needs based on budget and project scope."
-    },
-    {
-      "rank": 39,
       "title": "The Big Con of Agentic AI",
       "url": "https://towardsdatascience.com/the-big-con-of-agentic-ai/",
       "source": "Towards Data Science",
@@ -507,38 +494,38 @@
       "section": "research",
       "publishedAt": "2026-07-10T12:00:00+00:00",
       "engagement": "",
-      "summary": "The article discusses the pitfalls of over-relying on AI and external consulting, emphasizing the importance of human judgment. It highlights the need for balance between technology and personal insight.",
-      "lifeIdea": "Reflect on a recent decision you made and identify areas where your intuition might have been overlooked due to technology reliance.",
-      "sublimeAngle": "Recognizing the balance between AI and human insight can help Sublime create products that empower users rather than replace their decision-making."
+      "summary": "This piece discusses the risks of overly relying on AI and external consulting, emphasizing the importance of maintaining human agency in decision-making. It highlights the potential pitfalls of delegating too much to machines.",
+      "lifeIdea": "Reflect on daily tasks where you rely on AI, and identify one area to reassess your decision-making process today.",
+      "sublimeAngle": "Fostering a balanced approach to AI integration can enhance Sublime's offerings, ensuring users maintain control while leveraging technology."
+    },
+    {
+      "rank": 39,
+      "title": "The new GPT-5.6 family: Luna, Terra, Sol",
+      "url": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything",
+      "source": "Simon Willison",
+      "category": "blog",
+      "section": "tools",
+      "publishedAt": "2026-07-09T19:46:38+00:00",
+      "engagement": "",
+      "summary": "OpenAI has launched the GPT-5.6 family of models, which includes three sizes and distinct pricing structures for token usage. These models are now widely available, offering enhanced capabilities for various applications.",
+      "lifeIdea": "Experiment with the new GPT-5.6 models via OpenAI's API today to see how they can improve your workflow.",
+      "sublimeAngle": "Leveraging the latest GPT-5.6 models can enhance Sublime's AI capabilities, potentially leading to innovative features or services."
     },
     {
       "rank": 40,
-      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-      "url": "https://openai.com/index/gpt-5-6",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "research",
-      "publishedAt": "2026-07-09T10:00:00+00:00",
-      "engagement": "",
-      "summary": "GPT-5.6 promises to deliver enhanced intelligence and performance for users, making it a valuable tool for complex tasks. This model is designed to scale with user ambitions.",
-      "lifeIdea": "Identify a challenging task and use GPT-5.6 to assist in generating ideas or solutions, testing its capabilities firsthand.",
-      "sublimeAngle": "Integrating GPT-5.6's advanced features can position Sublime as a leader in providing scalable AI solutions that meet ambitious user goals."
-    },
-    {
-      "rank": 41,
-      "title": "GPT-5.5 Bio Bug Bounty",
-      "url": "https://openai.com/index/bio-bug-bounty",
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
       "source": "OpenAI Blog",
       "category": "blog",
       "section": "ai-news",
-      "publishedAt": "2026-07-09T10:00:00+00:00",
+      "publishedAt": "2026-07-09T13:00:00+00:00",
       "engagement": "",
-      "summary": "OpenAI has launched a Bio Bug Bounty program to encourage developers to identify and report bugs in their AI models. This initiative aims to improve the reliability and safety of AI in biological applications.",
-      "lifeIdea": "Research bug bounty programs online and share the concept with your team to enhance your product's reliability.",
-      "sublimeAngle": "Implementing a bug bounty program could reinforce trust in Sublime's technology and attract more users by demonstrating commitment to quality."
+      "summary": "GPT-5.6 is now integrated into Microsoft 365 Copilot, enhancing productivity across various applications like Word and Excel. This integration promises faster and higher-quality work through improved AI capabilities.",
+      "lifeIdea": "Utilize Microsoft 365 Copilot today to boost your productivity by leveraging the new GPT-5.6 features.",
+      "sublimeAngle": "Understanding how GPT-5.6 enhances productivity can inspire Sublime to create tools that maximize user efficiency and output."
     },
     {
-      "rank": 42,
+      "rank": 41,
       "title": "Introducing Muse Spark 1.1",
       "url": "https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything",
       "source": "Simon Willison",
@@ -546,9 +533,22 @@
       "section": "tools",
       "publishedAt": "2026-07-09T16:24:09+00:00",
       "engagement": "",
-      "summary": "Muse Spark 1.1 has been introduced, featuring an API that enhances tool calling and computer usage capabilities. This update signifies significant improvements in the performance of AI agents.",
-      "lifeIdea": "Explore the Muse Spark 1.1 API documentation and experiment with integrating it into a small project today.",
-      "sublimeAngle": "Leveraging Muse Spark 1.1 could enhance Sublime's functionality, making it more versatile and appealing to users."
+      "summary": "Muse Spark 1.1 has launched, introducing an API that enhances tool calling and computer usage. This version aims to improve user interactions with AI models significantly.",
+      "lifeIdea": "Experiment with Muse Spark 1.1's API to automate a simple task in your daily workflow, like scheduling or note-taking.",
+      "sublimeAngle": "Leveraging Muse Spark 1.1's API could inspire new automation features in Sublime, enhancing user experience."
+    },
+    {
+      "rank": 42,
+      "title": "llm-meta-ai 0.1",
+      "url": "https://simonwillison.net/2026/Jul/9/llm-meta-ai/#atom-everything",
+      "source": "Simon Willison",
+      "category": "blog",
+      "section": "tools",
+      "publishedAt": "2026-07-09T16:12:20+00:00",
+      "engagement": "",
+      "summary": "The release of llm-meta-ai 0.1 allows users to run prompts on the new Muse Spark 1.1 model. This integration aims to improve interactions with large language models.",
+      "lifeIdea": "Run a prompt using the llm-meta-ai 0.1 to generate ideas for a project or solve a work-related problem.",
+      "sublimeAngle": "Integrating llm-meta-ai capabilities could enhance Sublime's functionality, making it more attractive to users seeking advanced AI interactions."
     },
     {
       "rank": 43,
@@ -559,9 +559,9 @@
       "section": "research",
       "publishedAt": "2026-07-09T17:59:32+00:00",
       "engagement": "",
-      "summary": "UniClawBench is a new benchmark designed to evaluate proactive agents performing real-world tasks, addressing the limitations of previous benchmarks. This development reflects the growing need for effective assessment of AI agents in practical applications.",
-      "lifeIdea": "Analyze existing benchmarks in your field and identify gaps where proactive agents could improve efficiency.",
-      "sublimeAngle": "Using insights from UniClawBench can help Sublime develop more effective proactive features tailored for real-world applications."
+      "summary": "UniClawBench introduces a universal benchmark for evaluating proactive agents in real-world tasks. This development aims to improve the assessment of AI's effectiveness in everyday scenarios.",
+      "lifeIdea": "Identify a daily task that could be automated and outline how a proactive agent could assist in completing it.",
+      "sublimeAngle": "Understanding benchmarks for proactive agents can help Sublime develop smarter tools that better serve user needs."
     },
     {
       "rank": 44,
@@ -572,9 +572,9 @@
       "section": "research",
       "publishedAt": "2026-07-09T17:58:29+00:00",
       "engagement": "",
-      "summary": "OpenCoF introduces a novel reasoning method for video generation, allowing models to understand logical consequences over time. This approach contrasts with traditional reasoning methods by focusing on connected frames.",
-      "lifeIdea": "Watch a tutorial on Chain-of-Frame reasoning and brainstorm how this concept might apply to your current projects.",
-      "sublimeAngle": "Incorporating Chain-of-Frame reasoning could elevate Sublime's AI capabilities, making it more intuitive and responsive."
+      "summary": "OpenCoF presents a new reasoning method through video generation, highlighting the importance of logical decision-making in AI. This method allows reasoning to occur over time through connected video frames.",
+      "lifeIdea": "Watch a short video and practice identifying the logical sequence of events, enhancing your reasoning skills.",
+      "sublimeAngle": "Exploring video reasoning could inspire Sublime to incorporate visual storytelling elements into its product offerings."
     },
     {
       "rank": 45,
@@ -585,9 +585,9 @@
       "section": "research",
       "publishedAt": "2026-07-09T17:55:53+00:00",
       "engagement": "",
-      "summary": "The new benchmark, IdeaGene-Bench, aims to measure how well AI systems can follow the lineage of scientific ideas and generate new concepts. This reflects the evolutionary nature of scientific development.",
-      "lifeIdea": "Create a mind map of ideas related to your project to visualize connections and inspire innovative solutions.",
-      "sublimeAngle": "Understanding scientific lineage can help Sublime foster innovation by building on existing ideas more effectively."
+      "summary": "Ideas Have Genomes introduces a benchmark for evaluating how AI systems reason about scientific lineage and idea generation. This research emphasizes the evolutionary nature of scientific ideas.",
+      "lifeIdea": "Create a mind map of a project idea, tracing its origins and connections to previous work or concepts.",
+      "sublimeAngle": "Utilizing lineage reasoning could help Sublime develop tools that support innovative idea generation based on past knowledge."
     },
     {
       "rank": 46,
@@ -598,9 +598,9 @@
       "section": "research",
       "publishedAt": "2026-07-09T17:55:52+00:00",
       "engagement": "",
-      "summary": "Recent research shows that having a small error in forward diffusion does not guarantee stability in diffusion sampling. This highlights the complexities of numerical stability in machine learning models.",
-      "lifeIdea": "Explore free online courses on numerical methods to better understand stability in machine learning algorithms.",
-      "sublimeAngle": "Understanding numerical stability can help Sublime improve the reliability of its AI models, enhancing user trust."
+      "summary": "Research shows that having low error in forward diffusion does not ensure stability in diffusion sampling processes. This indicates that numerical stability needs to be validated separately from forward-marginal performance.",
+      "lifeIdea": "Explore online tutorials on numerical methods to improve your understanding of stability in sampling algorithms today.",
+      "sublimeAngle": "Understanding numerical stability can enhance the reliability of algorithms used in Sublime's technology."
     },
     {
       "rank": 47,
@@ -608,12 +608,12 @@
       "url": "https://arxiv.org/pdf/2607.08756v1",
       "source": "arXiv",
       "category": "research",
-      "section": "research",
+      "section": "ai-news",
       "publishedAt": "2026-07-09T17:55:33+00:00",
       "engagement": "",
-      "summary": "A new dataset, MulTTiPop, offers multitrack MIDI recordings for 572 pop music segments, useful for testing automatic transcription models. This dataset spans music from the 1930s to 2000s.",
-      "lifeIdea": "Use free music transcription software to analyze a song from the MulTTiPop dataset and understand its structure.",
-      "sublimeAngle": "Leveraging this dataset can help Sublime develop innovative music-related features in its platform, attracting a wider audience."
+      "summary": "The MulTTiPop dataset offers 572 segments of pop music along with their multitrack MIDI recordings for testing music transcription models. This resource spans diverse genres and decades, making it valuable for research and development.",
+      "lifeIdea": "Download the MulTTiPop dataset and analyze a song's MIDI structure using free music software to enhance your music transcription skills.",
+      "sublimeAngle": "Utilizing datasets like MulTTiPop can help Sublime improve its music-related AI features and offerings."
     },
     {
       "rank": 48,
@@ -624,9 +624,9 @@
       "section": "tools",
       "publishedAt": "2026-07-09T17:51:50+00:00",
       "engagement": "",
-      "summary": "A new method for low-rank regularization during training improves neural network compression without significant accuracy loss. This approach avoids complex modifications to the model architecture.",
-      "lifeIdea": "Experiment with free machine learning frameworks to implement low-rank regularization techniques in your projects.",
-      "sublimeAngle": "Implementing efficient model compression can reduce operational costs for Sublime, allowing for more scalable AI solutions."
+      "summary": "New research introduces SLORR, a method for low-rank regularization during training that avoids the downsides of traditional techniques. This approach enhances the compressibility of neural networks while maintaining accuracy.",
+      "lifeIdea": "Read about low-rank regularization techniques online and experiment with simple neural network models to apply these concepts today.",
+      "sublimeAngle": "Implementing efficient low-rank techniques could reduce costs and improve performance in Sublime's AI models."
     },
     {
       "rank": 49,
@@ -637,9 +637,9 @@
       "section": "technology",
       "publishedAt": "2026-07-09T17:49:14+00:00",
       "engagement": "",
-      "summary": "A large-scale analysis of AI learning assistants in higher education reveals usage patterns among over 77,000 students. The study examines various demographics and their engagement with AI tools.",
-      "lifeIdea": "Conduct a survey with your team to discuss how AI tools are currently utilized in your workflows and identify areas for improvement.",
-      "sublimeAngle": "Insights from this analysis can inform Sublime's development of educational tools that cater to diverse user needs."
+      "summary": "A study analyzed the use of an AI-based learning assistant in higher education, revealing diverse usage patterns among over 77,000 students. Insights include variations based on gender, age, and study mode.",
+      "lifeIdea": "Conduct a survey among your team or clients to gather feedback on AI tools they find useful in their work or studies.",
+      "sublimeAngle": "Understanding user engagement with AI tools can guide Sublime in developing features that cater to specific educational needs."
     },
     {
       "rank": 50,
@@ -650,38 +650,103 @@
       "section": "ai-news",
       "publishedAt": "2026-07-09T17:47:08+00:00",
       "engagement": "",
-      "summary": "Research reveals that UMAP's k-nearest-neighbor graph is often overlooked, despite its potential for understanding high-dimensional data. This graph can provide insights before data is distorted in 2D projection.",
-      "lifeIdea": "Use free data visualization tools to analyze the kNN graph of a dataset you are working with.",
-      "sublimeAngle": "Utilizing kNN insights can enhance Sublime's data visualization capabilities, making it more effective for users."
+      "summary": "Research highlights the importance of the k-nearest-neighbor graph created by UMAP, which is often overlooked in data analysis workflows. This graph retains valuable information about high-dimensional data before dimensionality reduction.",
+      "lifeIdea": "Experiment with UMAP on a high-dimensional dataset to visualize and analyze the kNN graph using free data visualization tools.",
+      "sublimeAngle": "Leveraging insights from UMAP's kNN graph can enhance data analysis capabilities within Sublime's product offerings."
     },
     {
       "rank": 51,
-      "title": "Claude is definitely not conscious…",
-      "url": "https://www.youtube.com/watch?v=KGtko3y2RXQ",
-      "source": "YouTube · Fireship",
-      "category": "video",
-      "section": "technology",
-      "publishedAt": "2026-07-08T17:53:47+00:00",
-      "engagement": "",
-      "summary": "The video discusses the misconception that AI, like Claude, is conscious. It clarifies that current AI technologies do not possess consciousness or self-awareness.",
-      "lifeIdea": "Watch the video to understand the distinction between AI capabilities and consciousness, and share your thoughts with your team.",
-      "sublimeAngle": "Understanding AI's limitations can guide Sublime in developing products that emphasize functionality over misconceptions about AI consciousness."
-    },
-    {
-      "rank": 52,
-      "title": "AI 2040: Plan A",
-      "url": "https://ai-2040.com/",
+      "title": "Alex Karp Is Saying What Every Angry CEO Is Thinking About AI",
+      "url": "https://www.wsj.com/tech/ai/alex-karp-is-saying-what-every-angry-ceo-is-thinking-about-ai-7f5f7c0c",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
-      "publishedAt": "2026-07-09T16:21:44+00:00",
-      "engagement": "275 points on Hacker News",
-      "summary": "A discussion on the future of AI by 2040, exploring various strategic approaches that could shape its development. It emphasizes the importance of planning for technological advancements.",
-      "lifeIdea": "Draft a brief outline of your vision for Sublime by 2040, focusing on potential innovations and market needs.",
-      "sublimeAngle": "Creating a long-term vision can help Sublime align its current projects with future trends in AI technology."
+      "publishedAt": "2026-07-11T17:37:30+00:00",
+      "engagement": "5 points on Hacker News",
+      "summary": "Alex Karp, CEO of Palantir, expresses the frustrations many CEOs feel about the rapid evolution of AI technology. He emphasizes the need for businesses to adapt or risk being left behind.",
+      "lifeIdea": "Discuss with your team today how your business can adapt to AI advancements and identify specific areas for improvement.",
+      "sublimeAngle": "Understanding CEO frustrations about AI can guide Sublime's product development to address real business needs and concerns."
+    },
+    {
+      "rank": 52,
+      "title": "AI Can't Recreate the Thrust Game (But It Can Help You Understand It)",
+      "url": "https://www.jamesdrandall.com/posts/thrust_ai_powered_software_archaeology/",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "ai-news",
+      "publishedAt": "2026-07-10T22:04:45+00:00",
+      "engagement": "8 points on Hacker News",
+      "summary": "Research indicates that while AI cannot fully replicate the complex dynamics of the Thrust game, it can provide valuable insights into its mechanics. This highlights AI's role in enhancing understanding rather than replacing human intuition.",
+      "lifeIdea": "Use free online simulation tools to analyze a game or process relevant to your work and discover insights that can improve your strategies.",
+      "sublimeAngle": "Leveraging AI to analyze complex systems could inspire Sublime's features, improving user experience through enhanced understanding."
     },
     {
       "rank": 53,
+      "title": "OpenAI Safety Head Heidecke to Leave Firm After Reshuffle: Wired",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-11/openai-safety-head-heidecke-to-leave-firm-after-reshuffle-wired",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-07-11T02:15:21+00:00",
+      "engagement": "",
+      "summary": "Johannes Heidecke, OpenAI's head of safety, is leaving the company amid organizational changes. This shift raises questions about the future direction of AI safety protocols.",
+      "lifeIdea": "Research current AI safety practices online today and evaluate how they can be integrated into your business processes.",
+      "sublimeAngle": "Staying informed on AI safety trends can help Sublime build trust with users, positioning the company as a responsible innovator."
+    },
+    {
+      "rank": 54,
+      "title": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in your feed’",
+      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "tools",
+      "publishedAt": "2026-07-10T13:59:07+00:00",
+      "engagement": "",
+      "summary": "Instagram's head, Adam Mosseri, suggests that users who dislike AI content should not expect it to be filtered out from their feeds. He believes in transparency rather than censorship regarding AI-generated content.",
+      "lifeIdea": "Engage with your audience on social media by asking for their preferences about AI content and how it affects their experience.",
+      "sublimeAngle": "Understanding user preferences for AI content can help Sublime tailor its offerings and marketing strategies more effectively."
+    },
+    {
+      "rank": 55,
+      "title": "Would you host part of an AI data center in your home?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-07-10T13:26:58+00:00",
+      "engagement": "",
+      "summary": "Sunrun is launching a pilot program that incentivizes homeowners to host AI data center units in exchange for payment. This innovative approach aims to create a distributed computing network using residential spaces.",
+      "lifeIdea": "Explore local initiatives or programs that allow you to collaborate with community members on tech projects that leverage shared resources.",
+      "sublimeAngle": "Considering alternative infrastructure models like distributed computing could inspire cost-effective solutions for Sublime's operations."
+    },
+    {
+      "rank": 56,
+      "title": "JPMorgan Builds AI Agents That Beat 60/40 Model in Backtests",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-09/jpmorgan-builds-ai-agents-that-beat-60-40-portfolio-in-backtests",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-07-09T23:00:59+00:00",
+      "engagement": "",
+      "summary": "JPMorgan is testing AI models that can manage investment allocations better than traditional 60/40 portfolios. This shift indicates a growing reliance on AI in financial decision-making.",
+      "lifeIdea": "Explore free AI tools like Google Colab to create a simple model that analyzes investment data and suggests allocations.",
+      "sublimeAngle": "Understanding AI's role in investment could inspire Sublime to develop financial tools that use similar advanced algorithms."
+    },
+    {
+      "rank": 57,
+      "title": "SK Hynix Debut Is a Bet That AI Breaks Boom-and-Bust Chip Cycle",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-10/sk-hynix-debut-is-a-bet-that-ai-breaks-boom-and-bust-chip-cycle",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-07-10T21:52:56+00:00",
+      "engagement": "",
+      "summary": "SK Hynix has made history with the largest public listing by a foreign company in the US, with shares jumping 13% on the first day. This move indicates strong investor confidence in AI-driven technologies.",
+      "lifeIdea": "Research free online resources about successful IPO strategies and apply the insights to your startup plans.",
+      "sublimeAngle": "Observing market trends like SK Hynix's success can inform Sublime's growth strategy and potential funding opportunities."
+    },
+    {
+      "rank": 58,
       "title": "Hugging Face’s CEO on why companies are done renting their AI",
       "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
       "source": "TechCrunch AI",
@@ -689,100 +754,35 @@
       "section": "tools",
       "publishedAt": "2026-07-10T14:00:00+00:00",
       "engagement": "",
-      "summary": "Hugging Face's CEO highlights the shift from renting AI solutions to using open-source models, which are increasingly popular among large companies. This trend reflects a growing preference for customizable AI tools.",
-      "lifeIdea": "Explore and experiment with open-source AI models on Hugging Face's platform to see how they can enhance your projects.",
-      "sublimeAngle": "Leveraging open-source AI can reduce costs and accelerate development for Sublime’s offerings."
+      "summary": "Hugging Face's CEO highlights the rise of open-source AI, with many Fortune 500 companies now utilizing their platform for models and datasets. This trend shows a shift away from proprietary AI solutions.",
+      "lifeIdea": "Join Hugging Face and explore open-source AI models that could enhance your work on Sublime.",
+      "sublimeAngle": "Leveraging open-source resources can accelerate Sublime's development while keeping costs low."
     },
     {
-      "rank": 54,
-      "title": "SK Hynix Debut Is a Bet That AI Breaks Boom-and-Bust Chip Cycle",
-      "url": "https://www.bloomberg.com/news/articles/2026-07-10/sk-hynix-debut-is-a-bet-that-ai-breaks-boom-and-bust-chip-cycle",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-07-10T21:52:56+00:00",
-      "engagement": "",
-      "summary": "SK Hynix has made history with the largest public listing by a foreign company in the US, marking a significant moment in the chip market. This event suggests a strong investor confidence in AI-related technologies.",
-      "lifeIdea": "Research the implications of the chip market on AI technology and consider how it could impact your startup's hardware needs.",
-      "sublimeAngle": "Understanding the chip industry dynamics can help Sublime anticipate hardware requirements for its AI products."
-    },
-    {
-      "rank": 55,
+      "rank": 59,
       "title": "Google will now tell you if an ad was made with AI",
       "url": "https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label",
       "source": "The Verge AI",
       "category": "news",
-      "section": "ai-news",
+      "section": "technology",
       "publishedAt": "2026-07-10T09:50:42+00:00",
       "engagement": "",
-      "summary": "Google has introduced a feature that labels ads created or edited with AI, aiming to increase transparency for users. This update allows users to discern the involvement of AI in advertisements.",
-      "lifeIdea": "Check out Google’s new ad feature and analyze how transparency in AI-generated content could affect your marketing strategies.",
-      "sublimeAngle": "Emphasizing transparency in Sublime's AI solutions could enhance user trust and differentiate your brand in the market."
+      "summary": "Google is now labeling ads created or edited with AI, allowing users to see the role of AI in advertising. This transparency can influence consumer trust and ad effectiveness.",
+      "lifeIdea": "Analyze your favorite ads to see if they disclose AI involvement, and note the impact on your perception.",
+      "sublimeAngle": "Incorporating transparency in Sublime’s marketing strategy could enhance brand trust and customer engagement."
     },
     {
-      "rank": 56,
+      "rank": 60,
       "title": "Apple Sues OpenAI for Trade Secret Theft in Pivotal Case",
       "url": "https://www.bloomberg.com/news/articles/2026-07-10/apple-sues-openai-for-trade-secret-theft-in-blockbuster-case",
       "source": "Bloomberg Tech",
       "category": "news",
-      "section": "finance",
+      "section": "technology",
       "publishedAt": "2026-07-10T20:30:22+00:00",
       "engagement": "",
-      "summary": "Apple has filed a lawsuit against OpenAI, alleging theft of trade secrets related to its upcoming products. This case highlights the competitive tensions in the AI and tech industries.",
-      "lifeIdea": "Research online about intellectual property basics and consider how it affects your startup to protect your ideas.",
-      "sublimeAngle": "Understanding legal aspects of intellectual property can help Sublime safeguard its innovations and avoid potential legal issues."
-    },
-    {
-      "rank": 57,
-      "title": "A New Experiential Gallery Just Might Change Your Mind About AI Art",
-      "url": "https://www.wired.com/story/a-new-experiential-gallery-just-might-change-your-mind-about-ai-art/",
-      "source": "Wired AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-07-10T10:30:00+00:00",
-      "engagement": "",
-      "summary": "A new gallery called Dataland merges nature, biometrics, and art to showcase AI art in an immersive way. This innovative approach aims to change perceptions about AI-generated art.",
-      "lifeIdea": "Visit an online virtual tour of an art gallery to explore how immersive experiences can enhance user engagement.",
-      "sublimeAngle": "Incorporating experiential elements into Sublime’s offerings could elevate user experience and attract more customers."
-    },
-    {
-      "rank": 58,
-      "title": "US Eases Export Curbs on UAE, Opening Door for AI Chip Sales",
-      "url": "https://www.bloomberg.com/news/articles/2026-07-10/us-eases-export-curbs-on-uae-opening-door-for-ai-chip-sales",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-07-10T16:21:10+00:00",
-      "engagement": "",
-      "summary": "The US government is lifting export restrictions on the UAE, facilitating sales of advanced technologies, including AI chips. This move is expected to bolster the UAE’s ambitions in artificial intelligence.",
-      "lifeIdea": "Follow news on AI chip advancements to stay informed about potential new technologies that could benefit your startup.",
-      "sublimeAngle": "Leveraging new AI technologies from global markets can help Sublime stay competitive and innovative."
-    },
-    {
-      "rank": 59,
-      "title": "SK Chairman Chey Tae-won on SK Hynix Debut, AI Demand and US Plans",
-      "url": "https://www.bloomberg.com/news/videos/2026-07-10/sk-chairman-on-sk-hynix-debut-ai-demand-and-us-plans-video",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "tools",
-      "publishedAt": "2026-07-10T16:10:13+00:00",
-      "engagement": "",
-      "summary": "SK Hynix has made a historic US listing, raising $26.5 billion, and anticipates a growing demand for AI technologies. The chairman emphasizes the importance of investments in AI.",
-      "lifeIdea": "Evaluate potential investors for your startup who are interested in AI and technology to expand your funding options.",
-      "sublimeAngle": "Securing investment can provide the necessary resources for Sublime to develop cutting-edge AI solutions."
-    },
-    {
-      "rank": 60,
-      "title": "Government Action is Crucial for AI Entrepreneurs Says Pelgo CEO",
-      "url": "https://www.bloomberg.com/news/videos/2026-07-10/gov-action-vital-for-ai-entrepreneurs-says-pelgo-ceo-video",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-07-10T15:08:48+00:00",
-      "engagement": "",
-      "summary": "The ILO reports that AI could transform jobs for 80 million people in Southeast Asia, yet large-scale job cuts haven't occurred. They advocate for government action to support AI integration.",
-      "lifeIdea": "Engage in a conversation with colleagues about how AI might impact your industry and brainstorm ways to adapt.",
-      "sublimeAngle": "Understanding workforce changes due to AI can help Sublime position itself as a leader in responsible AI deployment."
+      "summary": "Apple has filed a lawsuit against OpenAI for allegedly stealing trade secrets related to upcoming products. This case could have significant implications for the tech and AI industries.",
+      "lifeIdea": "Stay informed about legal developments in tech by following relevant news outlets or podcasts focused on AI and intellectual property.",
+      "sublimeAngle": "Understanding the legal landscape can help Sublime navigate potential challenges as it develops its innovative solutions."
     }
   ]
 }
