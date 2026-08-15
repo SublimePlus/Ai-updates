@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T06:39:52+00:00",
+  "updatedAt": "2026-08-15T15:21:47+00:00",
   "generator": "github-actions",
   "model": null,
   "aiGenerated": false,
@@ -12,52 +12,91 @@
       "category": "social",
       "section": "tools",
       "publishedAt": "2026-08-14T15:00:00+00:00",
-      "engagement": "1,045 points on Hacker News",
+      "engagement": "1,260 points on Hacker News",
       "summary": "Qwen 3.8 27B — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 2,
+      "title": "Working with AI Feels More Like Leadership Than Coding",
+      "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "ai-news",
+      "publishedAt": "2026-08-15T10:39:41+00:00",
+      "engagement": "69 points on Hacker News",
+      "summary": "Working with AI Feels More Like Leadership Than Coding — via Hacker News.",
+      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 3,
       "title": "Google is making private AI practical with homomorphic encryption",
       "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
       "source": "Hacker News",
       "category": "social",
       "section": "web-services",
       "publishedAt": "2026-08-14T15:43:10+00:00",
-      "engagement": "350 points on Hacker News",
+      "engagement": "448 points on Hacker News",
       "summary": "Google is making private AI practical with homomorphic encryption — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "AI by Hand",
       "url": "https://www.byhand.ai/",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-08-14T15:58:59+00:00",
-      "engagement": "271 points on Hacker News",
+      "engagement": "339 points on Hacker News",
       "summary": "AI by Hand — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+      "url": "https://chenxiachan.github.io/thoughtdag/",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "ai-news",
+      "publishedAt": "2026-08-15T04:42:07+00:00",
+      "engagement": "81 points on Hacker News",
+      "summary": "Show HN: ThoughtDAG – An editable context graph for LLM conversations — via Hacker News.",
+      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 6,
+      "title": "Secondhand book sales are booming. Is it because of AI?",
+      "url": "https://www.bbc.co.uk/news/articles/cp3rprx2wl4o",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "ai-news",
+      "publishedAt": "2026-08-15T14:08:55+00:00",
+      "engagement": "26 points on Hacker News",
+      "summary": "Secondhand book sales are booming. Is it because of AI? — via Hacker News.",
+      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 7,
       "title": "Maximizing the value of your Claude Code sessions",
       "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-08-14T16:15:21+00:00",
-      "engagement": "181 points on Hacker News",
+      "engagement": "285 points on Hacker News",
       "summary": "Maximizing the value of your Claude Code sessions — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 5,
+      "rank": 8,
       "title": "When Genius Fails: The Intellectual Arrogance of the AI Labs",
       "url": "https://weightythoughts.com/p/when-genius-failsthe-intellectual",
       "source": "Hacker News",
@@ -70,20 +109,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 6,
-      "title": "DeepSeek peak/off-peak pricing update",
-      "url": "https://api-docs.deepseek.com/news/news260813/",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "finance",
-      "publishedAt": "2026-08-14T09:55:33+00:00",
-      "engagement": "237 points on Hacker News",
-      "summary": "DeepSeek peak/off-peak pricing update — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "rank": 9,
+      "title": "Claude AI Failed 650 Times…Then Beat The Human Record",
+      "url": "https://www.youtube.com/watch?v=QnGNF8k_uoc",
+      "source": "YouTube · Two Minute Papers",
+      "category": "video",
+      "section": "web-services",
+      "publishedAt": "2026-08-14T08:42:07+00:00",
+      "engagement": "",
+      "summary": "Claude AI Failed 650 Times…Then Beat The Human Record — via YouTube · Two Minute Papers.",
+      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 7,
+      "rank": 10,
       "title": "Northern Gannet",
       "url": "https://simonwillison.net/2026/Aug/15/sighting-391300422/",
       "source": "Simon Willison",
@@ -96,20 +135,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 8,
-      "title": "Show HN: Deltix – AI Driven Testing",
-      "url": "https://app.deltix.ai",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-08-15T02:42:14+00:00",
-      "engagement": "23 points on Hacker News",
-      "summary": "Show HN: Deltix – AI Driven Testing — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "rank": 11,
+      "title": "Amazon Can Use Your Twitch Content to Train Its AI—Unless You Opt Out",
+      "url": "https://www.wired.com/story/amazon-uses-your-twitch-content-to-train-its-ai-how-to-opt-out/",
+      "source": "Wired AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-08-15T09:00:00+00:00",
+      "engagement": "",
+      "summary": "When Twitch announced that streamers could opt out, thousands of users questioned why their content was being used to train AI models in the first place.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 9,
+      "rank": 12,
       "title": "Don't classify. Hallucinate!",
       "url": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "source": "Simon Willison",
@@ -122,7 +161,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 10,
+      "rank": 13,
       "title": "Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets",
       "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
       "source": "Hugging Face Blog",
@@ -135,20 +174,46 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 11,
-      "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-      "url": "https://chenxiachan.github.io/thoughtdag/",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-08-15T04:42:07+00:00",
-      "engagement": "5 points on Hacker News",
-      "summary": "Show HN: ThoughtDAG – An editable context graph for LLM conversations — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "rank": 14,
+      "title": "Mathematical Experiments Are Becoming Abundant Through Human-Machine Teaming",
+      "url": "https://towardsdatascience.com/mathematical-experiments-are-becoming-abundant-through-human-machine-teaming/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-08-15T15:00:00+00:00",
+      "engagement": "",
+      "summary": "Two open problems, exact-arithmetic checking and a proof assistant, over a single weekend. The post Mathematical Experiments Are Becoming Abundant Through Human-Machine Teaming appeared first on Towards Data Science .",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 12,
+      "rank": 15,
+      "title": "Alibaba AI Models Hit 3 Billion Downloads, Passing Meta, Google",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-15/alibaba-ai-models-hit-3-billion-downloads-passing-meta-google",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-08-15T09:16:06+00:00",
+      "engagement": "",
+      "summary": "Alibaba Group Holding’s open-weight models have accumulated more than 3 billion global downloads in the past six months, eclipsing Meta Platforms Inc., Alphabet Inc. and domestic peers to become the world’s No. 1 artificial-intelligence model.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 16,
+      "title": "How to Shine as a Data Scientist in the Vibe Coding Era",
+      "url": "https://towardsdatascience.com/how-to-shine-in-the-vibe-coding-era-as-a-data-scientist/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-08-15T13:00:00+00:00",
+      "engagement": "",
+      "summary": "Here's how to be the Data Scientist who thrives in a world where coding is a commodity. The post How to Shine as a Data Scientist in the Vibe Coding Era appeared first on Towards Data Science .",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 17,
       "title": "You can now turn off Google Gemini’s visible watermarks",
       "url": "https://www.theverge.com/tech/980416/google-gemini-ai-watermarks-removal",
       "source": "The Verge AI",
@@ -161,7 +226,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 13,
+      "rank": 18,
       "title": "IBM partners with OpenAI to bolster enterprise AI push",
       "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
       "source": "TechCrunch AI",
@@ -174,7 +239,33 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 14,
+      "rank": 19,
+      "title": "AI News: A Flood of New Models (Here's What Matters)",
+      "url": "https://www.youtube.com/watch?v=NC4h5kWH_-A",
+      "source": "YouTube · Matt Wolfe",
+      "category": "video",
+      "section": "web-services",
+      "publishedAt": "2026-08-14T15:00:28+00:00",
+      "engagement": "",
+      "summary": "AI News: A Flood of New Models (Here's What Matters) — via YouTube · Matt Wolfe.",
+      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 20,
+      "title": "Did This AI Device Go Too Far?",
+      "url": "https://www.youtube.com/shorts/MVOWGGrVTOs",
+      "source": "YouTube · Matt Wolfe",
+      "category": "video",
+      "section": "web-services",
+      "publishedAt": "2026-08-14T14:56:41+00:00",
+      "engagement": "",
+      "summary": "Did This AI Device Go Too Far? — via YouTube · Matt Wolfe.",
+      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 21,
       "title": "Suno is trying to look more like a real music production tool",
       "url": "https://www.theverge.com/ai-artificial-intelligence/979345/suno-studio-2-0-midi-chatbot-custom-effects",
       "source": "The Verge AI",
@@ -187,7 +278,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 15,
+      "rank": 22,
       "title": "Google will now allow users to remove visible watermark from its AI generations",
       "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
       "source": "TechCrunch AI",
@@ -200,7 +291,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 16,
+      "rank": 23,
       "title": "Does Mark Zuckerberg really believe AI is ‘for everyone’?",
       "url": "https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/",
       "source": "TechCrunch AI",
@@ -213,7 +304,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 17,
+      "rank": 24,
       "title": "Tech Visionary Says the Big AI Labs Don’t Get What People Want",
       "url": "https://www.wired.com/story/tech-visionary-says-the-big-ai-labs-dont-get-what-people-want/",
       "source": "Wired AI",
@@ -226,7 +317,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 18,
+      "rank": 25,
       "title": "Kog is going deeper to squeeze more inference out of GPUs",
       "url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
       "source": "TechCrunch AI",
@@ -239,7 +330,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 19,
+      "rank": 26,
       "title": "Hyperscalers might regret embracing natural gas if new forecast proves correct",
       "url": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
       "source": "TechCrunch AI",
@@ -252,7 +343,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 20,
+      "rank": 27,
       "title": "Meta’s ‘open’ AI, and a $250M deal gone very wrong",
       "url": "https://techcrunch.com/podcast/metas-open-ai-and-a-250m-deal-gone-very-wrong/",
       "source": "TechCrunch AI",
@@ -265,20 +356,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 21,
-      "title": "Apple trained its own AI model for China with help from Alibaba",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-08-14T09:30:10+00:00",
-      "engagement": "",
-      "summary": "Apple has reportedly trained a custom AI model for the China market alongside domestic tech giant Alibaba, a rare cross-border partnership that cuts across growing tensions between Beijing and Washington. The China-focused large language model was developed in partnership with Al",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 22,
+      "rank": 28,
       "title": "Anthropic Revenue Ahead of IPO Surges Over 14-Fold in Second Quarter",
       "url": "https://www.bloomberg.com/news/articles/2026-08-14/anthropic-revenue-ahead-of-ipo-surges-over-14-fold-in-second-quarter",
       "source": "Bloomberg Tech",
@@ -291,20 +369,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 23,
-      "title": "These ‘Masturbation Consultants’ Were Hired to Pleasure Themselves With AI",
-      "url": "https://www.wired.com/story/these-masturbation-consultants-were-hired-to-pleasure-themselves-using-ai/",
-      "source": "Wired AI",
+      "rank": 29,
+      "title": "Apple trained its own AI model for China with help from Alibaba",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba",
+      "source": "The Verge AI",
       "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-08-14T10:45:00+00:00",
+      "section": "finance",
+      "publishedAt": "2026-08-14T09:30:10+00:00",
       "engagement": "",
-      "summary": "Joi AI hired 10 people to masturbate using AI companions as part of a monthlong “wellness” study. The company claims the practice could help “solve male loneliness.”",
+      "summary": "Apple has reportedly trained a custom AI model for the China market alongside domestic tech giant Alibaba, a rare cross-border partnership that cuts across growing tensions between Beijing and Washington. The China-focused large language model was developed in partnership with Al",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 24,
+      "rank": 30,
       "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
       "url": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/",
       "source": "Ars Technica AI",
@@ -317,20 +395,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 25,
-      "title": "People Are ‘Marrying’ Chatbots. These Lawmakers Want to Stop Them",
-      "url": "https://www.wired.com/story/people-are-marrying-chatbots-these-lawmakers-want-to-stop-them/",
+      "rank": 31,
+      "title": "These ‘Masturbation Consultants’ Were Hired to Pleasure Themselves With AI",
+      "url": "https://www.wired.com/story/these-masturbation-consultants-were-hired-to-pleasure-themselves-using-ai/",
       "source": "Wired AI",
       "category": "news",
       "section": "technology",
-      "publishedAt": "2026-08-14T10:15:00+00:00",
+      "publishedAt": "2026-08-14T10:45:00+00:00",
       "engagement": "",
-      "summary": "Human-AI marriages are not currently recognized by US law. Some Republican state policymakers are drafting legislation to keep it that way.",
+      "summary": "Joi AI hired 10 people to masturbate using AI companions as part of a monthlong “wellness” study. The company claims the practice could help “solve male loneliness.”",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 26,
+      "rank": 32,
       "title": "State of Open Models: Summer 2026 Observations",
       "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
       "source": "Hugging Face Blog",
@@ -343,20 +421,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 27,
-      "title": "Signs of a Slowing US Consumer | Open Interest 8/14/2026",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-14/open-interest-8-14-2026-video",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-08-14T18:04:09+00:00",
-      "engagement": "",
-      "summary": "Get a jump start on the US trading day with Dave Gura on \"Bloomberg Open Interest.\" Signs the consumer is finally slowing sown. Today, retail sales post their biggest drop in more than a year as confidence slides. Oil rises as Washington threatens more economic pressure on Iran. ",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 28,
+      "rank": 33,
       "title": "sqlite-utils 4.2.1",
       "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
       "source": "Simon Willison",
@@ -369,33 +434,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 29,
-      "title": "Introducing Gemini 3.7 Flash",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
-      "source": "DeepMind Blog",
-      "category": "blog",
-      "section": "ai-news",
-      "publishedAt": "2026-08-13T17:04:18+00:00",
-      "engagement": "",
-      "summary": "Introducing Gemini 3.7 Flash — via DeepMind Blog.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 30,
-      "title": "Bring your spreadsheet data to life with Sheets canvas",
-      "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
-      "source": "Google AI Blog",
-      "category": "blog",
-      "section": "ai-news",
-      "publishedAt": "2026-08-13T16:45:00+00:00",
-      "engagement": "",
-      "summary": "The video shows Sheets canvas in action.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 31,
+      "rank": 34,
       "title": "A Day in the Life of a Data Scientist in 2026",
       "url": "https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/",
       "source": "Towards Data Science",
@@ -408,7 +447,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 32,
+      "rank": 35,
       "title": "RAG Workflow and Loop Engineering: The Dispatcher That Decides When to Loop and When to Stop",
       "url": "https://towardsdatascience.com/rag-workflow-and-loop-engineering-the-dispatcher-that-decides-when-to-loop-and-when-to-stop/",
       "source": "Towards Data Science",
@@ -421,20 +460,33 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 33,
-      "title": "llm-gemini 0.33",
-      "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
-      "source": "Simon Willison",
+      "rank": 36,
+      "title": "Introducing Gemini 3.7 Flash",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+      "source": "DeepMind Blog",
       "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-08-13T19:37:34+00:00",
+      "section": "ai-news",
+      "publishedAt": "2026-08-13T17:04:18+00:00",
       "engagement": "",
-      "summary": "Release: llm-gemini 0.33 It's been a while since the last llm-gemini release. This version of the plugin adds support for today's Gemini 3.7 Flash release, plus gemini-3.6-flash , gemini-3.5-flash-lite and two embedding models gemini-embedding-2 and gemini-embedding-001 . The plu",
+      "summary": "Introducing Gemini 3.7 Flash — via DeepMind Blog.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 34,
+      "rank": 37,
+      "title": "Bring your spreadsheet data to life with Sheets canvas",
+      "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
+      "source": "Google AI Blog",
+      "category": "blog",
+      "section": "ai-news",
+      "publishedAt": "2026-08-13T16:45:00+00:00",
+      "engagement": "",
+      "summary": "The video shows Sheets canvas in action.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 38,
       "title": "My Model Was Cheating on Its Own Test",
       "url": "https://towardsdatascience.com/my-model-was-cheating-on-its-own-test/",
       "source": "Towards Data Science",
@@ -447,20 +499,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 35,
-      "title": "The builder’s guide to GPT‑5.6",
-      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "finance",
-      "publishedAt": "2026-08-13T11:00:00+00:00",
-      "engagement": "",
-      "summary": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 36,
+      "rank": 39,
       "title": "I Made an LLM Lay Siege to My Minecraft House",
       "url": "https://towardsdatascience.com/i-made-an-llm-lay-siege-to-my-minecraft-house/",
       "source": "Towards Data Science",
@@ -473,33 +512,33 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 37,
-      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
-      "url": "https://openai.com/index/previewing-ultrafast",
-      "source": "OpenAI Blog",
+      "rank": 40,
+      "title": "llm-gemini 0.33",
+      "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+      "source": "Simon Willison",
       "category": "blog",
-      "section": "web-services",
-      "publishedAt": "2026-08-13T10:00:00+00:00",
+      "section": "tools",
+      "publishedAt": "2026-08-13T19:37:34+00:00",
       "engagement": "",
-      "summary": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
+      "summary": "Release: llm-gemini 0.33 It's been a while since the last llm-gemini release. This version of the plugin adds support for today's Gemini 3.7 Flash release, plus gemini-3.6-flash , gemini-3.5-flash-lite and two embedding models gemini-embedding-2 and gemini-embedding-001 . The plu",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 38,
-      "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
-      "url": "https://openai.com/index/dali-rajic-chief-revenue-officer",
+      "rank": 41,
+      "title": "The builder’s guide to GPT‑5.6",
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
       "source": "OpenAI Blog",
       "category": "blog",
       "section": "finance",
-      "publishedAt": "2026-08-13T09:00:00+00:00",
+      "publishedAt": "2026-08-13T11:00:00+00:00",
       "engagement": "",
-      "summary": "OpenAI appoints Dali Rajic as Chief Revenue Officer to lead its global revenue organization and help businesses realize the full value of AI.",
+      "summary": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 39,
+      "rank": 42,
       "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
       "url": "https://arxiv.org/pdf/2608.13560v1",
       "source": "arXiv",
@@ -512,7 +551,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 40,
+      "rank": 43,
       "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
       "url": "https://arxiv.org/pdf/2608.13558v1",
       "source": "arXiv",
@@ -525,7 +564,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 41,
+      "rank": 44,
       "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
       "url": "https://arxiv.org/pdf/2608.13555v1",
       "source": "arXiv",
@@ -538,7 +577,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 42,
+      "rank": 45,
       "title": "Defensive Boosting for Online Probabilistic Forecasting",
       "url": "https://arxiv.org/pdf/2608.13554v1",
       "source": "arXiv",
@@ -551,12 +590,12 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 43,
+      "rank": 46,
       "title": "Exponential Convex Calibration Dimension for the Multi-Label Jaccard Measure",
       "url": "https://arxiv.org/pdf/2608.13549v1",
       "source": "arXiv",
       "category": "research",
-      "section": "research",
+      "section": "technology",
       "publishedAt": "2026-08-13T17:59:17+00:00",
       "engagement": "",
       "summary": "The per-instance Jaccard score, or intersection over union (IoU), is standard in multi-label classification and binary segmentation. With $s$ labels, its loss matrix has $2^s$ outcomes and reports. Under the convention $\\mathrm{Jac}(\\varnothing,\\varnothing)=1$, we prove that the ",
@@ -564,12 +603,12 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 44,
+      "rank": 47,
       "title": "QuoteBench: How Matched Scores Can Hide Command-Path Failures",
       "url": "https://arxiv.org/pdf/2608.13547v1",
       "source": "arXiv",
       "category": "research",
-      "section": "research",
+      "section": "tools",
       "publishedAt": "2026-08-13T17:57:20+00:00",
       "engagement": "",
       "summary": "LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures introduced after generation. QuoteBench measures this boundary with exact final-s",
@@ -577,12 +616,12 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 45,
+      "rank": 48,
       "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
       "url": "https://arxiv.org/pdf/2608.13545v1",
       "source": "arXiv",
       "category": "research",
-      "section": "web-services",
+      "section": "technology",
       "publishedAt": "2026-08-13T17:56:12+00:00",
       "engagement": "",
       "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-t",
@@ -590,7 +629,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 46,
+      "rank": 49,
       "title": "SAEVerbalizer: Generating Explanations for Sparse Autoencoder Features via Representation Verbalization",
       "url": "https://arxiv.org/pdf/2608.13538v1",
       "source": "arXiv",
@@ -603,33 +642,46 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 47,
-      "title": "How AI text watermarking works",
-      "url": "https://declaude.org/watermarking/",
+      "rank": 50,
+      "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
+      "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
-      "publishedAt": "2026-08-13T23:16:55+00:00",
-      "engagement": "131 points on Hacker News",
-      "summary": "How AI text watermarking works — via Hacker News.",
+      "publishedAt": "2026-08-15T13:43:46+00:00",
+      "engagement": "13 points on Hacker News",
+      "summary": "Yadda 3.0.0: BDD in the Age of AI Agents — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 48,
-      "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
-      "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
+      "rank": 51,
+      "title": "DeepSeek peak/off-peak pricing update",
+      "url": "https://api-docs.deepseek.com/news/news260813/",
       "source": "Hacker News",
       "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-08-13T19:25:38+00:00",
-      "engagement": "124 points on Hacker News",
-      "summary": "How Organizations Use AI: Evidence from ChatGPT [pdf] — via Hacker News.",
+      "section": "finance",
+      "publishedAt": "2026-08-14T09:55:33+00:00",
+      "engagement": "237 points on Hacker News",
+      "summary": "DeepSeek peak/off-peak pricing update — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 49,
+      "rank": 52,
+      "title": "Signs of a Slowing US Consumer | Open Interest 8/14/2026",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-14/open-interest-8-14-2026-video",
+      "source": "Bloomberg Tech",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-08-14T18:04:09+00:00",
+      "engagement": "",
+      "summary": "Get a jump start on the US trading day with Dave Gura on \"Bloomberg Open Interest.\" Signs the consumer is finally slowing sown. Today, retail sales post their biggest drop in more than a year as confidence slides. Oil rises as Washington threatens more economic pressure on Iran. ",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 53,
       "title": "OpenAI’s Explosive Growth Continues | Bloomberg Tech 8/14/2026",
       "url": "https://www.bloomberg.com/news/videos/2026-08-14/bloomberg-tech-8-14-2026-video",
       "source": "Bloomberg Tech",
@@ -642,7 +694,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 50,
+      "rank": 54,
       "title": "Beyond Chatbots: The Next Wave of AI",
       "url": "https://www.bloomberg.com/news/videos/2026-08-14/beyond-chatbots-the-next-wave-of-ai-video",
       "source": "Bloomberg Tech",
@@ -655,7 +707,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 51,
+      "rank": 55,
       "title": "OpenAI on Track to Double Revenue Ahead of IPO",
       "url": "https://www.bloomberg.com/news/videos/2026-08-14/openai-on-track-to-double-revenue-ahead-of-ipo-video",
       "source": "Bloomberg Tech",
@@ -668,7 +720,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 52,
+      "rank": 56,
+      "title": "People Are ‘Marrying’ Chatbots. These Lawmakers Want to Stop Them",
+      "url": "https://www.wired.com/story/people-are-marrying-chatbots-these-lawmakers-want-to-stop-them/",
+      "source": "Wired AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-08-14T10:15:00+00:00",
+      "engagement": "",
+      "summary": "Human-AI marriages are not currently recognized by US law. Some Republican state policymakers are drafting legislation to keep it that way.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 57,
       "title": "AI Boom Reshapes Commodity Markets",
       "url": "https://www.bloomberg.com/news/videos/2026-08-14/ai-boom-reshapes-commodity-markets-video",
       "source": "Bloomberg Tech",
@@ -681,46 +746,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 53,
-      "title": "AI Companies Work for Better Data, Not Better Models",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-14/ai-companies-work-for-better-data-not-better-models-video",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "web-services",
-      "publishedAt": "2026-08-14T15:16:15+00:00",
-      "engagement": "",
-      "summary": "Rudina Seseri, founder and managing partner of Glasswing Ventures, joins Businessweek to discuss latest AI-related headlines including reports that Anthropic is in talks to buy startup 'Decart' for $6 Billion. She argues that with many of the major AI companies operating today li",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 54,
-      "title": "will.i.am on AI's Threat to Human Creativity",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-14/will-i-am-on-ai-s-threat-to-human-creativity-video",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-08-14T14:06:10+00:00",
-      "engagement": "",
-      "summary": "\"How can you validate human sweat to make something?\" will.i.am tells Mishal Husain that in the era of AI, human creativity \"should be worth more than just compute output.\" (Source: Bloomberg)",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 55,
-      "title": "Reddit Climbs, Applied Materials, Gemini Fall | Stock Movers",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-14/reddit-up-applied-materials-gemini-fall-stock-movers-video",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-08-14T13:46:34+00:00",
-      "engagement": "",
-      "summary": "On this episode of Stock Movers: Drone companies including AeroVironment Inc. (AVAV), Aevex Corp. (AVEX), and Unusual Machines Inc. (UMAC) rose on news that the Trump administration plans to apply a 100% tariff on imports of unmanned aircraft systems and their components. Applied",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 56,
+      "rank": 58,
       "title": "Microsoft’s Clippy-like Mico character is no longer the face of Copilot",
       "url": "https://www.theverge.com/tech/979871/microsoft-copilot-mico-retired",
       "source": "The Verge AI",
@@ -733,7 +759,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 57,
+      "rank": 59,
       "title": "Microsoft is combining its Copilot apps ahead of a ‘super app’",
       "url": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience",
       "source": "The Verge AI",
@@ -746,7 +772,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 58,
+      "rank": 60,
       "title": "The Safety Reckoning Inside OpenAI",
       "url": "https://www.wired.com/story/openai-safety-security-ai-agents-culture/",
       "source": "Wired AI",
@@ -755,32 +781,6 @@
       "publishedAt": "2026-08-13T22:37:19+00:00",
       "engagement": "",
       "summary": "OpenAI’s rogue agent hack was a watershed moment for AI safety and cybersecurity. It also sparked internal questions about the culture that led to it.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 59,
-      "title": "OpenAI is losing its second executive this week",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "tools",
-      "publishedAt": "2026-08-13T19:28:39+00:00",
-      "engagement": "",
-      "summary": "Another OpenAI executive is departing. Denise Dresser, who joined OpenAI as its chief revenue officer in December after serving as CEO of Slack, will be leaving in the \"coming weeks\" to \"pursue other opportunities,\" she said in a team note posted to LinkedIn. Dali Rajic, presiden",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 60,
-      "title": "Mark Zuckerberg’s AI Manifesto Is 6,500 Words—and Barely Says Anything",
-      "url": "https://www.wired.com/story/mark-zuckerbergs-ai-manifesto-is-6500-words-and-barely-says-anything/",
-      "source": "Wired AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-08-13T21:14:43+00:00",
-      "engagement": "",
-      "summary": "AI is shifting the culture, from tech CEO manifestos to 1 am job interviews. We unpack some of the latest, along with the top findings from Black Hat and Defcon, this week on Uncanny Valley.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     }
