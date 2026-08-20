@@ -647,62 +647,6 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
     log(f"Wrote {OUT_PATH} with {len(top)} items (aiGenerated={ai_ok})")
 
-    generate_email_html(output)
-
-
-def generate_email_html(data):
-    items = data["items"]
-    date_str = data["updatedAt"][:10]
-    rows = ""
-    for item in items:
-        rows += f"""<tr><td style="padding:12px 16px;border-bottom:1px solid #1a2332;">
-          <span style="color:#5eead4;font-size:12px;font-weight:600;letter-spacing:1px;">
-            N&deg;{item['rank']:02d} &middot; {html.escape(item['section'].upper().replace('-',' '))}
-          </span>
-          <h3 style="margin:4px 0 6px;font-size:16px;">
-            <a href="{html.escape(item['url'])}" style="color:#d7e2f4;text-decoration:none;">{html.escape(item['title'])}</a>
-          </h3>
-          <p style="color:#7b89a8;font-size:14px;margin:0 0 8px;">{html.escape(item['summary'])}</p>
-          <table width="100%" cellpadding="0" cellspacing="0"><tr>
-            <td style="padding:8px 10px;background:rgba(94,234,212,0.06);border-left:2px solid #5eead4;font-size:13px;color:#7b89a8;width:50%;">
-              <strong style="color:#5eead4;font-size:10px;letter-spacing:1px;display:block;">USE IT TODAY</strong>
-              {html.escape(item['lifeIdea'])}
-            </td>
-            <td style="padding:8px 10px;background:rgba(167,139,250,0.06);border-left:2px solid #a78bfa;font-size:13px;color:#7b89a8;width:50%;">
-              <strong style="color:#a78bfa;font-size:10px;letter-spacing:1px;display:block;">SUBLIME ANGLE</strong>
-              {html.escape(item['sublimeAngle'])}
-            </td>
-          </tr></table>
-        </td></tr>"""
-
-    email_html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#04060d;font-family:'Segoe UI',Arial,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#04060d;">
-<tr><td align="center" style="padding:24px 16px;">
-<table width="640" cellpadding="0" cellspacing="0" style="background:#0b1120;border:1px solid rgba(94,234,212,0.2);border-radius:4px;">
-  <tr><td style="padding:24px 20px;border-bottom:1px solid rgba(94,234,212,0.14);">
-    <h1 style="margin:0;color:#d7e2f4;font-size:20px;letter-spacing:2px;">
-      SUBLIME <span style="color:#5eead4;">//</span> AI SIGNAL
-    </h1>
-    <p style="margin:6px 0 0;color:#7b89a8;font-size:12px;letter-spacing:1px;">
-      DAILY BRIEFING &middot; {date_str}
-    </p>
-  </td></tr>
-  {rows}
-  <tr><td style="padding:16px 20px;text-align:center;">
-    <a href="https://sublimeplus.github.io/Ai-updates/" style="color:#5eead4;font-size:12px;letter-spacing:1px;text-decoration:none;">
-      VIEW FULL DASHBOARD &rarr;
-    </a>
-  </td></tr>
-</table>
-</td></tr></table>
-</body></html>"""
-
-    email_path = os.path.join(ROOT, "site", "data", "email.html")
-    with open(email_path, "w", encoding="utf-8") as f:
-        f.write(email_html)
-    log(f"Wrote email template to {email_path}")
-
 
 if __name__ == "__main__":
     main()
