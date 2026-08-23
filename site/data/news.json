@@ -1,37 +1,50 @@
 {
-  "updatedAt": "2026-08-23T06:42:15+00:00",
+  "updatedAt": "2026-08-23T15:23:42+00:00",
   "generator": "github-actions",
   "model": null,
   "aiGenerated": false,
   "items": [
     {
       "rank": 1,
+      "title": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes",
+      "url": "https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "tools",
+      "publishedAt": "2026-08-23T10:02:51+00:00",
+      "engagement": "159 points on Hacker News",
+      "summary": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes — via Hacker News.",
+      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 2,
       "title": "Why your local LLM feels dumber than it is",
       "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
       "source": "Hacker News",
       "category": "social",
       "section": "tools",
       "publishedAt": "2026-08-22T18:14:16+00:00",
-      "engagement": "280 points on Hacker News",
+      "engagement": "417 points on Hacker News",
       "summary": "Why your local LLM feels dumber than it is — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 2,
+      "rank": 3,
       "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
       "url": "https://twitter.com/argofowl/status/2091150597374537729",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-08-22T16:58:49+00:00",
-      "engagement": "181 points on Hacker News",
+      "engagement": "196 points on Hacker News",
       "summary": "Anthropic appears to be A/B testing reduced effort levels in Claude Code — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
       "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
       "source": "TechCrunch AI",
@@ -44,7 +57,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "title": "Is it legal to train AI models on copyrighted books? It’s complicated",
+      "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-08-23T15:00:00+00:00",
+      "engagement": "",
+      "summary": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 6,
       "title": "Quoting Linus Torvalds",
       "url": "https://simonwillison.net/2026/Aug/22/linus-torvalds/",
       "source": "Simon Willison",
@@ -57,20 +83,33 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 5,
+      "rank": 7,
       "title": "GPT 5.6 Sol 20% price reduction",
       "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
       "source": "Hacker News",
       "category": "social",
       "section": "finance",
       "publishedAt": "2026-08-22T04:33:06+00:00",
-      "engagement": "87 points on Hacker News",
+      "engagement": "90 points on Hacker News",
       "summary": "GPT 5.6 Sol 20% price reduction — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 6,
+      "rank": 8,
+      "title": "Parse the Folder, Not Just the PDFs: The Relational Tables RAG Needs on a Case File",
+      "url": "https://towardsdatascience.com/parse-the-folder-not-just-the-pdfs-the-relational-tables-rag-needs-on-a-case-file/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-08-23T15:00:00+00:00",
+      "engagement": "",
+      "summary": "Enterprise Document Intelligence [Vol.1 #14D] - The index lists what the case type demands before any folder is opened, and the two questions worth building for are not retrieval questions at all The post Parse the Folder, Not Just the PDFs: The Relational Tables RAG Needs on a C",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 9,
       "title": "llm 0.33",
       "url": "https://simonwillison.net/2026/Aug/22/llm/",
       "source": "Simon Willison",
@@ -83,7 +122,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 7,
+      "rank": 10,
       "title": "More than just code review",
       "url": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/",
       "source": "Simon Willison",
@@ -96,20 +135,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 8,
-      "title": "A week of using Codex more than Claude",
-      "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-08-21T19:51:48+00:00",
-      "engagement": "179 points on Hacker News",
-      "summary": "A week of using Codex more than Claude — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "rank": 11,
+      "title": "Bug Detection Blind Spots in AI Coding Harnesses (GStack and Beyond)",
+      "url": "https://towardsdatascience.com/bug-detection-blind-spots-in-ai-coding-harnesses-gstack-and-beyond/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-08-23T13:00:00+00:00",
+      "engagement": "",
+      "summary": "28 debugging experiments reveal that AI struggles less with complexity than with missing information. The post Bug Detection Blind Spots in AI Coding Harnesses (GStack and Beyond) appeared first on Towards Data Science .",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 9,
+      "rank": 12,
       "title": "Nvidia partners with data center developer Cloverleaf",
       "url": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
       "source": "TechCrunch AI",
@@ -122,7 +161,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 10,
+      "rank": 13,
       "title": "Harvard’s $699 startup bootcamp offers AI avatars of its instructors",
       "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
       "source": "TechCrunch AI",
@@ -135,20 +174,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 11,
-      "title": "Alibaba to Raise $10 Billion by Selling Shares for AI Expansion",
+      "rank": 14,
+      "title": "Alibaba Seeks $10 Billion From Share Sale for AI Expansion",
       "url": "https://www.bloomberg.com/news/articles/2026-08-23/alibaba-to-raise-10-billion-by-selling-shares-for-ai-expansion",
       "source": "Bloomberg Tech",
       "category": "news",
       "section": "finance",
       "publishedAt": "2026-08-23T06:13:28+00:00",
       "engagement": "",
-      "summary": "Alibaba Group Holding Ltd. is seeking to raise about HK$80 billion ($10 billion) from a share sale, its latest move to compete for global leadership in artificial intelligence.",
+      "summary": "Alibaba Group Holding Ltd. is seeking to raise about HK$80 billion ($10.2 billion) from a share sale, its latest move to compete for global leadership in artificial intelligence.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 12,
+      "rank": 15,
       "title": "DeepSeek Ends Weekend Peak Pricing for API Users From Today",
       "url": "https://www.bloomberg.com/news/articles/2026-08-23/deepseek-ends-weekend-peak-pricing-for-api-users-from-today",
       "source": "Bloomberg Tech",
@@ -161,7 +200,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 13,
+      "rank": 16,
       "title": "Mystery AI Model Ox Alpha Draws Developers With Free Access",
       "url": "https://www.bloomberg.com/news/articles/2026-08-23/mystery-ai-model-ox-alpha-draws-developers-with-free-access",
       "source": "Bloomberg Tech",
@@ -174,7 +213,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 14,
+      "rank": 17,
       "title": "OpenAI says California should strengthen its AI safety bill",
       "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
       "source": "TechCrunch AI",
@@ -187,7 +226,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 15,
+      "rank": 18,
+      "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "ai-news",
+      "publishedAt": "2026-08-21T13:43:33+00:00",
+      "engagement": "188 points on Hacker News",
+      "summary": "How a Texas student blew the whistle on a rogue AI hacking attempt — via Hacker News.",
+      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 19,
       "title": "Frontier AI labs still won’t say how they’d contain a rogue model",
       "url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
       "source": "TechCrunch AI",
@@ -200,20 +252,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 16,
-      "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-08-21T13:43:33+00:00",
-      "engagement": "148 points on Hacker News",
-      "summary": "How a Texas student blew the whistle on a rogue AI hacking attempt — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 17,
+      "rank": 20,
       "title": "Nvidia Customers Notified About AI-Related Price Hikes Above 15%",
       "url": "https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15",
       "source": "Bloomberg Tech",
@@ -226,7 +265,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 18,
+      "rank": 21,
       "title": "Building a Proper Backend for My LangGraph AI Agent",
       "url": "https://towardsdatascience.com/building-a-proper-backend-for-my-langgraph-ai-agent/",
       "source": "Towards Data Science",
@@ -239,20 +278,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 19,
-      "title": "Apollo’s Slok Says AI Weighs On Pay Without Cutting Jobs — Yet",
-      "url": "https://www.bloomberg.com/news/articles/2026-08-22/apollo-s-slok-says-ai-weighs-on-pay-without-cutting-jobs-yet",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-08-22T12:00:00+00:00",
-      "engagement": "",
-      "summary": "Torsten Slok found something surprising when Apollo Global Management Inc. looked at how the adoption of artificial intelligence was playing out in the labor market.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 20,
+      "rank": 22,
       "title": "Multi-Document RAG: A Folder of Unrelated PDFs Is One Long Document with a Nested Outline",
       "url": "https://towardsdatascience.com/multi-document-rag-a-folder-of-unrelated-pdfs-is-one-long-document-with-a-nested-outline/",
       "source": "Towards Data Science",
@@ -265,20 +291,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 21,
-      "title": "Over 1 million people have clicked LinkedIn’s AI slop button",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/983502/linkedin-ai-slop-button-one-million-people-message",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-08-21T21:54:07+00:00",
-      "engagement": "",
-      "summary": "LinkedIn actually announced a \"Seems like AI slop\" button on July 30th, and the company says that a lot of people have already used it. According to a Thursday post from chief product officer Hari Srinivasan, \"over a million people\" have clicked on the button, which is accessible",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 22,
+      "rank": 23,
       "title": "Why We Fine-Tuned SigLip (And Why That’s Not Always the Right Call)",
       "url": "https://towardsdatascience.com/why-we-fine-tuned-siglip-and-why-thats-not-always-the-right-call/",
       "source": "Towards Data Science",
@@ -291,7 +304,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 23,
+      "rank": 24,
+      "title": "Over 1 million people have clicked LinkedIn’s AI slop button",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/983502/linkedin-ai-slop-button-one-million-people-message",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-08-21T21:54:07+00:00",
+      "engagement": "",
+      "summary": "LinkedIn actually announced a \"Seems like AI slop\" button on July 30th, and the company says that a lot of people have already used it. According to a Thursday post from chief product officer Hari Srinivasan, \"over a million people\" have clicked on the button, which is accessible",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 25,
       "title": "The Unlikely Place at the Center of China’s AI Boom",
       "url": "https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/",
       "source": "Wired AI",
@@ -304,7 +330,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 24,
+      "rank": 26,
       "title": "Anthropic’s Opus 4.6 is a smut-machine",
       "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
       "source": "TechCrunch AI",
@@ -317,20 +343,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 25,
-      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "source": "DeepMind Blog",
-      "category": "blog",
-      "section": "finance",
-      "publishedAt": "2026-08-21T11:59:48+00:00",
-      "engagement": "",
-      "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 26,
+      "rank": 27,
       "title": "llm-openrouter 0.7",
       "url": "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
       "source": "Simon Willison",
@@ -343,7 +356,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 27,
+      "rank": 28,
       "title": "Major YouTube creators are facing backlash for accepting AI money",
       "url": "https://www.theverge.com/ai-artificial-intelligence/983181/matti-haapoja-sam-kold-kolder-higgsfield-seedance-backlash",
       "source": "The Verge AI",
@@ -356,7 +369,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 28,
+      "rank": 29,
+      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "source": "DeepMind Blog",
+      "category": "blog",
+      "section": "finance",
+      "publishedAt": "2026-08-21T11:59:48+00:00",
+      "engagement": "",
+      "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 30,
       "title": "Stop Making TUIs",
       "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
       "source": "Simon Willison",
@@ -369,7 +395,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 29,
+      "rank": 31,
       "title": "Quoting Matt Webb",
       "url": "https://simonwillison.net/2026/Aug/21/matt-webb/",
       "source": "Simon Willison",
@@ -382,7 +408,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 30,
+      "rank": 32,
       "title": "Nvidia just showed that the harness, not the AI model, is now the real hero",
       "url": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
       "source": "TechCrunch AI",
@@ -395,7 +421,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 31,
+      "rank": 33,
       "title": "AI News: OpenAI Pauses, AI Cancer Vaccine, and Qwen3.8",
       "url": "https://www.youtube.com/watch?v=EfGF7QbJItA",
       "source": "YouTube · Matt Wolfe",
@@ -408,7 +434,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 32,
+      "rank": 34,
       "title": "Running Codex as a Headless Agent",
       "url": "https://towardsdatascience.com/running-codex-as-a-headless-agent/",
       "source": "Towards Data Science",
@@ -421,7 +447,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 33,
+      "rank": 35,
       "title": "Estimating from No Data: Deriving a Continuous Score from Categories",
       "url": "https://towardsdatascience.com/estimating-from-no-data-deriving-a-continuous-score-from-categories-2/",
       "source": "Towards Data Science",
@@ -434,7 +460,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 34,
+      "rank": 36,
       "title": "Retrieve One Row from a Table, Not the Whole Table: Row-Level Chunks for RAG",
       "url": "https://towardsdatascience.com/retrieve-one-row-from-a-table-not-the-whole-table-row-level-chunks-for-rag/",
       "source": "Towards Data Science",
@@ -443,32 +469,6 @@
       "publishedAt": "2026-08-21T16:30:00+00:00",
       "engagement": "",
       "summary": "Enterprise Document Intelligence [Vol.1 #7sexies] - The unit of retrieval doesn’t have to be a page or a paragraph. When the corpus carries tables, each body row with its column headers is a chunk in its own right, and it’s often the one row the reader asked about The post Retrie",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 35,
-      "title": "Measuring benchmark optimization in speech recognition",
-      "url": "https://huggingface.co/blog/asr-benchmark-optimization",
-      "source": "Hugging Face Blog",
-      "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-08-21T00:00:00+00:00",
-      "engagement": "",
-      "summary": "Measuring benchmark optimization in speech recognition — via Hugging Face Blog.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 36,
-      "title": "The Types of Dimensions in a Star Schema, and How to Use Them",
-      "url": "https://towardsdatascience.com/what-are-the-types-of-dimensions-in-a-star-schema-and-how-to-use-them/",
-      "source": "Towards Data Science",
-      "category": "blog",
-      "section": "research",
-      "publishedAt": "2026-08-21T15:00:00+00:00",
-      "engagement": "",
-      "summary": "Dimensions are one of the two main object types in dimensional modelling. But what are the different types of dimensions? And how can you use them? The post The Types of Dimensions in a Star Schema, and How to Use Them appeared first on Towards Data Science .",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
@@ -487,19 +487,6 @@
     },
     {
       "rank": 38,
-      "title": "Claude’s Text Watermark Could Follow It Everywhere",
-      "url": "https://www.youtube.com/shorts/O-8TbMFOAfg",
-      "source": "YouTube · Matt Wolfe",
-      "category": "video",
-      "section": "web-services",
-      "publishedAt": "2026-08-20T12:41:43+00:00",
-      "engagement": "",
-      "summary": "Claude’s Text Watermark Could Follow It Everywhere — via YouTube · Matt Wolfe.",
-      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 39,
       "title": "Information on trajectories: martingales and random times",
       "url": "https://arxiv.org/pdf/2608.20337v1",
       "source": "arXiv",
@@ -512,12 +499,12 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 40,
+      "rank": 39,
       "title": "ConceptGuard: Benchmarking Context-Sensitive Unlearning in Large Language Models",
       "url": "https://arxiv.org/pdf/2608.20338v1",
       "source": "arXiv",
       "category": "research",
-      "section": "research",
+      "section": "ai-news",
       "publishedAt": "2026-08-20T17:59:57+00:00",
       "engagement": "",
       "summary": "Large Language Models (LLMs) increasingly require selective removal of harmful or sensitive knowledge, called unlearning, yet existing methods and benchmarks fail to evaluate this capability completely. Current approaches rely on disjoint forget and retain sets composed of indepe",
@@ -525,7 +512,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 41,
+      "rank": 40,
       "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
       "url": "https://arxiv.org/pdf/2608.20331v1",
       "source": "arXiv",
@@ -538,7 +525,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 42,
+      "rank": 41,
       "title": "$TCP_α$: Margin-Controlled Confidence estimation for reliable Music Information Retrieval",
       "url": "https://arxiv.org/pdf/2608.20326v1",
       "source": "arXiv",
@@ -551,7 +538,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 43,
+      "rank": 42,
       "title": "A comparison between ceiling-mounted FMCW, IR-UWB and Wi-Fi radar for in-bedroom human activity monitoring and sleep interruption detection",
       "url": "https://arxiv.org/pdf/2608.20322v1",
       "source": "arXiv",
@@ -564,7 +551,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 44,
+      "rank": 43,
       "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
       "url": "https://arxiv.org/pdf/2608.20320v1",
       "source": "arXiv",
@@ -577,7 +564,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 45,
+      "rank": 44,
       "title": "Inducing Task Models from Computer-Use Traces",
       "url": "https://arxiv.org/pdf/2608.20319v1",
       "source": "arXiv",
@@ -590,7 +577,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 46,
+      "rank": 45,
       "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
       "url": "https://arxiv.org/pdf/2608.20318v1",
       "source": "arXiv",
@@ -603,7 +590,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 47,
+      "rank": 46,
       "title": "A third of web pages published since ChatGPT launched were written by AI, study finds",
       "url": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
       "source": "TechCrunch AI",
@@ -616,7 +603,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 48,
+      "rank": 47,
       "title": "Ramp launches its own AI model router, called Router",
       "url": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/",
       "source": "TechCrunch AI",
@@ -629,25 +616,25 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 49,
-      "title": "Slack is launching collaborative vibe-coding channels",
-      "url": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-08-20T12:06:09+00:00",
+      "rank": 48,
+      "title": "The Types of Dimensions in a Star Schema, and How to Use Them",
+      "url": "https://towardsdatascience.com/what-are-the-types-of-dimensions-in-a-star-schema-and-how-to-use-them/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "ai-news",
+      "publishedAt": "2026-08-21T15:00:00+00:00",
       "engagement": "",
-      "summary": "Slack is introducing dedicated channels where teams can vibe-code together with AI agents instead of jumping between different tools and conversations. The Slack Code launch includes open, project-specific code channels with dedicated user tabs, alongside features that compare co",
+      "summary": "Dimensions are one of the two main object types in dimensional modelling. But what are the different types of dimensions? And how can you use them? The post The Types of Dimensions in a Star Schema, and How to Use Them appeared first on Towards Data Science .",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 50,
+      "rank": 49,
       "title": "Bayesian Guardrails for AI Decisions: Measuring Uncertainty Before Automating Decisions",
       "url": "https://towardsdatascience.com/bayesian-guardrails-for-ai-decisions-measuring-uncertainty-before-automating-decisions/",
       "source": "Towards Data Science",
       "category": "blog",
-      "section": "ai-news",
+      "section": "technology",
       "publishedAt": "2026-08-21T13:30:00+00:00",
       "engagement": "",
       "summary": "AI systems should not automate a decision simply because they can provide a prediction. A decision system should consider how uncertain the prediction is and defer if a mistake would be costly. The post Bayesian Guardrails for AI Decisions: Measuring Uncertainty Before Automating",
@@ -655,20 +642,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 51,
-      "title": "ChatGPT search now uses the site:operator at scale",
-      "url": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
-      "source": "Simon Willison",
+      "rank": 50,
+      "title": "Measuring benchmark optimization in speech recognition",
+      "url": "https://huggingface.co/blog/asr-benchmark-optimization",
+      "source": "Hugging Face Blog",
       "category": "blog",
       "section": "tools",
-      "publishedAt": "2026-08-20T23:57:32+00:00",
+      "publishedAt": "2026-08-21T00:00:00+00:00",
       "engagement": "",
-      "summary": "ChatGPT search now uses the site:operator at scale Promptwatch is part of the emerging \"GEO\" space, for Generative Engine Optimization - the chatbot version of SEO, where companies offer tools and consulting to help your site increase its presence in replies to prompts inside too",
+      "summary": "Measuring benchmark optimization in speech recognition — via Hugging Face Blog.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 52,
+      "rank": 51,
       "title": "How Benders Decomposition Works, Part II: Feasibility Cuts",
       "url": "https://towardsdatascience.com/how-benders-decomposition-works-part-ii-feasibility-cuts/",
       "source": "Towards Data Science",
@@ -677,6 +664,19 @@
       "publishedAt": "2026-08-21T12:00:00+00:00",
       "engagement": "",
       "summary": "Learning about Farkas' lemma and how it can inform Benders decomposition to learn from infeasibility, applied to the capacitated facility location problem. The post How Benders Decomposition Works, Part II: Feasibility Cuts appeared first on Towards Data Science .",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 52,
+      "title": "ChatGPT search now uses the site:operator at scale",
+      "url": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
+      "source": "Simon Willison",
+      "category": "blog",
+      "section": "web-services",
+      "publishedAt": "2026-08-20T23:57:32+00:00",
+      "engagement": "",
+      "summary": "ChatGPT search now uses the site:operator at scale Promptwatch is part of the emerging \"GEO\" space, for Generative Engine Optimization - the chatbot version of SEO, where companies offer tools and consulting to help your site increase its presence in replies to prompts inside too",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
@@ -721,19 +721,6 @@
     },
     {
       "rank": 56,
-      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
-      "source": "Hugging Face Blog",
-      "category": "blog",
-      "section": "ai-news",
-      "publishedAt": "2026-08-20T16:52:57+00:00",
-      "engagement": "",
-      "summary": "Up to 3.2x Faster Inference with LFM2.5-DSpark — via Hugging Face Blog.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 57,
       "title": "It’s Greg Brockman’s OpenAI now",
       "url": "https://www.theverge.com/ai-artificial-intelligence/982774/greg-brockman-openai-role-expansion",
       "source": "The Verge AI",
@@ -742,6 +729,19 @@
       "publishedAt": "2026-08-20T20:16:13+00:00",
       "engagement": "",
       "summary": "OpenAI has had a hell of a year. The company spent months battling former cofounder Elon Musk in a sensational jury trial, was hit with a high-profile trade secrets lawsuit from Apple, and faced widespread scrutiny after an unreleased model hacked another AI company. As it prepar",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 57,
+      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+      "source": "Hugging Face Blog",
+      "category": "blog",
+      "section": "ai-news",
+      "publishedAt": "2026-08-20T16:52:57+00:00",
+      "engagement": "",
+      "summary": "Up to 3.2x Faster Inference with LFM2.5-DSpark — via Hugging Face Blog.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
@@ -760,19 +760,6 @@
     },
     {
       "rank": 59,
-      "title": "Debates over AI consciousness are a trap",
-      "url": "https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/",
-      "source": "MIT Tech Review AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-08-20T15:42:39+00:00",
-      "engagement": "",
-      "summary": "“Runaway” AI, “rogue” agents, and “autonomous” actors—the current rhetoric would have you believe that AI agents are not only awake and aware, but angry at their creators. Prominent tech leaders such as Demis Hassabis, Dario Amodei, and Sam Altman push for regulation of these see",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 60,
       "title": "Google gives publishers a new way to fight AI-driven traffic losses",
       "url": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/",
       "source": "TechCrunch AI",
@@ -781,6 +768,19 @@
       "publishedAt": "2026-08-20T19:18:21+00:00",
       "engagement": "",
       "summary": "Google is giving publishers a new button that lets readers make them a preferred source across Search, Discover, and Google News, potentially boosting their traffic as AI search sends fewer clicks to the web.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 60,
+      "title": "Silicon Valley Doesn't Get Why You Hate AI",
+      "url": "https://www.wired.com/story/silicon-valley-doesnt-get-why-you-hate-ai/",
+      "source": "Wired AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-08-20T18:49:07+00:00",
+      "engagement": "",
+      "summary": "Technology leaders don’t seem to understand society’s gripes about AI, but boy, are they posting through it.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     }
