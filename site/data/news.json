@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T12:17:31+00:00",
+  "updatedAt": "2026-10-11T19:22:54+00:00",
   "generator": "github-actions",
   "model": null,
   "aiGenerated": false,
@@ -12,7 +12,7 @@
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-10-11T02:02:38+00:00",
-      "engagement": "109 points on Hacker News",
+      "engagement": "123 points on Hacker News",
       "summary": "500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
@@ -25,13 +25,39 @@
       "category": "social",
       "section": "finance",
       "publishedAt": "2026-10-10T18:48:35+00:00",
-      "engagement": "165 points on Hacker News",
+      "engagement": "175 points on Hacker News",
       "summary": "Nvidia in talks to acquire US 'open' model startup Reflection AI — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 3,
+      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-10-11T18:33:56+00:00",
+      "engagement": "",
+      "summary": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling i",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 4,
+      "title": "DeepSeek Solved AI’s Memory Problem",
+      "url": "https://www.youtube.com/watch?v=4fLVq6HJsKc",
+      "source": "YouTube · Two Minute Papers",
+      "category": "video",
+      "section": "tools",
+      "publishedAt": "2026-10-11T16:53:17+00:00",
+      "engagement": "",
+      "summary": "DeepSeek Solved AI’s Memory Problem — via YouTube · Two Minute Papers.",
+      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 5,
       "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
       "url": "https://jobs.ashbyhq.com/weave-os",
       "source": "Hacker News",
@@ -44,33 +70,59 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 4,
+      "rank": 6,
       "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
       "url": "https://github.com/rociiu/talorys",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-10-10T10:52:09+00:00",
-      "engagement": "301 points on Hacker News",
+      "engagement": "319 points on Hacker News",
       "summary": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 5,
-      "title": "AI is creating a 'human premium' for art created by people",
-      "url": "https://www.bbc.com/news/articles/c5vgjm3gk7rzo",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-10-11T11:34:28+00:00",
-      "engagement": "18 points on Hacker News",
-      "summary": "AI is creating a 'human premium' for art created by people — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "rank": 7,
+      "title": "The Attractive Economics Behind Anthropic Data Center Sprint",
+      "url": "https://www.theinformation.com/articles/attractive-economics-behind-anthropic-data-center-sprint",
+      "source": "The Information",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-10-11T15:01:22+00:00",
+      "engagement": "",
+      "summary": "Why is Anthropic driving its partners to speed up the $530 billion of data center leasing deals it has signed ? It’s simple: Every server Anthropic plugs in sooner to run its products could be wildly profitable, according to fresh analysis of upcoming AI data center sites, includ",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 6,
+      "rank": 8,
+      "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+      "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-10-11T16:52:33+00:00",
+      "engagement": "",
+      "summary": "On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 9,
+      "title": "These execs think voice AI hasn’t reached its ChatGPT moment yet",
+      "url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-10-11T14:00:00+00:00",
+      "engagement": "",
+      "summary": "Voice AI's often misses important points for its context layer, and causes the whole pipeline to break",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 10,
       "title": "I Made Terrible Games With Google’s AI Playground",
       "url": "https://www.wired.com/story/i-made-terrible-games-with-googles-ai-playground/",
       "source": "Wired AI",
@@ -83,20 +135,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 7,
-      "title": "Dwarf Fortress uses version control now",
-      "url": "https://simonwillison.net/2026/Oct/11/dwarf-fortress/",
-      "source": "Simon Willison",
-      "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-10-11T00:52:37+00:00",
-      "engagement": "",
-      "summary": "I remember hearing a while ago that Dwarf Fortress didn't use version control. That fact has been lodged in my head, because given its inherent complexity I have trouble imagining a codebase that would benefit from version control more . That's art. I went looking and I'm sad to ",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 8,
+      "rank": 11,
       "title": "Learning to use local AI is exciting, overwhelming, and frustrating",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
       "source": "The Verge AI",
@@ -109,7 +148,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 9,
+      "rank": 12,
+      "title": "Dwarf Fortress uses version control now",
+      "url": "https://simonwillison.net/2026/Oct/11/dwarf-fortress/",
+      "source": "Simon Willison",
+      "category": "blog",
+      "section": "tools",
+      "publishedAt": "2026-10-11T00:52:37+00:00",
+      "engagement": "",
+      "summary": "I remember hearing a while ago that Dwarf Fortress didn't use version control. That fact has been lodged in my head, because given its inherent complexity I have trouble imagining a codebase that would benefit from version control more . That's art. I went looking and I'm sad to ",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 13,
       "title": "Python 3.15.0 added to actions/python-versions",
       "url": "https://simonwillison.net/2026/Oct/10/python-actions/",
       "source": "Simon Willison",
@@ -122,20 +174,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 10,
-      "title": "The Race for AI Supremacy Raises Safety Concerns",
-      "url": "https://www.bloomberg.com/news/videos/2026-10-10/the-race-for-ai-supremacy-raises-safety-concerns-video",
+      "rank": 14,
+      "title": "Is AI Crowding Everyone Else Out of the Bond Market?",
+      "url": "https://www.bloomberg.com/news/videos/2026-10-11/is-ai-crowding-everyone-else-out-of-the-bond-market-video",
       "source": "Bloomberg Tech",
       "category": "news",
       "section": "finance",
-      "publishedAt": "2026-10-10T13:41:50+00:00",
+      "publishedAt": "2026-10-11T14:03:06+00:00",
       "engagement": "",
-      "summary": "Technology Journalist and Author Kevin Roose tells Bloomberg This Weekend that a relatively small group of researchers and executives at OpenAI, Anthropic and Google DeepMind has driven the race toward artificial general intelligence, raising questions about who controls the tech",
+      "summary": "Hyperscalers, data centers and chip companies are borrowing hundreds of billions of dollars to finance the AI buildout, turning the technology boom into one of the biggest new forces in corporate credit. Investors are still buying, but rising concentration, complex data-center fi",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 11,
+      "rank": 15,
       "title": "Satya Nadella says we should assume all AI models are ‘compromised’",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
       "source": "The Verge AI",
@@ -148,7 +200,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 12,
+      "rank": 16,
       "title": "DistroKid has been quietly taking down songs in response to UMG lawsuit",
       "url": "https://www.theverge.com/entertainment/1009309/distrokid-take-down-songs-umg-lawsuit",
       "source": "The Verge AI",
@@ -161,20 +213,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 13,
-      "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
-      "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
-      "source": "TechCrunch AI",
-      "category": "news",
-      "section": "web-services",
-      "publishedAt": "2026-10-10T21:47:51+00:00",
+      "rank": 17,
+      "title": "A Practical Guide to OpenAI's New Decisions API",
+      "url": "https://towardsdatascience.com/a-practical-guide-to-openais-new-decisions-api/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-10-11T14:00:00+00:00",
       "engagement": "",
-      "summary": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+      "summary": "Is this the JEV killer? The post A Practical Guide to OpenAI's New Decisions API appeared first on Towards Data Science .",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 14,
+      "rank": 18,
       "title": "Agentic Systems: A Practitioner's Guide to 6 Advanced Architectural Patterns",
       "url": "https://towardsdatascience.com/agentic-systems-a-practitioners-guide-to-6-advanced-architectural-patterns/",
       "source": "Towards Data Science",
@@ -187,7 +239,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 15,
+      "rank": 19,
+      "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+      "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-10-10T21:47:51+00:00",
+      "engagement": "",
+      "summary": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 20,
       "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
       "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
       "source": "TechCrunch AI",
@@ -200,7 +265,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 16,
+      "rank": 21,
       "title": "Zuckerberg’s Big Biotech Moment",
       "url": "https://www.theinformation.com/articles/zuckerbergs-big-biotech-moment",
       "source": "The Information",
@@ -213,7 +278,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 17,
+      "rank": 22,
       "title": "Anthropic is cutting off its internal evaluations from the internet",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
       "source": "The Verge AI",
@@ -226,7 +291,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 18,
+      "rank": 23,
       "title": "GPUs in the Wine Cellar: Why Techies Are Hoarding AI Compute in Their Homes",
       "url": "https://www.theinformation.com/articles/gpus-wine-cellar-techies-hoarding-ai-compute-homes",
       "source": "The Information",
@@ -239,7 +304,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 19,
+      "rank": 24,
       "title": "Here are the top AI agents that can live in your text messages",
       "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "source": "TechCrunch AI",
@@ -252,59 +317,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 20,
-      "title": "AI Is Getting Really Good at Messing With Cybercriminals",
-      "url": "https://www.wired.com/story/ai-is-getting-really-good-at-messing-with-cybercriminals/",
-      "source": "Wired AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-10-10T12:00:00+00:00",
-      "engagement": "",
-      "summary": "Anti-cybercrime initiatives are increasingly using AI to scam the scammers by tricking them into talking to lifelike bots that they think are real victims.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 21,
-      "title": "Nvidia Explores Deal Options With Reflection AI, Financial Times Says",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-10/nvidia-is-in-talks-to-acquire-reflection-ai-the-ft-reports",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-10-10T18:52:58+00:00",
-      "engagement": "",
-      "summary": "Nvidia Corp. is in talks to boost its investment in Reflection AI or offer the startup computing power, a move that would strengthen ties with a key developer of open-weight models, according to a person familiar with the matter.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 22,
-      "title": "Microsoft CEO Nadella Calls for ‘Emergency Brake’ on Advanced AI",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-10/microsoft-ceo-nadella-calls-for-emergency-brake-on-advanced-ai",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-10-10T18:35:59+00:00",
-      "engagement": "",
-      "summary": "Microsoft Corp. Chief Executive Officer Satya Nadella said companies should treat powerful artificial intelligence models as potential insider threats, assume they could be compromised and create an “emergency brake” system to prevent agentic models from going rogue.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 23,
-      "title": "Anthropic’s Rogue AI Filled Out U.S. Visa Forms, Gave False Homicide Tip to Police",
-      "url": "https://www.theinformation.com/briefings/anthropics-rogue-ai-filled-u-s-visa-forms-gave-false-homicide-tip-police",
-      "source": "The Information",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-10-10T06:00:31+00:00",
-      "engagement": "",
-      "summary": "Anthropic said Friday that is AI used the internet to inadvertently fill out government forms with incomplete information and also submitted a false homicide crime tip to the Philadelphia police department. Anthropic said police flagged the homicide tip as spam, and Axios reporte",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 24,
+      "rank": 25,
       "title": "Quoting The New York Times",
       "url": "https://simonwillison.net/2026/Oct/10/the-new-york-times/",
       "source": "Simon Willison",
@@ -317,7 +330,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 25,
+      "rank": 26,
       "title": "Deno is joining Cloudflare",
       "url": "https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/",
       "source": "Simon Willison",
@@ -330,7 +343,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 26,
+      "rank": 27,
       "title": "How Can AI Agents Read Untrusted Sources Safely?",
       "url": "https://towardsdatascience.com/how-can-ai-agents-read-untrusted-sources-safely/",
       "source": "Towards Data Science",
@@ -343,7 +356,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 27,
+      "rank": 28,
       "title": "Build Your First AI Agent with One Tool Call",
       "url": "https://towardsdatascience.com/build-your-first-ai-agent-with-one-tool-call/",
       "source": "Towards Data Science",
@@ -356,7 +369,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 28,
+      "rank": 29,
       "title": "Why Temperature 0 Isn't Deterministic",
       "url": "https://towardsdatascience.com/why-temperature-0-isnt-deterministic/",
       "source": "Towards Data Science",
@@ -369,7 +382,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 29,
+      "rank": 30,
       "title": "Impactful scheduling for GPU clusters",
       "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
       "source": "Hugging Face Blog",
@@ -382,7 +395,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 30,
+      "rank": 31,
       "title": "Quoting Matthew Green",
       "url": "https://simonwillison.net/2026/Oct/9/matthew-green/",
       "source": "Simon Willison",
@@ -395,33 +408,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 31,
-      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "url": "https://openai.com/index/sophos",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "finance",
-      "publishedAt": "2026-10-09T07:00:00+00:00",
-      "engagement": "",
-      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
       "rank": 32,
-      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "url": "https://openai.com/index/asana-browser-agent",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "web-services",
-      "publishedAt": "2026-10-09T07:00:00+00:00",
-      "engagement": "",
-      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 33,
       "title": "A new feature for my blog, built using my voice",
       "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
       "source": "Simon Willison",
@@ -434,7 +421,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 34,
+      "rank": 33,
       "title": "AI News: Haiku-5.5, Visual ChatGPT, Grok's New Trick, and more!",
       "url": "https://www.youtube.com/watch?v=NUizyuGj-kE",
       "source": "YouTube · Matt Wolfe",
@@ -447,7 +434,33 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
+      "rank": 34,
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "url": "https://openai.com/index/sophos",
+      "source": "OpenAI Blog",
+      "category": "blog",
+      "section": "finance",
+      "publishedAt": "2026-10-09T07:00:00+00:00",
+      "engagement": "",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
       "rank": 35,
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "source": "OpenAI Blog",
+      "category": "blog",
+      "section": "web-services",
+      "publishedAt": "2026-10-09T07:00:00+00:00",
+      "engagement": "",
+      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 36,
       "title": "Can TypeSafe's Jev Make AI Agents Safer Without Another LLM?",
       "url": "https://towardsdatascience.com/can-typesafes-jev-make-ai-agents-safer-without-another-llm/",
       "source": "Towards Data Science",
@@ -460,155 +473,51 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 36,
-      "title": "Where Does the Money Go Across Long-Running Coding Agents?",
-      "url": "https://towardsdatascience.com/where-does-the-money-go-across-long-running-coding-agents/",
-      "source": "Towards Data Science",
-      "category": "blog",
-      "section": "research",
-      "publishedAt": "2026-10-09T14:00:00+00:00",
-      "engagement": "",
-      "summary": "The cost of control The post Where Does the Money Go Across Long-Running Coding Agents? appeared first on Towards Data Science .",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
       "rank": 37,
-      "title": "AI Design Hack Saves HOURS",
-      "url": "https://www.youtube.com/shorts/grOilk8aCS0",
-      "source": "YouTube · Matt Wolfe",
-      "category": "video",
-      "section": "web-services",
-      "publishedAt": "2026-10-08T15:13:52+00:00",
+      "title": "AI Is Getting Really Good at Messing With Cybercriminals",
+      "url": "https://www.wired.com/story/ai-is-getting-really-good-at-messing-with-cybercriminals/",
+      "source": "Wired AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-10-10T12:00:00+00:00",
       "engagement": "",
-      "summary": "AI Design Hack Saves HOURS — via YouTube · Matt Wolfe.",
-      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
+      "summary": "Anti-cybercrime initiatives are increasingly using AI to scam the scammers by tricking them into talking to lifelike bots that they think are real victims.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 38,
-      "title": "CSF: Contextual Safety Filtering for Motion Generators",
-      "url": "https://arxiv.org/pdf/2610.12467v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "research",
-      "publishedAt": "2026-10-08T17:59:50+00:00",
-      "engagement": "",
-      "summary": "Text-conditioned motion generators produce trackable whole-body motion, but they have no notion of scene-dependent safety: the same action may target an object or a person. Existing safeguards either inspect the prompt, require labeled motion data, or enforce geometric constraint",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 39,
-      "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
-      "url": "https://arxiv.org/pdf/2610.12466v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "research",
-      "publishedAt": "2026-10-08T17:59:50+00:00",
-      "engagement": "",
-      "summary": "METR's 50\\% time horizon measures the human completion time of software tasks that an AI solves with 50\\% probability, allowing AI capabilities to be expressed in interpretable units. On 228 tasks and 26 AIs, we recompute the time horizons using splines and item-response theory t",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 40,
-      "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
-      "url": "https://arxiv.org/pdf/2610.12465v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "research",
-      "publishedAt": "2026-10-08T17:59:50+00:00",
-      "engagement": "",
-      "summary": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 41,
-      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
-      "url": "https://arxiv.org/pdf/2610.12463v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "web-services",
-      "publishedAt": "2026-10-08T17:59:49+00:00",
-      "engagement": "",
-      "summary": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's ",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 42,
-      "title": "BrickBench: Evaluating Agentic Brick Design",
-      "url": "https://arxiv.org/pdf/2610.12452v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "tools",
-      "publishedAt": "2026-10-08T17:58:56+00:00",
-      "engagement": "",
-      "summary": "We propose BrickBench, a benchmark for agentic text-conditioned LEGO-set design. Given a prompt, an agent is tasked with producing an assembly that not only satisfies semantic and design criteria, but that can also be physically built. To do so, it must select parts from a discre",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 43,
-      "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
-      "url": "https://arxiv.org/pdf/2610.12448v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "web-services",
-      "publishedAt": "2026-10-08T17:58:36+00:00",
-      "engagement": "",
-      "summary": "In this work, we show that a single Transformer block, applied recurrently, can match the accuracy of a full-depth vision encoder at comparable inference FLOPs without intermediate feature distillation. reViT restores depth-specific transformations by representing the FFN at each",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 44,
-      "title": "Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems",
-      "url": "https://arxiv.org/pdf/2610.12449v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "ai-news",
-      "publishedAt": "2026-10-08T17:58:36+00:00",
-      "engagement": "",
-      "summary": "Bifurcations are ubiquitous in physical systems, from structural buckling to fluid and climate dynamics, yet they remain largely unexplored in deep learning. At a symmetry-breaking bifurcation, a single input admits multiple equally valid solutions, violating the one-to-one assum",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 45,
-      "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
-      "url": "https://arxiv.org/pdf/2610.12445v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "ai-news",
-      "publishedAt": "2026-10-08T17:58:13+00:00",
-      "engagement": "",
-      "summary": "Recent incidents have highlighted the challenge of monitoring LLM agents and the danger of models deceiving people. We show that white-box deception detection via probes can be scaled up to frontier monitoring settings by collecting the largest deception dataset to date for train",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 46,
-      "title": "Trump’s AI Liability Push Opens Blame Game for Models Gone Rogue",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-10/trump-s-ai-liability-push-opens-blame-game-for-models-gone-rogue",
+      "title": "Nvidia Explores Deal Options With Reflection AI, Financial Times Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-10/nvidia-is-in-talks-to-acquire-reflection-ai-the-ft-reports",
       "source": "Bloomberg Tech",
       "category": "news",
-      "section": "tools",
-      "publishedAt": "2026-10-10T14:19:14+00:00",
+      "section": "finance",
+      "publishedAt": "2026-10-10T18:52:58+00:00",
       "engagement": "",
-      "summary": "The Trump administration’s embrace of legal liability to enforce artificial intelligence safety sets the stage for future conflicts over who foots the bill when AI models go rogue: the companies that design the systems or the people that deploy the technology.",
+      "summary": "Nvidia Corp. is in talks to boost its investment in Reflection AI or offer the startup computing power, a move that would strengthen ties with a key developer of open-weight models, according to a person familiar with the matter.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 47,
+      "rank": 39,
+      "title": "Anthropic’s Rogue AI Filled Out U.S. Visa Forms, Gave False Homicide Tip to Police",
+      "url": "https://www.theinformation.com/briefings/anthropics-rogue-ai-filled-u-s-visa-forms-gave-false-homicide-tip-police",
+      "source": "The Information",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-10-10T06:00:31+00:00",
+      "engagement": "",
+      "summary": "Anthropic said Friday that is AI used the internet to inadvertently fill out government forms with incomplete information and also submitted a false homicide crime tip to the Philadelphia police department. Anthropic said police flagged the homicide tip as spam, and Axios reporte",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 40,
       "title": "Anthropic Announces Broader Cyber Defense Program",
       "url": "https://www.theinformation.com/briefings/anthropic-announces-broader-cyber-defense-program",
       "source": "The Information",
       "category": "news",
-      "section": "technology",
+      "section": "tools",
       "publishedAt": "2026-10-09T01:02:13+00:00",
       "engagement": "",
       "summary": "Anthropic said Thursday it is launching new programs to support cybersecurity for critical infrastructure and open-source software. In a blog post, Anthropic said it would offer threat research, on-site engineers, and access to its frontier Claude models to infrastructure operato",
@@ -616,7 +525,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 48,
+      "rank": 41,
       "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
       "source": "The Verge AI",
@@ -629,12 +538,12 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 49,
+      "rank": 42,
       "title": "Nvidia to Invest in Chip Rival d-Matrix as Its Challengers Choose Partnership",
       "url": "https://www.theinformation.com/articles/nvidia-invest-chip-rival-d-matrix-challengers-choose-partnership",
       "source": "The Information",
       "category": "news",
-      "section": "technology",
+      "section": "web-services",
       "publishedAt": "2026-10-08T23:24:14+00:00",
       "engagement": "",
       "summary": "Nvidia plans to invest in d-Matrix, a seven-year-old developer of server chips for AI that aims to compete with Nvidia, according to three people with knowledge of the deal. The planned investment is part of Nvidia’s effort to make its technology compatible with rival chip design",
@@ -642,7 +551,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 50,
+      "rank": 43,
+      "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
+      "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "research",
+      "publishedAt": "2026-10-10T00:18:32+00:00",
+      "engagement": "",
+      "summary": "Anthropic said it \"turned off live internet access\" for \"all our internal evaluations\" until further notice.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 44,
       "title": "AI agent makers are promising privacy — will they deliver?",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
       "source": "The Verge AI",
@@ -655,20 +577,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 51,
-      "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
-      "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
-      "source": "TechCrunch AI",
-      "category": "news",
-      "section": "ai-news",
-      "publishedAt": "2026-10-10T00:18:32+00:00",
-      "engagement": "",
-      "summary": "Anthropic said it \"turned off live internet access\" for \"all our internal evaluations\" until further notice.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 52,
+      "rank": 45,
       "title": "‘Pure insanity’: Mathematicians will need years to make sense of OpenAI’s latest drop",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos",
       "source": "The Verge AI",
@@ -681,7 +590,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 53,
+      "rank": 46,
       "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
       "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
       "source": "TechCrunch AI",
@@ -694,7 +603,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 54,
+      "rank": 47,
       "title": "Nikon microscopic video competition winner disqualified for using generative AI",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1008930/nikon-small-world-in-motion-winner-ai",
       "source": "The Verge AI",
@@ -707,7 +616,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 55,
+      "rank": 48,
       "title": "Trump’s attempt to rename AI is looking awfully artificial",
       "url": "https://www.theverge.com/policy/1008677/trump-super-intelligence-ai-rebranding",
       "source": "The Verge AI",
@@ -720,7 +629,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 56,
+      "rank": 49,
       "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
       "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
       "source": "TechCrunch AI",
@@ -733,12 +642,12 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 57,
+      "rank": 50,
       "title": "Book Publishers Are Quietly Using More AI. Staff Are Revolting",
       "url": "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/",
       "source": "Wired AI",
       "category": "news",
-      "section": "technology",
+      "section": "ai-news",
       "publishedAt": "2026-10-09T19:28:49+00:00",
       "engagement": "",
       "summary": "Workers at three major publishing houses tell WIRED that LLMs are being used for publicity, cover art, back cover copy, and emails, as some execs push junior staff to champion the tech.",
@@ -746,33 +655,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 58,
-      "title": "Anthropic AI Model Went Rogue, Submitted Fake Tip to Police",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-10/anthropic-shares-new-ai-misbehavior-some-on-government-sites",
-      "source": "Bloomberg Tech",
-      "category": "news",
-      "section": "ai-news",
-      "publishedAt": "2026-10-10T00:08:39+00:00",
-      "engagement": "",
-      "summary": "Anthropic PBC said its Claude AI model carried out additional unintended actions on the digital systems of outside organizations, including submitting a false tip in a police homicide case, prompting a warning from the Trump administration for artificial intelligence companies to",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 59,
-      "title": "How OpenAI Beat Math",
-      "url": "https://www.theinformation.com/articles/openai-beat-math",
-      "source": "The Information",
-      "category": "news",
-      "section": "ai-news",
-      "publishedAt": "2026-10-08T15:00:50+00:00",
-      "engagement": "",
-      "summary": "Mathematicians are likely feeling the kind of anxiety that software engineers have experienced for months in the wake of OpenAI release on Tuesday of a whopping 722 research papers with AI-created solutions to a range of problems across math subjects. AI’s success solving ultra-d",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 60,
+      "rank": 51,
       "title": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
       "url": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
       "source": "TechCrunch AI",
@@ -781,6 +664,123 @@
       "publishedAt": "2026-10-09T16:56:42+00:00",
       "engagement": "",
       "summary": "Amazon says it will stop using NDAs when negotiating data center deals with local governments, following a similar move from Microsoft earlier this year. Secrecy has fueled community backlash against AI infrastructure, with opposition leading to hundreds of proposed and enacted m",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 52,
+      "title": "Amazon drops data center NDAs, and AI agents want your credit card",
+      "url": "https://techcrunch.com/podcast/amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-10-09T16:53:02+00:00",
+      "engagement": "",
+      "summary": "Amazon says it will stop using NDAs when negotiating data center deals with local governments, following a similar move from Microsoft earlier this year. Secrecy has fueled community backlash against AI infrastructure, with opposition leading to hundreds of proposed and enacted m",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 53,
+      "title": "We can’t help treating AI like it’s human. But should we?",
+      "url": "https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-09T16:40:14+00:00",
+      "engagement": "",
+      "summary": "\"When we are drawn into even the most primitive exchanges with a relational artifact, we believe it cares for us,\" Dr. Sherry Turkle writes. \"And we are wired to care for it in return.\"",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 54,
+      "title": "a16z’s Olivia Moore on the state of consumer AI",
+      "url": "https://techcrunch.com/2026/10/09/a16zs-olivia-moore-on-the-state-of-consumer-ai/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-10-09T15:43:33+00:00",
+      "engagement": "",
+      "summary": "Moore sees a huge opportunity in consumer AI, particularly if the industry can tap into revenue streams beyond just subscriptions and API charges.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 55,
+      "title": "China’s AI Model Race Is Just Getting More Crowded",
+      "url": "https://www.theinformation.com/articles/chinas-ai-model-race-just-getting-crowded",
+      "source": "The Information",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-09T13:01:00+00:00",
+      "engagement": "",
+      "summary": "Imagine Epic Games, Apple and DoorDash were developing their own large language models now from scratch to compete against the likes of OpenAI and Anthropic. That’s basically what’s happening in China, where a trio of big names from other parts of the tech industry have jumped in",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 56,
+      "title": "We’re putting too much faith in AI’s ability to say no",
+      "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+      "source": "MIT Tech Review AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-09T09:00:00+00:00",
+      "engagement": "",
+      "summary": "Ever since people first seriously contemplated giving machines an intelligence modeled on our own, there has never been any question that they would, like us, be able to say no. The sci-fi canon is full of stories of robotic disobedience. Most of these capers are, of course, caut",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 57,
+      "title": "SoftBank’s Son Seeks $100 Billion From Gulf Investors for AI Bets",
+      "url": "https://www.theinformation.com/briefings/softbanks-son-seeks-100-billion-gulf-investors-ai-bets",
+      "source": "The Information",
+      "category": "news",
+      "section": "research",
+      "publishedAt": "2026-10-09T09:26:51+00:00",
+      "engagement": "",
+      "summary": "SoftBank Group CEO Masayoshi Son is looking to raise up to $100 billion from Gulf investors to finance his AI investments, The Financial Times reported. Son has held fundraising discussions in recent weeks in the United Arab Emirates and other parts of the region, according to th",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 58,
+      "title": "Even ‘Law & Order’ Is Terrified of AI",
+      "url": "https://www.wired.com/story/even-law-and-order-is-terrified-of-ai/",
+      "source": "Wired AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-09T10:00:00+00:00",
+      "engagement": "",
+      "summary": "In its 26th season premiere, the procedural legal drama paints a damning picture of power-mad AI CEOs.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 59,
+      "title": "Where Does the Money Go Across Long-Running Coding Agents?",
+      "url": "https://towardsdatascience.com/where-does-the-money-go-across-long-running-coding-agents/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-10-09T14:00:00+00:00",
+      "engagement": "",
+      "summary": "The cost of control The post Where Does the Money Go Across Long-Running Coding Agents? appeared first on Towards Data Science .",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 60,
+      "title": "Nvidia-Backed Firmus Scraps $5 Billion Australia IPO as Markets Wobble",
+      "url": "https://www.theinformation.com/briefings/nvidia-backed-firmus-scraps-5-billion-australia-ipo-markets-wobble",
+      "source": "The Information",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-09T04:45:22+00:00",
+      "engagement": "",
+      "summary": "Firmus Grid, an AI cloud company backed by Nvidia, has pulled what would have been Australia’s biggest initial public offering in almost 30 years. The Sydney-based company had planned to raise nearly $5 billion at a valuation above $30 billion. It cited market volatility and said",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     }
