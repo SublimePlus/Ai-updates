@@ -575,6 +575,102 @@
   $("#generate-news")?.addEventListener("click", () => generateLive("news"));
   $("#generate-projects")?.addEventListener("click", () => generateLive("projects"));
 
+  /* ---------- image studio (Kie.ai GPT Image 2.5 via /api/kie-image) ---------- */
+
+  const STUDIO_API = "/api/kie-image";
+  const STUDIO_HISTORY = "signal-studio-history";
+  const ONE_K_ONLY = ["27:16", "16:27", "9:8", "8:9"];
+
+  function getStudioHistory() {
+    try { return JSON.parse(localStorage.getItem(STUDIO_HISTORY) || "[]"); } catch { return []; }
+  }
+  function addStudioHistory(item) {
+    const list = [item, ...getStudioHistory()].slice(0, 30);
+    localStorage.setItem(STUDIO_HISTORY, JSON.stringify(list));
+  }
+
+  async function studioFetch(url, init = {}) {
+    const passcode = localStorage.getItem("signal-studio-passcode") || "";
+    const resp = await fetch(url, {
+      ...init,
+      headers: { "Content-Type": "application/json", "x-studio-passcode": passcode, ...(init.headers || {}) },
+    });
+    const data = await resp.json().catch(() => ({}));
+    if (resp.status === 401 && /passcode/i.test(data.error || "")) {
+      const entered = prompt("Image Studio passcode:");
+      if (entered) {
+        localStorage.setItem("signal-studio-passcode", entered);
+        return studioFetch(url, init);
+      }
+    }
+    if (!resp.ok) throw new Error(data.error || `HTTP ${resp.status}`);
+    return data;
+  }
+
+  function renderStudioGallery() {
+    const items = getStudioHistory();
+    $("#studio-gallery").innerHTML = items.length
+      ? items.map((it) => `
+        <figure class="studio-card">
+          <a href="${esc(it.url)}" target="_blank" rel="noopener"><img src="${esc(it.url)}" alt="${esc(it.prompt)}" loading="lazy" /></a>
+          <figcaption>
+            <p>${esc(it.prompt.length > 160 ? it.prompt.slice(0, 160) + "…" : it.prompt)}</p>
+            <span class="mono">${esc(it.aspect_ratio)} · ${esc(it.resolution)} · ${esc(timeAgo(it.at))}</span>
+          </figcaption>
+        </figure>`).join("")
+      : `<p class="sub">No images yet — your generations will appear here.</p>`;
+  }
+
+  function syncResolutionOptions() {
+    const oneK = ONE_K_ONLY.includes($("#studio-aspect").value);
+    const res = $("#studio-resolution");
+    [...res.options].forEach((o) => { o.disabled = oneK && o.value !== "1K"; });
+    if (oneK) res.value = "1K";
+  }
+
+  async function generateImage(e) {
+    e.preventDefault();
+    const btn = $("#studio-generate");
+    const status = $("#studio-status");
+    const payload = {
+      prompt: $("#studio-prompt").value.trim(),
+      aspect_ratio: $("#studio-aspect").value,
+      resolution: $("#studio-resolution").value,
+      background: $("#studio-background").value,
+    };
+    if (!payload.prompt) return;
+    btn.disabled = true;
+    btn.classList.add("spinning");
+    try {
+      status.textContent = "SUBMITTING TASK…";
+      const { taskId } = await studioFetch(STUDIO_API, { method: "POST", body: JSON.stringify(payload) });
+      const started = Date.now();
+      while (true) {
+        await new Promise((r) => setTimeout(r, 4000));
+        const secs = Math.round((Date.now() - started) / 1000);
+        status.textContent = `RENDERING… ${secs}s`;
+        const info = await studioFetch(`${STUDIO_API}?taskId=${encodeURIComponent(taskId)}`);
+        if (info.state === "success") {
+          info.urls.forEach((url) => addStudioHistory({ ...payload, url, at: new Date().toISOString() }));
+          renderStudioGallery();
+          status.textContent = `DONE IN ${secs}s ✓`;
+          break;
+        }
+        if (info.state === "fail") throw new Error(info.failMsg || "GENERATION FAILED");
+        if (secs > 300) throw new Error(`TIMED OUT — TASK ${taskId} MAY STILL FINISH`);
+      }
+    } catch (err) {
+      status.textContent = `ERROR: ${String(err.message || err).toUpperCase()}`;
+    } finally {
+      btn.disabled = false;
+      btn.classList.remove("spinning");
+    }
+  }
+
+  $("#studio-aspect")?.addEventListener("change", syncResolutionOptions);
+  $("#studio-form")?.addEventListener("submit", generateImage);
+  renderStudioGallery();
+
   refresh();
   setInterval(refresh, REFRESH_MS);
 })();
