@@ -592,3 +592,29 @@ main { padding: 34px clamp(16px, 5vw, 64px) 60px; max-width: 1240px; margin: 0 a
   .section-tabs { gap: 0; }
   .section-tab, .saved-tab { padding: 8px 10px; font-size: 0.56rem; }
 }
+
+/* ------- image studio ------- */
+.studio-form {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; margin-bottom: 28px;
+}
+.studio-label { display: block; color: var(--cyan); font-size: 0.72rem; letter-spacing: 0.14em; margin-bottom: 8px; }
+.studio-form textarea, .studio-form select {
+  width: 100%; background: var(--panel-solid); color: var(--text);
+  border: 1px solid var(--line-strong); border-radius: var(--radius);
+  font: inherit; padding: 10px 12px;
+}
+.studio-form textarea { resize: vertical; min-height: 110px; }
+.studio-form textarea:focus, .studio-form select:focus { outline: none; border-color: var(--cyan); }
+.studio-options { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; margin-top: 14px; }
+.studio-options label { display: flex; flex-direction: column; gap: 6px; color: var(--dim); font-size: 0.7rem; letter-spacing: 0.12em; min-width: 120px; }
+.studio-options select { font-family: var(--font-mono); font-size: 0.85rem; padding: 8px 10px; }
+.studio-options .action-btn { margin-left: auto; }
+.studio-status { color: var(--dim); font-size: 0.75rem; letter-spacing: 0.1em; margin-top: 12px; min-height: 1.2em; }
+.studio-gallery { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.studio-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.studio-card img { display: block; width: 100%; height: auto; background: var(--panel-solid); }
+.studio-card figcaption { padding: 12px 14px; }
+.studio-card figcaption p { font-size: 0.85rem; color: var(--text); margin-bottom: 6px; }
+.studio-card figcaption span { font-size: 0.7rem; color: var(--faint); letter-spacing: 0.08em; }
+@media (max-width: 560px) { .studio-options .action-btn { margin-left: 0; width: 100%; justify-content: center; } }
