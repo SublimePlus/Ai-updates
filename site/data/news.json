@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T12:49:58+00:00",
+  "updatedAt": "2026-11-01T19:23:52+00:00",
   "generator": "github-actions",
   "model": null,
   "aiGenerated": false,
@@ -12,78 +12,104 @@
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-10-31T18:50:34+00:00",
-      "engagement": "173 points on Hacker News",
+      "engagement": "176 points on Hacker News",
       "summary": "GPT-5.6 Sol can beat Factorio on peaceful mode — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 2,
-      "title": "OpenAI raises less than half of $30B target",
-      "url": "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5",
+      "title": "AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
       "source": "Hacker News",
       "category": "social",
-      "section": "finance",
-      "publishedAt": "2026-10-31T03:22:44+00:00",
-      "engagement": "184 points on Hacker News",
-      "summary": "OpenAI raises less than half of $30B target — via Hacker News.",
+      "section": "ai-news",
+      "publishedAt": "2026-11-01T13:47:24+00:00",
+      "engagement": "117 points on Hacker News",
+      "summary": "AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 3,
-      "title": "Anthropic blocks users for anything touching training larger models",
-      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "research",
-      "publishedAt": "2026-10-31T19:39:19+00:00",
-      "engagement": "390 points on Hacker News",
-      "summary": "Anthropic blocks users for anything touching training larger models — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 4,
       "title": "The AI cost of JavaScript frameworks",
       "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
       "source": "Hacker News",
       "category": "social",
       "section": "finance",
       "publishedAt": "2026-11-01T06:06:19+00:00",
-      "engagement": "125 points on Hacker News",
+      "engagement": "232 points on Hacker News",
       "summary": "The AI cost of JavaScript frameworks — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
+      "rank": 4,
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "source": "Hacker News",
+      "category": "social",
+      "section": "research",
+      "publishedAt": "2026-10-31T19:39:19+00:00",
+      "engagement": "435 points on Hacker News",
+      "summary": "Anthropic blocks users for anything touching training larger models — via Hacker News.",
+      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
       "rank": 5,
+      "title": "Quoting Kyle Kingsbury",
+      "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+      "source": "Simon Willison",
+      "category": "blog",
+      "section": "tools",
+      "publishedAt": "2026-11-01T16:49:04+00:00",
+      "engagement": "",
+      "summary": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to coun",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 6,
       "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
       "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
       "source": "Hacker News",
       "category": "social",
       "section": "technology",
       "publishedAt": "2026-10-31T21:07:58+00:00",
-      "engagement": "156 points on Hacker News",
+      "engagement": "173 points on Hacker News",
       "summary": "Anthropic takes steps to block Claude from reverse-engineering video games — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 6,
+      "rank": 7,
       "title": "Malware uses LLMs to rank victims by how much they're worth",
       "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
       "source": "Hacker News",
       "category": "social",
       "section": "ai-news",
       "publishedAt": "2026-10-31T14:29:03+00:00",
-      "engagement": "249 points on Hacker News",
+      "engagement": "253 points on Hacker News",
       "summary": "Malware uses LLMs to rank victims by how much they're worth — via Hacker News.",
       "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 7,
+      "rank": 8,
+      "title": "Google Energy Chief: Space Data Centers Cost Up to 100 Times More Than Those on Earth",
+      "url": "https://www.theinformation.com/articles/google-energy-chief-space-data-centers-cost-100-times-earth",
+      "source": "The Information",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-11-01T16:30:45+00:00",
+      "engagement": "",
+      "summary": "Data centers in space could cost up to 100 times as much as those on Earth, Google's head of data center energy said this week, a reality check from a company that itself is testing AI server chips in orbit. “Let’s explore all the terrestrial options before we go extraterrestrial",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 9,
       "title": "OpenAI reportedly lowers funding target for new round",
       "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
       "source": "TechCrunch AI",
@@ -96,7 +122,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 8,
+      "rank": 10,
       "title": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
       "url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
       "source": "Wired AI",
@@ -109,7 +135,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 9,
+      "rank": 11,
       "title": "How We Took Over ChatGPT Accounts",
       "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
       "source": "Simon Willison",
@@ -122,7 +148,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 10,
+      "rank": 12,
       "title": "datasette-llm 0.1a9",
       "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
       "source": "Simon Willison",
@@ -135,20 +161,33 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 11,
-      "title": "Google’s satellite AI server transmits its first response to Earth",
-      "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "web-services",
-      "publishedAt": "2026-10-30T18:21:38+00:00",
+      "rank": 13,
+      "title": "The Enterprise Context Layer: A Practitioner's Guide to 6 Advanced Architectural Patterns",
+      "url": "https://towardsdatascience.com/the-enterprise-context-layer-a-practitioners-guide-to-6-advanced-architectural-patterns/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-11-01T16:00:00+00:00",
       "engagement": "",
-      "summary": "Google's AI chip-equipped satellite has generated its first response from space. In a blog post on Friday, Google says it successfully booted up the satellite's Tensor Processing Units (TPUs), allowing the on-board Gemma 4 model to follow through on a prompt to create a haiku abo",
+      "summary": "Beyond RAG: How modern architectures engineer precise, cost-efficient context for enterprise AI agents. The post The Enterprise Context Layer: A Practitioner's Guide to 6 Advanced Architectural Patterns appeared first on Towards Data Science .",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 12,
+      "rank": 14,
+      "title": "Fix the Image, Not the Prompt",
+      "url": "https://towardsdatascience.com/fix-the-image-not-the-prompt/",
+      "source": "Towards Data Science",
+      "category": "blog",
+      "section": "research",
+      "publishedAt": "2026-11-01T14:00:00+00:00",
+      "engagement": "",
+      "summary": "Vision models often fail before they even start reasoning. A few well-placed labels on the image fix more than any prompt tweak. The post Fix the Image, Not the Prompt appeared first on Towards Data Science .",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 15,
       "title": "A Neural Network Learned to Read Digits From Pure Noise",
       "url": "https://towardsdatascience.com/a-neural-network-learned-to-read-digits-from-pure-noise/",
       "source": "Towards Data Science",
@@ -161,7 +200,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 13,
+      "rank": 16,
+      "title": "Google’s satellite AI server transmits its first response to Earth",
+      "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-10-30T18:21:38+00:00",
+      "engagement": "",
+      "summary": "Google's AI chip-equipped satellite has generated its first response from space. In a blog post on Friday, Google says it successfully booted up the satellite's Tensor Processing Units (TPUs), allowing the on-board Gemma 4 model to follow through on a prompt to create a haiku abo",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 17,
       "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
       "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
       "source": "TechCrunch AI",
@@ -174,7 +226,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 14,
+      "rank": 18,
       "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
       "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
       "source": "TechCrunch AI",
@@ -187,20 +239,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 15,
-      "title": "I built an AI Tamagotchi before Meta could",
-      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "web-services",
-      "publishedAt": "2026-10-31T16:09:02+00:00",
-      "engagement": "",
-      "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It [",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 16,
+      "rank": 19,
       "title": "DeepSeek Drops Enhanced Coding Agent With Aim to Rival Anthropic",
       "url": "https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic",
       "source": "Bloomberg Tech",
@@ -213,7 +252,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 17,
+      "rank": 20,
+      "title": "I built an AI Tamagotchi before Meta could",
+      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-10-31T16:09:02+00:00",
+      "engagement": "",
+      "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It [",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 21,
       "title": "Google’s first data center satellite is online and writing poetry",
       "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
       "source": "TechCrunch AI",
@@ -226,7 +278,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 18,
+      "rank": 22,
       "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
       "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
       "source": "Wired AI",
@@ -239,7 +291,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 19,
+      "rank": 23,
       "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
       "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
       "source": "Wired AI",
@@ -252,7 +304,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 20,
+      "rank": 24,
       "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
       "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
       "source": "Wired AI",
@@ -265,7 +317,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 21,
+      "rank": 25,
       "title": "How to Build Bug-Free Applications with Claude Code",
       "url": "https://towardsdatascience.com/how-to-build-bug-free-applications-with-claude-code/",
       "source": "Towards Data Science",
@@ -278,7 +330,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 22,
+      "rank": 26,
       "title": "Behind DeepSeek’s $16 Billion Funding: Chinese Tech Titans and State Players",
       "url": "https://www.theinformation.com/articles/behind-deepseeks-16-billion-funding-chinese-tech-titans-state-players",
       "source": "The Information",
@@ -291,46 +343,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 23,
-      "title": "dbreunig/nesformer",
-      "url": "https://simonwillison.net/2026/Oct/30/nesformer/",
-      "source": "Simon Willison",
-      "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-10-30T21:59:22+00:00",
-      "engagement": "",
-      "summary": "dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on H",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 24,
-      "title": "S&P Lowers Meta’s Credit Outlook Amid Soaring AI Spending",
-      "url": "https://www.theinformation.com/briefings/s-p-lowers-metas-credit-outlook-amid-soaring-ai-spending",
-      "source": "The Information",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-10-31T00:43:11+00:00",
-      "engagement": "",
-      "summary": "S&P Global Ratings lowered its credit rating outlook on Meta Platforms to negative from stable, saying the company’s ability to monetize its fast-rising AI investments is “more limited than that of its peers.” The announcement Friday comes after Meta last week reported negative f",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 25,
-      "title": "OpenAI Lowers Fundraising Target–After Decreasing Possible Valuation",
-      "url": "https://www.theinformation.com/briefings/openai-lowers-fundraising-target-after-decreasing-possible-valuation",
-      "source": "The Information",
-      "category": "news",
-      "section": "finance",
-      "publishedAt": "2026-10-31T00:33:18+00:00",
-      "engagement": "",
-      "summary": "OpenAI has lowered the amount of capital it is seeking from investors in its latest fundraising round by $10 billion, according to a Friday report by The Financial Times. The company was initially seeking to raise $30 billion at a $1.4 trillion valuation. It lowered the valuation",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 26,
+      "rank": 27,
       "title": "We Taught AI to Answer Questions. Who Taught It to Change Its Mind?",
       "url": "https://towardsdatascience.com/we-taught-ai-to-answer-questions-who-taught-it-to-change-its-mind/",
       "source": "Towards Data Science",
@@ -343,33 +356,46 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 27,
-      "title": "nemotron-halloween",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
-      "source": "Hugging Face Blog",
-      "category": "blog",
-      "section": "tools",
-      "publishedAt": "2026-10-30T17:57:24+00:00",
-      "engagement": "",
-      "summary": "nemotron-halloween — via Hugging Face Blog.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
       "rank": 28,
-      "title": "U.S. Stocks Dive on AI Spending Fears",
-      "url": "https://www.theinformation.com/briefings/u-s-stocks-dive-ai-spending-fears",
+      "title": "S&P Lowers Meta’s Credit Outlook Amid Soaring AI Spending",
+      "url": "https://www.theinformation.com/briefings/s-p-lowers-metas-credit-outlook-amid-soaring-ai-spending",
       "source": "The Information",
       "category": "news",
       "section": "finance",
-      "publishedAt": "2026-10-30T22:31:39+00:00",
+      "publishedAt": "2026-10-31T00:43:11+00:00",
       "engagement": "",
-      "summary": "U.S. stocks dropped sharply Friday as disappointing quarterly results from Amazon and Intel intensified the tech selloff of the past two days. The Nasdaq Composite dropped almost 3%, while the S&P 500 dropped almost 2% and the Dow Jones Industrial Average dropped 1%. The tech-hea",
+      "summary": "S&P Global Ratings lowered its credit rating outlook on Meta Platforms to negative from stable, saying the company’s ability to monetize its fast-rising AI investments is “more limited than that of its peers.” The announcement Friday comes after Meta last week reported negative f",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 29,
+      "title": "OpenAI Lowers Fundraising Target–After Decreasing Possible Valuation",
+      "url": "https://www.theinformation.com/briefings/openai-lowers-fundraising-target-after-decreasing-possible-valuation",
+      "source": "The Information",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-10-31T00:33:18+00:00",
+      "engagement": "",
+      "summary": "OpenAI has lowered the amount of capital it is seeking from investors in its latest fundraising round by $10 billion, according to a Friday report by The Financial Times. The company was initially seeking to raise $30 billion at a $1.4 trillion valuation. It lowered the valuation",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 30,
+      "title": "dbreunig/nesformer",
+      "url": "https://simonwillison.net/2026/Oct/30/nesformer/",
+      "source": "Simon Willison",
+      "category": "blog",
+      "section": "tools",
+      "publishedAt": "2026-10-30T21:59:22+00:00",
+      "engagement": "",
+      "summary": "dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on H",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 31,
       "title": "I Told an AI Agent That Its Wrong Answers Were Right. One Model Believed Me.",
       "url": "https://towardsdatascience.com/i-told-an-ai-agent-that-its-wrong-answers-were-right-one-model-believed-me/",
       "source": "Towards Data Science",
@@ -382,7 +408,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 30,
+      "rank": 32,
+      "title": "nemotron-halloween",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "source": "Hugging Face Blog",
+      "category": "blog",
+      "section": "tools",
+      "publishedAt": "2026-10-30T17:57:24+00:00",
+      "engagement": "",
+      "summary": "nemotron-halloween — via Hugging Face Blog.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 33,
       "title": "AI News: The Only 6 Stories Worth Knowing This Week",
       "url": "https://www.youtube.com/watch?v=eDiQNFa-zYg",
       "source": "YouTube · Matt Wolfe",
@@ -395,7 +434,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 31,
+      "rank": 34,
       "title": "Making it easier for websites to express AI training preferences",
       "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
       "source": "OpenAI Blog",
@@ -408,7 +447,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 32,
+      "rank": 35,
       "title": "Community safety report and new protections for teens",
       "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
       "source": "OpenAI Blog",
@@ -421,7 +460,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 33,
+      "rank": 36,
       "title": "OpenAI Claims It Just Did The Impossible",
       "url": "https://www.youtube.com/watch?v=CWdTBLsbaQs",
       "source": "YouTube · Two Minute Papers",
@@ -434,20 +473,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 34,
-      "title": "Fair use benefits everyone",
-      "url": "https://openai.com/index/fair-use-benefits-everyone",
-      "source": "OpenAI Blog",
-      "category": "blog",
-      "section": "finance",
-      "publishedAt": "2026-10-30T00:00:00+00:00",
-      "engagement": "",
-      "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 35,
+      "rank": 37,
       "title": "Pick a Number Between 1 and 10",
       "url": "https://towardsdatascience.com/pick-a-number-between-1-and-10/",
       "source": "Towards Data Science",
@@ -460,176 +486,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 36,
-      "title": "Binning or Feature Selection: Which One Won Us an Insurance Hackathon?",
-      "url": "https://towardsdatascience.com/binning-or-feature-selection-which-one-won-us-an-insurance-hackathon/",
-      "source": "Towards Data Science",
-      "category": "blog",
-      "section": "research",
-      "publishedAt": "2026-10-30T14:00:00+00:00",
-      "engagement": "",
-      "summary": "For a year, we believed that supervised binning carried our winning entry to an insurance competition. After four seeds per arm and one shared feature set, the credit belongs elsewhere. The post Binning or Feature Selection: Which One Won Us an Insurance Hackathon? appeared first",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 37,
-      "title": "No AI, 52 min. Build all Linux Files utils in C by Hand [video]",
-      "url": "https://www.youtube.com/watch?v=gQRmSlcTq9c",
-      "source": "Hacker News",
-      "category": "social",
-      "section": "ai-news",
-      "publishedAt": "2026-10-29T15:20:04+00:00",
-      "engagement": "66 points on Hacker News",
-      "summary": "No AI, 52 min. Build all Linux Files utils in C by Hand [video] — via Hacker News.",
-      "lifeIdea": "Skim the top 5 comments in the thread — practitioners often share the real-world catch there.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
       "rank": 38,
-      "title": "Your Agent’s Tools Can Make Decisions, Too",
-      "url": "https://towardsdatascience.com/your-agents-tools-can-make-decisions-too/",
-      "source": "Towards Data Science",
+      "title": "Fair use benefits everyone",
+      "url": "https://openai.com/index/fair-use-benefits-everyone",
+      "source": "OpenAI Blog",
       "category": "blog",
-      "section": "research",
-      "publishedAt": "2026-10-30T12:30:00+00:00",
+      "section": "finance",
+      "publishedAt": "2026-10-30T00:00:00+00:00",
       "engagement": "",
-      "summary": "Decision models as tools: a hands-on guide The post Your Agent’s Tools Can Make Decisions, Too appeared first on Towards Data Science .",
+      "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
       "rank": 39,
-      "title": "Claude Code Mods: Custom Hooks to Fix My Biggest AI Coding Frustrations",
-      "url": "https://towardsdatascience.com/claude-code-mods-custom-hooks-to-fix-my-biggest-ai-coding-frustrations/",
-      "source": "Towards Data Science",
-      "category": "blog",
-      "section": "ai-news",
-      "publishedAt": "2026-10-30T11:00:00+00:00",
-      "engagement": "",
-      "summary": "How I built four Claude Code mods to protect API keys, track plan progress, catch untested code, and monitor context usage — with 135 passing tests and up to 100× less overhead than traditional hooks — and why they can outperform traditional hooks. The post Claude Code Mods: Cust",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 40,
-      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
-      "url": "https://arxiv.org/pdf/2610.40654v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "tools",
-      "publishedAt": "2026-10-29T17:59:49+00:00",
-      "engagement": "",
-      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data w",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 41,
-      "title": "3 Critical Tasks AI Can Automate For You",
-      "url": "https://www.youtube.com/shorts/evXFML_Rnc0",
-      "source": "YouTube · Matt Wolfe",
-      "category": "video",
-      "section": "web-services",
-      "publishedAt": "2026-10-29T15:28:47+00:00",
-      "engagement": "",
-      "summary": "3 Critical Tasks AI Can Automate For You — via YouTube · Matt Wolfe.",
-      "lifeIdea": "Watch this video at 1.5x speed over coffee and write down one technique to try this week.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 42,
-      "title": "Elucidating the Design Space of LM Data Attribution",
-      "url": "https://arxiv.org/pdf/2610.40655v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "tools",
-      "publishedAt": "2026-10-29T17:59:53+00:00",
-      "engagement": "",
-      "summary": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To dia",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 43,
-      "title": "Rethinking Neural Thickets Without Weight Perturbations",
-      "url": "https://arxiv.org/pdf/2610.40649v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "tools",
-      "publishedAt": "2026-10-29T17:59:29+00:00",
-      "engagement": "",
-      "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanatio",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 44,
-      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
-      "url": "https://arxiv.org/pdf/2610.40647v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "tools",
-      "publishedAt": "2026-10-29T17:59:21+00:00",
-      "engagement": "",
-      "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency struct",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 45,
-      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
-      "url": "https://arxiv.org/pdf/2610.40644v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "ai-news",
-      "publishedAt": "2026-10-29T17:59:01+00:00",
-      "engagement": "",
-      "summary": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the em",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 46,
-      "title": "Luggage re-identification: A study of strategies towards a real-world application",
-      "url": "https://arxiv.org/pdf/2610.40643v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "ai-news",
-      "publishedAt": "2026-10-29T17:58:59+00:00",
-      "engagement": "",
-      "summary": "Luggage re-identification (ReID) is a critical task in video surveillance for forensics, security or border management (suspicious or abandoned luggage recognition), as well as luggage management (lost luggage recovery). It enables the association of observations of the same lugg",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 47,
-      "title": "From extreme weather to agricultural consequences with agentic AI",
-      "url": "https://arxiv.org/pdf/2610.40641v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "ai-news",
-      "publishedAt": "2026-10-29T17:58:53+00:00",
-      "engagement": "",
-      "summary": "Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and the records that could tell span many sources. We present WxCrop, the first agen",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 48,
-      "title": "world2vec: Mechanistic world models through latent dynamics learning",
-      "url": "https://arxiv.org/pdf/2610.40637v1",
-      "source": "arXiv",
-      "category": "research",
-      "section": "ai-news",
-      "publishedAt": "2026-10-29T17:58:23+00:00",
-      "engagement": "",
-      "summary": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward in",
-      "lifeIdea": "Read just the abstract and ask a free AI chat to explain it like you're twelve.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 49,
       "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
       "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
       "source": "TechCrunch AI",
@@ -642,7 +512,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 50,
+      "rank": 40,
+      "title": "U.S. Stocks Dive on AI Spending Fears",
+      "url": "https://www.theinformation.com/briefings/u-s-stocks-dive-ai-spending-fears",
+      "source": "The Information",
+      "category": "news",
+      "section": "finance",
+      "publishedAt": "2026-10-30T22:31:39+00:00",
+      "engagement": "",
+      "summary": "U.S. stocks dropped sharply Friday as disappointing quarterly results from Amazon and Intel intensified the tech selloff of the past two days. The Nasdaq Composite dropped almost 3%, while the S&P 500 dropped almost 2% and the Dow Jones Industrial Average dropped 1%. The tech-hea",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 41,
       "title": "The biggest names in AI are backing a new way to opt out of scraping",
       "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
       "source": "The Verge AI",
@@ -655,20 +538,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 51,
-      "title": "Sam Altman says it’s better for RAM to be in a data center than on your desk",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers",
-      "source": "The Verge AI",
-      "category": "news",
-      "section": "technology",
-      "publishedAt": "2026-10-30T20:48:43+00:00",
-      "engagement": "",
-      "summary": "Asked about supply chain shortages, like the ongoing RAM shortage, OpenAI CEO Sam Altman said in an interview that it's \"terrible\" to have RAM in personal PCs instead of data centers. During his appearance on the Cheeky Pint podcast, where he also commented on AI's impact on math",
-      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
-      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
-    },
-    {
-      "rank": 52,
+      "rank": 42,
       "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
       "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
       "source": "TechCrunch AI",
@@ -681,7 +551,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 53,
+      "rank": 43,
+      "title": "Sam Altman says it’s better for RAM to be in a data center than on your desk",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "technology",
+      "publishedAt": "2026-10-30T20:48:43+00:00",
+      "engagement": "",
+      "summary": "Asked about supply chain shortages, like the ongoing RAM shortage, OpenAI CEO Sam Altman said in an interview that it's \"terrible\" to have RAM in personal PCs instead of data centers. During his appearance on the Cheeky Pint podcast, where he also commented on AI's impact on math",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 44,
       "title": "Ollie, a privacy-focused AI assistant, is shutting down",
       "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
       "source": "TechCrunch AI",
@@ -694,7 +577,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 54,
+      "rank": 45,
       "title": "Intel’s stock crashes, knocking $12B from government’s stake",
       "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/",
       "source": "TechCrunch AI",
@@ -707,7 +590,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 55,
+      "rank": 46,
       "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
       "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
       "source": "TechCrunch AI",
@@ -720,7 +603,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 56,
+      "rank": 47,
       "title": "Last-minute Halloween costumes for tech nerds",
       "url": "https://techcrunch.com/2026/10/30/last-minute-halloween-costumes-for-tech-nerds/",
       "source": "TechCrunch AI",
@@ -733,7 +616,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 57,
+      "rank": 48,
       "title": "How a Contractor’s Claude Agent Got Into the Pentagon",
       "url": "https://www.wired.com/story/uncanny-valley-podcast-how-a-contractors-claude-agent-got-into-the-pentagon/",
       "source": "Wired AI",
@@ -746,7 +629,7 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 58,
+      "rank": 49,
       "title": "Cracks are emerging in the AI spending boom",
       "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
       "source": "TechCrunch AI",
@@ -759,7 +642,20 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 59,
+      "rank": 50,
+      "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
+      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "web-services",
+      "publishedAt": "2026-10-29T20:08:31+00:00",
+      "engagement": "",
+      "summary": "As AI transforms how people find information online, Reddit is rethinking its open-web roots to protect its audience and business.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 51,
       "title": "Starbucks wants to use AI to show you a ‘personalized digital menu’ at the drive-thru",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
       "source": "The Verge AI",
@@ -772,15 +668,119 @@
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     },
     {
-      "rank": 60,
-      "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
-      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
-      "source": "TechCrunch AI",
+      "rank": 52,
+      "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+      "source": "Ars Technica AI",
       "category": "news",
       "section": "web-services",
-      "publishedAt": "2026-10-29T20:08:31+00:00",
+      "publishedAt": "2026-10-30T21:09:54+00:00",
       "engagement": "",
-      "summary": "As AI transforms how people find information online, Reddit is rethinking its open-web roots to protect its audience and business.",
+      "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 53,
+      "title": "Zest’s new AI agent finds restaurants and books reservations over text",
+      "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-30T17:47:12+00:00",
+      "engagement": "",
+      "summary": "Can't agree on where to eat? Zest's AI concierge can combine everyone's tastes, put restaurant options to a vote, and make the reservation.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 54,
+      "title": "Pope Leo calls for the disarmament of AI: ‘Machines are tools, not persons’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-30T15:14:37+00:00",
+      "engagement": "",
+      "summary": "Pope Leo XIV says AI systems should be \"disarmed,\" adding that humans \"have the responsibility to guide, change and, when necessary, reject its applications.\" In Friday's Papal Address, Pope Leo encourages United Nations member states to \"take concrete steps toward banning lethal",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 55,
+      "title": "Maine’s data center revolt will decide who controls the Senate",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "tools",
+      "publishedAt": "2026-10-30T14:40:29+00:00",
+      "engagement": "",
+      "summary": "Maine Sen. Susan Collins, a Republican, was midway through defending her record during the final debate of the midterms when an audience member cut her short. \"I'm terrified,\" a man shouted. \"AI data centers are destroying our climate. They are poisoning our water.\" Collins brush",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 56,
+      "title": "Theranos whistleblower Tyler Shultz warns that the AI boom is ‘a great opportunity to go deceive people’",
+      "url": "https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-30T16:03:45+00:00",
+      "engagement": "",
+      "summary": "The cautionary Theranos tale takes on a new significance in the AI era, when companies that have never turned a profit are raising capital at trillion-dollar valuations.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 57,
+      "title": "Sam Altman sympathizes with mathematicians, but says OpenAI’s math onslaught won’t stop",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
+      "source": "The Verge AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-30T13:30:14+00:00",
+      "engagement": "",
+      "summary": "After months of bombarding mathematicians with a relentless stream of AI-generated results, OpenAI CEO Sam Altman says he sympathizes with researchers struggling to make sense of it all. But he has no intention of stopping - and hints there could be much more to come from the com",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 58,
+      "title": "An Anthropic Windfall Could Await State Pension Funds",
+      "url": "https://www.theinformation.com/articles/anthropic-windfall-await-state-pension-funds",
+      "source": "The Information",
+      "category": "news",
+      "section": "tools",
+      "publishedAt": "2026-10-30T13:00:46+00:00",
+      "engagement": "",
+      "summary": "Over the past year, politicians and AI executives have floated ideas for a sovereign wealth fund or other ways of giving the American public a stake in the AI boom. Some of the biggest public pension plans are poised to get a taste of the action long before those proposals come t",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 59,
+      "title": "DoorDash said it’s only received ‘several hundred’ orders from AI agents",
+      "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "tools",
+      "publishedAt": "2026-10-30T13:54:25+00:00",
+      "engagement": "",
+      "summary": "DoorDash said that it is open to working with third-party agent makers.",
+      "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
+      "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
+    },
+    {
+      "rank": 60,
+      "title": "Can AI data centers be mass-produced like cars? This startup aims to find out",
+      "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "section": "ai-news",
+      "publishedAt": "2026-10-30T13:00:00+00:00",
+      "engagement": "",
+      "summary": "Runware is building a factory to turn out prefabricated AI data centers on an assembly line. The real test will be whether it can deliver at that scale.",
       "lifeIdea": "Read the article, then explain it out loud in 30 seconds — if you can't, reread the intro.",
       "sublimeAngle": "Track this trend — knowing it before competitors is an edge for Sublime."
     }
